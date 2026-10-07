@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import XLSX from 'xlsx';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=path.join(root,'reports/promotion-v1');
+const readRows=(f:string)=>XLSX.utils.sheet_to_json<{key:string,value:unknown,description?:string}>(XLSX.readFile(path.join(root,f)).Sheets.Balance);
+const before=readRows('config/archive/game_config-pre-promotion-v1.xlsx'),after=readRows('config/game_config.xlsx');
+for(const row of before)assert.deepEqual(after.find(r=>r.key===row.key),row);
+const added=after.filter(r=>!before.some(b=>b.key===r.key));assert.ok(added.every(r=>['promotionAssignment','promotionQualification','promotionLowProfile'].includes(r.key.split('.')[0])));
+const generated=JSON.parse(fs.readFileSync(path.join(out,'promotion-config-before.json'),'utf8'));for(const key of ['promotionAssignment','promotionQualification','promotionLowProfile'])delete generated[key];
+const canonical=path.join(out,'promotion-config-before-existing-balance.json');fs.writeFileSync(canonical,JSON.stringify(generated,null,2));
+const v=JSON.parse(fs.readFileSync(path.join(out,'promotion-config-verification.json'),'utf8'));Object.assign(v,{excelExistingRowsDeepEqual:true,excelBeforeRows:before.length,excelAfterRows:after.length,addedExcelKeys:added.map(r=>r.key)});fs.writeFileSync(path.join(out,'promotion-config-verification.json'),JSON.stringify(v,null,2));console.log(v);

@@ -1,0 +1,17 @@
+import { test, expect } from '@playwright/test';
+import { gameConfig as c } from '../../src/config/gameConfig';
+import { initialState } from '../../src/game/state/initialState';
+test('V2 subscriptions, permanent upgrades, debug offline32days, prestige and reload',async({page})=>{
+  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});const s=initialState(42);s.runStatistics.activeSeconds=1800;s.player.money=10000;s.prestige.clarity=100;
+  await page.addInitScript(({key,value})=>{if(!localStorage.getItem(key)){value.offline.lastSeenAt=Date.now();localStorage.setItem(key,JSON.stringify(value));}},{key:c.save.key,value:s});await page.goto('/');
+  const nav=page.getByRole('navigation');await nav.getByRole('button',{name:'產品'}).click();const eyes=page.getByRole('region',{name:'用眼休息組'});await eyes.getByRole('button',{name:/啟用/}).click();await expect(eyes).toContainText('有效中');
+  const quick=page.getByRole('region',{name:'快速飽足飲'});await quick.getByRole('button',{name:/啟用/}).click();await page.getByRole('button',{name:/快速飽足飲.*需求/}).click();
+  await nav.getByRole('button',{name:'升級'}).click();await page.getByRole('button',{name:/永久升級/}).click();const upgrade=page.getByRole('region',{name:'永久工作效率',exact:true});for(let i=0;i<3;i++)await upgrade.getByRole('button',{name:/升級/}).click();await expect(upgrade).toContainText('×1.33');
+  await page.getByRole('button',{name:'Debug',exact:true}).click();await page.getByRole('button',{name:'模擬離線 16 小時'}).click();await expect.poll(async()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)!).runStatistics.offlineDays,c.save.key)).toBe(32);
+  await page.getByRole('button',{name:'強制眼睛酸澀'}).click();await page.getByRole('button',{name:'關閉 Debug'}).click();await nav.getByRole('button',{name:'日常'}).click();await expect(page.getByRole('region',{name:'中央目標'})).toHaveAttribute('data-kind','problem',{timeout:12000});
+  await page.getByRole('button',{name:'Debug',exact:true}).click();await page.getByRole('button',{name:'開啟醒來條件'}).click();await page.getByRole('button',{name:'關閉 Debug'}).click();await page.getByRole('button',{name:'該醒了，別做夢了'}).click();await page.getByRole('button',{name:'確認醒來',exact:true}).click();await page.reload();
+  const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(saved.permanentStatistics.runs).toBe(1);expect(saved.prestige.levels.workEfficiency).toBe(3);expect(saved.player.upgrades.efficiency).toBe(0);expect(saved.products.eyes.active).toBe(false);
+  for(const width of [320,390,460,1280]){await page.setViewportSize({width,height:844});for(const name of ['日常','升級','產品','紀錄']){await nav.getByRole('button',{name}).click();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);}}
+  await page.setViewportSize({width:390,height:844});await nav.getByRole('button',{name:'日常'}).click();await page.screenshot({path:'tests/artifacts/v2-mobile-home.png',fullPage:true});expect(errors).toEqual([]);
+});
+test('legacy save shows V2 reset notice and saves new core',async({page})=>{await page.addInitScript(key=>localStorage.setItem(key,'{"version":2,"money":500}'),c.save.legacyKey);await page.goto('/');await expect(page.getByRole('alert')).toContainText('新版核心已更新');expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!).coreVersion,c.save.key)).toBe('todo-v2');});

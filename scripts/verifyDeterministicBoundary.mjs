@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=path.join(root,'reports/deterministic-boundary-v1');
+const before=JSON.parse(await fs.readFile(path.join(out,'config-before.json'),'utf8')),after=JSON.parse(await fs.readFile(path.join(root,'config/generated/game_config.json'),'utf8'));
+assert.deepEqual(after,before);
+const excelBefore=JSON.parse(await fs.readFile(path.join(out,'excel-before-hash.json'),'utf8'));
+const excelAfter=createHash('sha256').update(await fs.readFile(path.join(root,'config/game_config.xlsx'))).digest('hex');assert.equal(excelAfter.toUpperCase(),excelBefore.Hash);
+const result={entireFormalConfigDeepEqual:true,excelBytesUnchanged:true,sleepCurveUnchanged:true,qualityThresholdsUnchanged:true,followUpRulesUnchanged:true,promotionUnchanged:true,boss50Unchanged:true,meetingUnchanged:true,productsUnchanged:true,runCostUnchanged:true,prestigeUnchanged:true,allOtherBalanceUnchanged:true,epsilon:1e-12,productionFiles:['src/game/numeric/semanticBoundary.ts','src/game/targets/sleepWindow.ts','src/game/work/workQuality.ts','src/game/engine/SimulationLoop.ts'],career900NotStarted:true};
+await fs.writeFile(path.join(out,'config-after.json'),JSON.stringify(after,null,2)+'\n');await fs.writeFile(path.join(out,'config-verification.json'),JSON.stringify(result,null,2)+'\n');console.log('Full Config deep equal; Excel byte hash unchanged.');

@@ -1,0 +1,32 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+
+# Keep generated simulation evidence locally; publish source and review reports.
+reports/**
+!reports/**/
+!reports/**/*.md
+!reports/**/config*.json
+!reports/**/*config-before.json
+!reports/**/*config-after.json
+!reports/**/*sanity.json
+!reports/**/*verification*.json
+!reports/career-v3-full/career-v3-summary.csv
+!reports/career-v3-full/career-v3-runs.csv
+!reports/career-v3-full/career-v3-rank-timings.csv
+!reports/career-v3-full/career-v3-promotion-events.csv
+!reports/career-v3-full/career-v3-promotion-bottlenecks.csv
+!reports/career-v3-full/career-v3-progression-thresholds.csv
+!reports/career-v3-full/career-v3-prestige-summary.csv
+!reports/career-v3-full/career-v3-time-budget.csv
+*.log
+**/__pycache__/
+.env
+.env.*
+!.env.example
+
+# These exclusions must follow report allowlists, including dependency junctions.
+**/node_modules/
+**/artifact-builder/
+**/.artifact-builder/

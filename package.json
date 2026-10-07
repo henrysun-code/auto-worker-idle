@@ -1,0 +1,31 @@
+{
+  "name": "auto-worker",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run config && vite --host 127.0.0.1",
+    "build": "npm run config && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "config": "tsx scripts/config.ts",
+    "config:seed": "tsx scripts/config.ts --seed",
+    "test": "tsx --test tests/*.test.ts",
+    "simulate:scenarios": "npm run config && tsx scripts/simulate-scenarios.ts",
+    "simulate:paired": "npm run config && tsx scripts/simulate-paired.ts",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@types/node": "^24.7.0",
+    "@playwright/test": "^1.55.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "xlsx": "^0.18.5"
+  }
+}

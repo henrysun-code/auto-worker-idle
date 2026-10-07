@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import XLSX from 'xlsx';
+import { defaultGameConfig as c } from '../src/config/v2Defaults';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const file = path.join(root, 'config/game_config.xlsx');
+const backup = path.join(root, 'config/archive/game_config-pre-deadline.xlsx');
+if (!fs.existsSync(backup)) fs.copyFileSync(file, backup);
+const book = XLSX.readFile(file);
+const rows = XLSX.utils.sheet_to_json<{key:string;value:unknown;description:string}>(book.Sheets.Balance);
+const additions = Object.entries(c.deadlines).flatMap(([k,v]) => typeof v === 'object' ? Object.entries(v).map(([sub,val])=>({key:`deadlines.${k}.${sub}`,value:val,description:'Provisional deadline game hours'})) : [{key:`deadlines.${k}`,value:v,description:'Provisional deadline balance'}]);
+for (const r of additions) if (!rows.some(x=>x.key===r.key)) rows.push(r);
+book.Sheets.Balance = XLSX.utils.json_to_sheet(rows); book.Sheets.Balance['!cols'] = [{wch:48},{wch:70},{wch:55}]; XLSX.writeFile(book,file);

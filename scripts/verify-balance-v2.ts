@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {gameConfig as c} from '../src/config/gameConfig';
+import {getRunUpgradeCost} from '../src/game/work/progression';
+const old=JSON.parse(readFileSync(new URL('../config/archive/game_config-pre-balance-v2.json',import.meta.url),'utf8'));
+const expected=structuredClone(old);expected.prestige.minimumPrestigeActiveMinutes=30;expected.runUpgradeCurve.post200Growth=1.005;
+assert.deepEqual(c,expected,'Only the two authorized numerical Config changes are allowed');
+const costs=[100,200,225,250,275,300].map((level,i)=>({level,actual:getRunUpgradeCost('efficiency',level),requested:[414,21650,65970,201023,612553,1866562][i],difference:getRunUpgradeCost('efficiency',level)-[414,21650,65970,201023,612553,1866562][i]}));
+for(let level=0;level<=200;level++)for(const id of Object.keys(c.upgrades) as (keyof typeof c.upgrades)[])assert.equal(getRunUpgradeCost(id,level),Math.ceil(old.upgrades[id].baseCost*old.runUpgradeCurve.baseGrowth**level*old.runUpgradeCurve.post100Growth**Math.max(0,level-old.runUpgradeCurve.softCap1)));
+const root=fileURLToPath(new URL('../reports/career-progression-v2/',import.meta.url));mkdirSync(root,{recursive:true});writeFileSync(root+'config-verification.json',JSON.stringify({onlyTwoBalanceChanges:true,changedPaths:['prestige.minimumPrestigeActiveMinutes','runUpgradeCurve.post200Growth'],pre200PricesExactlyEqual:true,costs},null,2));console.log(JSON.stringify(costs));

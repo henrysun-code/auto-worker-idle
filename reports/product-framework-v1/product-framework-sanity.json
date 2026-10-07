@@ -1,0 +1,1329 @@
+{
+  "architectureRatingBefore": "MINOR_REFACTOR_REQUIRED",
+  "architectureRatingAfter": "CONFIG_READY",
+  "formalProductCount": 7,
+  "formalEffectTypeCount": 4,
+  "supportedEffectTypes": [
+    "FOOD_OPTION",
+    "PROBLEM_RESOLVER",
+    "OFFLINE_AGE_PROTECTION",
+    "TAGGED_WORK_REWARD"
+  ],
+  "reservedUnimplementedEffectTypes": [
+    "SLEEP_MODIFIER"
+  ],
+  "coreLiteralProductIdEffectBranchCount": 0,
+  "perProductSubscriptionLogic": false,
+  "stackingCentralized": true,
+  "configValidation": true,
+  "configOnlyExistingEffectExtension": true,
+  "syntheticProducts": {
+    "A": {
+      "type": "TAGGED_WORK_REWARD",
+      "passed": true
+    },
+    "B": {
+      "type": "OFFLINE_AGE_PROTECTION",
+      "passed": true
+    },
+    "formalConfigPollution": false
+  },
+  "exactBehavior": {
+    "products": 7,
+    "scenariosPerProduct": 17,
+    "fixtures": 119,
+    "fullStateExactEqual": true,
+    "uiStaticMarkupExactEqual": true,
+    "baselineManifestVerified": true,
+    "rows": [
+      {
+        "productId": "quick",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "59d7a9909454a2100eda51134eccffc0fa7c90e587f8437267971b5fee97581a"
+      },
+      {
+        "productId": "quick",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "9f7c9aece5361f7fe2a84c3c2f2219d85530c0d6c99fedda1daf027de6dad448"
+      },
+      {
+        "productId": "quick",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "dad006132b91e2b4c6df871f1ed27ce968dba3d53b3adb7f0c11aeca4cca558a"
+      },
+      {
+        "productId": "quick",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999912,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "22a26fe81ad85e4744c219dcf161e8b580c4bb7a86395768e4a0790ae960a897"
+      },
+      {
+        "productId": "quick",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "4486c486ff768219379cbd679dcedecce30de95d9377b5133aad533d09e172e6"
+      },
+      {
+        "productId": "quick",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "8c93121a848b2fcf0e3a3f857707cf386a929b67c093e492c38c15e89fc21f22"
+      },
+      {
+        "productId": "quick",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "431f34a02a37d4e011fe7ab08f168c45ed7e7e5034fa9f242a72a3bb0b93025d"
+      },
+      {
+        "productId": "quick",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "9f2f9cd5c8f285eda52c64b05d29231a82762dcbc21b257cabadf23a96da46c0"
+      },
+      {
+        "productId": "quick",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "675589f3a31842b4f236a0b075f512afd85867b4be5c4882fb8f0693abaf1c81"
+      },
+      {
+        "productId": "quick",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999840,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "fb88d9debc5e654c5f4a334c35977a0344287af68c482ce8a10e94b8f155e5bb"
+      },
+      {
+        "productId": "quick",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "6788c2aad93d7363c39e1fa142df76ff7319798c51cc9c15d92c87cdfbf193b4"
+      },
+      {
+        "productId": "quick",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "68b82e3365a47a9b9013bbdd414a51320b3db776066b35c66b60f64865b6bd4a"
+      },
+      {
+        "productId": "quick",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "d0f32ee494d23dae4504cc3cbb8ec646112cdd9f46cc9a15dcc9e08aea3aa21f"
+      },
+      {
+        "productId": "quick",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999840,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "ee09119fd7e41e8b36917d271aadf96398964690a8272da590bb20fbd67dc69d"
+      },
+      {
+        "productId": "quick",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "8ec070b9919017ac8e3a2f22a365ed1897fbba711e907fc743714d4040f03bef"
+      },
+      {
+        "productId": "quick",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "34b53b091ad7b569c42c81bdfb0df99a69c350a52aff32808b65a21b6a647363"
+      },
+      {
+        "productId": "quick",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999920,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "179a86b15da3524196162f8ce640b900e16ca191018ff1fc2d93b47021cadd9e"
+      },
+      {
+        "productId": "wound",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "1fba9a54bfdf803bb47116953f42015f9e80d4865d9033b29ab3f10d42581444"
+      },
+      {
+        "productId": "wound",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "3bb6e2e8074ff04c585d015b5382dc6baf288a471da98beed805a6aedb41b655"
+      },
+      {
+        "productId": "wound",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "d4a0f8129d440c17b162aa92368bbf63e304ebed262ac71b4adfccdb7ad70ea1"
+      },
+      {
+        "productId": "wound",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "911b3ffbaee19e1ad724be8073ebce943e4055e212d43b204b0e62ee5da5fb31"
+      },
+      {
+        "productId": "wound",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "991b654ef47e7154fd97f2ff6793acb98360858283171a1afddc526d234e18c2"
+      },
+      {
+        "productId": "wound",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "a40cea6cdf2a5db2abd44c8770f3c50137dc304e7df07d4f233e16086e32f764"
+      },
+      {
+        "productId": "wound",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "1374f4065bc2b390b3f34171289308fde8317879954182e5c82744c46f32ea76"
+      },
+      {
+        "productId": "wound",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "803b47ae5d4a04976e9f85070f6287eb892ade2d1e6f33331a1f5afcf526da12"
+      },
+      {
+        "productId": "wound",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "cf27a4307a66dea525206c60965494d9d84ce0aef99727c4a412b9c016eb92d9"
+      },
+      {
+        "productId": "wound",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999810,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "6f66e68564eeaff4ba6e06f031b1045a4783594ae0cf7226d7f8d8c341fec6ec"
+      },
+      {
+        "productId": "wound",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "9a48ee563340f8385a3cc1277bb158734688ccdf0d3ef725fefacbe604141692"
+      },
+      {
+        "productId": "wound",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "55fce25841f446d64da84b2b006289d6cf4533c0ec632f9d0d2e9013cba6e59d"
+      },
+      {
+        "productId": "wound",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "c710f7f8935e5b37b549785d3b200d0b4737b88513a8f67622347eacc6d2d714"
+      },
+      {
+        "productId": "wound",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999810,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "d6ecfa07b6268757a9ed1d11dd57f0ddabbe2511f874a3f6fa856a87a81c81ab"
+      },
+      {
+        "productId": "wound",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "fb745c76782fde8813cf142f636bf41202cf00608b54b9ac941cfdc1584d51f3"
+      },
+      {
+        "productId": "wound",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "ae370ef9b08c4948b9da59efc419bf0657725f9309d0fbd52238c29f26d52838"
+      },
+      {
+        "productId": "wound",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999905,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "9f73438e056d21fedc0a37d91ca3a3b137c6fdf01af2fde17e5e0aff73bb5ec2"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "d33d5da9f4fee8f99d15afa5e811c44efcdf5c3745f87f9c86159fd567ddbd42"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "8d2cd8310ba22b7409c97e7691277e476c036456b1cfb6244c361581b0226d2c"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "9025f87905fda97ae4943c413f990264308b63c89b2fcc0faa8231eddefdcebb"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "f43f4cd474fa7b1ebcf81e08c733b0c33e0f7fe8276171e55958bd3db6db3a14"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "2d71f42d300d774849f5623f07a8dcf99ff7fcef9e17acb63b60ac957fa3f206"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "fa510e296026bc49e2242ab9c4d76bf8df117c796988c81acf5f4ad892d7bcd6"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "eb42db4464110c457282745f52dde27226caa1487ff1dfe95ec7afedd478a49f"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "0e92365fd71aa5e1b1521a8f47f9925c28fe6a89b31392375e14603972ed28a6"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "e7628749db572f798027e5705a5331053c9770082b07c5c8e3423c79b760b7b5"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999830,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "05fe6d8a355e9a41aa8e46674fa609187611b281ae999103add5382055b3d09b"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "39c747143ca57615144af0823dd11e196cea96bc55c17cdc9b92d59c3dbe83a3"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "ce12d4bcff2effc468daaee2951d8a502a3ebf6ecd11de76ad0d8706be65a934"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "1890818a5ba272026e38ed24361047df917c6dfbff1d87bf3212b0ed45ee68ee"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999830,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "1d1e10b684b5763cc29490740e12f8e13c31374e4e9f1fecafb7fc0c8bbde7c0"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "ead1ecec9f1d8757515df8768b27d16d0ea73ac76252e9d7d386fcf199cefcd7"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "3cafc2fdfbe4cf502002e2c09be1c369dfec5cd786df1a6f1188af3082448306"
+      },
+      {
+        "productId": "eyes",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999915,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "ba6a33a529d6853e8281eb854ec2fbfa7861bbe2e719770062adeb5787c9cf4c"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "737f0c588fcad50f4c7903903f8bbcff008c7f43cce9f523836deafe90e579e2"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "20891ecb452719f833b51801e86b3e09d14431269ba0a4074eabf03c6bd4adb7"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "5f9a530145528e13b0ec8f4eb686c9d257f904c1ec52dff88c91d8db9a51d947"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "8f668516c5814aa3b5805a46aa42215610b12882c7012e9ce72eb70e613fe455"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "5ac6d3b41b8e7d79388530580c790cfd8ce54611ec0175c22e260f516c3a0d88"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "49f3cf4ccc1ab07fe8652b08c0fc934e36f82bba6b1db45b133a070c3f5549f4"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "ba02831c7bcdf97a96dde5ef6813d7877bce59a4148a676a9ea4f82555f38353"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "c5b667a9d4fdac4e828db84c0c51cc58dc3136bc1b5feb6ccb957cb404fa0440"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "8e76f5c5d02e44ad270e15be1b2bcccba846ad3da54be76b78421a2a5b8cf8c3"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999820,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "288405fbc906145b16f0bc3b958d88dfa808f00cb08897d793026dc3139d361b"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "7b8bef64c73f4bac8158d99972f5fe98da6476bbc078c6d2a0a17a17aab35d20"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "9098a2ea0f980b65e177d035e2d9e1bad42d4e778d0ab7d65d828ccfe50f7d96"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "e884f129a1ee78e957dfdd61b09a729fe4d335d5fc7fae62b2a161ba5340c095"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999820,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "ce5f727c458ff929a509548a1f3468fd5b9371f94d2bb463ad4593fd045f06e7"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "8e4b5c00beb0a00d365986997d051d9ce4aa16ab655eb0aa722dfdc92225af9d"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "328ba1ff0488710029c124a211aae4f05e5b996b2a680da1779f160d84b7f395"
+      },
+      {
+        "productId": "sleep",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999910,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "3e254250858066edc8ccfaa9ab98e5ec0f1934f01ed044b34b986c5afa4b617c"
+      },
+      {
+        "productId": "itch",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "e3edb5a332a78eedac4c8788cafa8763dd8b9d1a7a99d0c2899ec66845c954f0"
+      },
+      {
+        "productId": "itch",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "14e3970140e5168aa439fd122ef09324a9b7e65f1e7ec51a16a4a78232369632"
+      },
+      {
+        "productId": "itch",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "5a7366c69695fcdf71ea3e5e7e79bdf17b782f79e0038425326282c14c78e397"
+      },
+      {
+        "productId": "itch",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "f1da33b356a8e92eaeff9ab6fadc4249f55d3337a76ac772de9f090b30c2c6cf"
+      },
+      {
+        "productId": "itch",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "3df257b1118211eac4afcb892ce79c308c92591caba29d2c4b8c254843e51469"
+      },
+      {
+        "productId": "itch",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "7d6f8211c3aaf0d25a3b2e19d5f7ecc2c93fd2481188df9aa1d9d0d0cd783401"
+      },
+      {
+        "productId": "itch",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "57be58caf7f030bb9fbdff589f17a9b8858a03a54e2997551a27f6eefde2c0eb"
+      },
+      {
+        "productId": "itch",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "a8ad1cc2b8bfae49f7f0cd28399cf7bd0daff42aa60143e63a3f60f964a57532"
+      },
+      {
+        "productId": "itch",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "0997502f2d775a434a278add866713c0f3a6a0c4b73fdf787f62b6dbeeddedb0"
+      },
+      {
+        "productId": "itch",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999850,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "6a6aed2c2982fa16c51b4e1da8e45713cb1b3466546b20d6165628e67804cd9e"
+      },
+      {
+        "productId": "itch",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "ea8db16a2668dcce20e871d98c34cd63fec23d15c7cde318eeaf0c6953a1c5d8"
+      },
+      {
+        "productId": "itch",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "df5309714dbcb66cc53e63bd8a606d30ca0c7b352d1d6979cd15dd59cffc8b29"
+      },
+      {
+        "productId": "itch",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "1a56f983c13d0bab4fa0818fc985d66d772450b6f6e1f38d8cf2aaced3ac0b2a"
+      },
+      {
+        "productId": "itch",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999850,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "018dc1040893d9e07bf03b293ae41d8b3f3f5829d527328898e00c08d4bf0ae8"
+      },
+      {
+        "productId": "itch",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "e68292d96183e53eed5c16a0f418a81c5a5d3a93e1ebb3bf9387c7ff3dcf19aa"
+      },
+      {
+        "productId": "itch",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "43b82d3c3be333e1e080f7913f41aaae9a1d26ec69c27321cae4612421d71c2f"
+      },
+      {
+        "productId": "itch",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999925,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "ffa1c94082c0609451649399e05c17a30d8c1fd665743dba429c1f37634930a7"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "4106e59ea66488d8150eb06f8fe43d59d8443f81818c5279c67f13a88a9bda40"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "d83320b613c7359aa079437ec9f61777fe83c9ceecacb26083cb5035a4a69e71"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "db67a5a924765b6bacbf2037202bc1f6ce863350e4312a4f12e7f278b7cbeeb0"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "b0d3a86b788dbe0ee43726ea184131c5d93dd78ca7a5503747f96f8eb8fc4c72"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "124a84bc85c96d540bc6d8dda91091b64b9910ab892b184686da93f0e6a6d9da"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "a913785550447b4a3e99e9714b0db4da685eadca5c4b4e9354625a2cab0a711e"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "8a08b16179a50e59449062ef1e25889be5f85fad31fa7212a1483cc6a25d2836"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "575e9601d5f9e2a3e8bff77272fb9cf99b5db10b87ac11fdd4f269eda4b5fa13"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "3d515d5aad249410d4ed9f0e51f7840be8328befa1e3196e21e3ffdb933c256d"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999760,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "3a79c713bbeceae5c91860dc91c6ae8f02a81ef52fcabcb618a96918955fb271"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "7a40962f45547b55debd69096f06f32bab24fa809a3e9fda62a4ca36f34aea1a"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "fb58e11b7f0db46751b1877a78260048a380de43a711d0e28e940296c91cd622"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "cf282d105a01d8dd67648f56f6fcbc7890c13d5822ae0692fa2fb6b848117d27"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999760,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "176c6aabc170eef244c4225afb656441fa73acb65aab1ec76dc86cc2a9d321a2"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "3ff33cd4ca49cb5670c586f6732dfe8b69f6247bf41c033707aa3446c7512b47"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "bb9026ac1ec7a9e68f6bd85d63158b33995db753ef72d60f4d26c8b28b46a598"
+      },
+      {
+        "productId": "agecare",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999880,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "d47d76b33d55ec2b003af7697fc105f5bddc16ad3d65d7685089255d0194f87d"
+      },
+      {
+        "productId": "care",
+        "scenario": "ACTIVATE",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "1536b89d8bbbf4f1e08307fc125cdc1845f1d936bdfb04384ad4d503ee1d53cd"
+      },
+      {
+        "productId": "care",
+        "scenario": "WORK",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "ff07bcdde52daaf6036de3ca2907f96ac060165ed24a6c066c1ca4ded5e6ed7c"
+      },
+      {
+        "productId": "care",
+        "scenario": "REWARD",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "5742f7cb30ee9e24c6a7c2ed2398cf58ae29eb1eb40b7ac56520d723130501fa"
+      },
+      {
+        "productId": "care",
+        "scenario": "FOOD",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 13,
+        "active": true,
+        "resultHash": "acfe1d01d75ee950e5640d021493fc4be23d0045ea554977c47c80d3934f3984"
+      },
+      {
+        "productId": "care",
+        "scenario": "SLEEP",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 68,
+        "active": true,
+        "resultHash": "278e19e0450b5f90de736bc195783f7cd534de62693bc6259e3376f513554291"
+      },
+      {
+        "productId": "care",
+        "scenario": "ONLINE_AGE",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 130,
+        "active": true,
+        "resultHash": "e6afa350a4d52d219920ebaeac89ddc3273c39d82ac4fee0a5a62249c679a472"
+      },
+      {
+        "productId": "care",
+        "scenario": "PROBLEM",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 15,
+        "active": true,
+        "resultHash": "ca7e8f12df50d72bc16bfa34c5806341763d30ed2828d005ef16a4aa449e3b46"
+      },
+      {
+        "productId": "care",
+        "scenario": "DISABLE",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 14,
+        "active": false,
+        "resultHash": "f38924e69ad9e23c9020c0cd0678ba3f8c92b9f3fc0a5a99cde6f390a0ad9ffb"
+      },
+      {
+        "productId": "care",
+        "scenario": "REENABLE",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "4e7b0296ce9e56d5ec5f17623d72de824f4fff81943d8c5a4ba93a7cd980e048"
+      },
+      {
+        "productId": "care",
+        "scenario": "BILLING",
+        "exactEqual": true,
+        "money": 999800,
+        "worldTime": 1810,
+        "active": true,
+        "resultHash": "6100c61f24dbf05cff80c283248720b73def0e7b68e899e9c2ee34682ce6c432"
+      },
+      {
+        "productId": "care",
+        "scenario": "EXPIRY_FAILURE",
+        "exactEqual": true,
+        "money": 0,
+        "worldTime": 13,
+        "active": false,
+        "resultHash": "46bc6dbfeddb037df4ac6d705a48fd01312dbdbf6da4869f089d865a6b80439f"
+      },
+      {
+        "productId": "care",
+        "scenario": "SAVE_RELOAD",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 12,
+        "active": true,
+        "resultHash": "89174b6dabb0c47c48eda4e823bb59a92fe347083791723b8a4091a6f38407b8"
+      },
+      {
+        "productId": "care",
+        "scenario": "SAVE_OFFLINE",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 70,
+        "active": true,
+        "resultHash": "2b8313c183c134ae91810e9f24d573b0d10fa21c229f2159f75db67bfed83af2"
+      },
+      {
+        "productId": "care",
+        "scenario": "OFFLINE_BILLING",
+        "exactEqual": true,
+        "money": 999800,
+        "worldTime": 1870,
+        "active": true,
+        "resultHash": "95052a202309a9a246a8b000e50cbd26cdaf4da4bdca275b4aa5c0037f9db81a"
+      },
+      {
+        "productId": "care",
+        "scenario": "PRESTIGE",
+        "exactEqual": true,
+        "money": 120,
+        "worldTime": 0,
+        "active": false,
+        "resultHash": "1825a9f5a94580566110a79480c20f21dac684969fee5b803ee84dbb2a28356f"
+      },
+      {
+        "productId": "care",
+        "scenario": "BOSS",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "f1e6194e159d40228c8e08e2ac857b0b9e8ce1c5050fe33472f3b6ca8c160d74"
+      },
+      {
+        "productId": "care",
+        "scenario": "UI",
+        "exactEqual": true,
+        "money": 999900,
+        "worldTime": 10,
+        "active": true,
+        "resultHash": "f273dd90f3947c7a666f9b2583c06886661a4f7acd8d6f48ff4df42d94797bcd"
+      }
+    ]
+  },
+  "configVerification": {
+    "existingProductBalanceDeepEqual": true,
+    "entireFormalConfigDeepEqual": true,
+    "excelBalanceRowsDeepEqual": true,
+    "productCount": 7,
+    "productIds": [
+      "quick",
+      "wound",
+      "eyes",
+      "sleep",
+      "itch",
+      "agecare",
+      "care"
+    ],
+    "prices": [
+      80,
+      95,
+      85,
+      90,
+      75,
+      120,
+      100
+    ],
+    "actualEffectTypes": [
+      "FOOD_OPTION",
+      "PROBLEM_RESOLVER",
+      "OFFLINE_AGE_PROTECTION",
+      "TAGGED_WORK_REWARD"
+    ],
+    "supportedEffectTypes": [
+      "FOOD_OPTION",
+      "PROBLEM_RESOLVER",
+      "OFFLINE_AGE_PROTECTION",
+      "TAGGED_WORK_REWARD"
+    ],
+    "reservedUnimplementedEffectTypes": [
+      "SLEEP_MODIFIER"
+    ],
+    "testProductPollution": false,
+    "allProtectedBalanceDeepEqual": true,
+    "bossBaseWorkload": 50,
+    "stackingPreserved": true
+  },
+  "protectedSource": {
+    "src/game/career/bossEvents.ts": {
+      "sha256": "d90cf302bdd844824d762a59a0ecaf2e9ed9d180c33c799e66cecd9bef043149",
+      "unchanged": true
+    },
+    "src/game/career/promotion.ts": {
+      "sha256": "c7beb3160e95d2f1b355226c6e0b6b1ad187cecac3a6f29503542d29eb651dee",
+      "unchanged": true
+    },
+    "src/game/career/promotionAssignment.ts": {
+      "sha256": "2df7b878c62fc73483c655bb77b540998a47a9f22e2a479079d2a983656cb563",
+      "unchanged": true
+    },
+    "src/game/targets/meetingTarget.ts": {
+      "sha256": "7dc34d408c4ba76481fbc39ed6dc53ba0efe14b2bd08826ed726f543af96f941",
+      "unchanged": true
+    },
+    "src/game/targets/sleepWindow.ts": {
+      "sha256": "10a54fdb2663bd314d5fa9a7e307354556e6322c9be8134b9cdf6a9f64a2a155",
+      "unchanged": true
+    },
+    "src/game/products/billingManager.ts": {
+      "sha256": "2a0585a4391573283aa2ca8b362a166a97b2dcf1ca16047954f5d274e64ace32",
+      "unchanged": true
+    },
+    "src/config/prestigeConfig.ts": {
+      "sha256": "625ebaaceedde3675790fe154c4fde9cc079c7c47d3eba64f8469686bd2583cd",
+      "unchanged": true
+    },
+    "src/game/prestige/permanentUpgrades.ts": {
+      "sha256": "be6011b5b522cc777c151edce34ab5da3302b6a68821f1f619f497074843268f",
+      "unchanged": true
+    },
+    "src/game/prestige/prestigeManager.ts": {
+      "sha256": "95d2813e37c66f655221241490636573c42406d33ac7574c43069a41fd593807",
+      "unchanged": true
+    }
+  },
+  "regressionChecks": {
+    "A": {
+      "description": "Formal product count and IDs unchanged",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "B": {
+      "description": "Existing prices exact equal",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "C": {
+      "description": "Existing effects exact equal",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "D": {
+      "description": "Effect activation via central resolver",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "E": {
+      "description": "Disable stops effects immediately",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "F": {
+      "description": "Expiry/payment failure stops effects immediately",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "G": {
+      "description": "Current Work progress retained",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "H": {
+      "description": "Save/reload no duplicate charge/effect",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "I": {
+      "description": "Original offline billing",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "J": {
+      "description": "Renewal failure retained",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "K": {
+      "description": "Prestige clears Run Product State",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "L": {
+      "description": "Agecare exact equal",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "M": {
+      "description": "Stable Promotion qualification excludes products",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "N": {
+      "description": "Active Promotion uses formal effectiveWorkSpeed",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "O": {
+      "description": "Meeting fixed duration retained",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "P": {
+      "description": "Boss interaction exact equal",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "Q": {
+      "description": "TEST_PRODUCT_A Config-only lifecycle/UI succeeds",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "R": {
+      "description": "TEST_PRODUCT_B Config-only lifecycle/UI succeeds",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "S": {
+      "description": "No test products in formal Config",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    },
+    "T": {
+      "description": "Existing effects need no per-product Engine changes",
+      "passed": true,
+      "evidence": "tests/product-framework.test.ts; tests/browser/product-framework.spec.ts; product-framework-exact-results.json"
+    }
+  },
+  "tests": {
+    "core": {
+      "passed": 419,
+      "failed": 0,
+      "log": "core-tests.log"
+    },
+    "browser": {
+      "passed": 31,
+      "failed": 0,
+      "log": "browser-tests.log"
+    },
+    "productCore": {
+      "passed": 38,
+      "failed": 0
+    },
+    "productBrowser": {
+      "passed": 2,
+      "failed": 0
+    },
+    "build": {
+      "passed": true,
+      "log": "build.log"
+    }
+  },
+  "limits": {
+    "historicalFirstActivationTimestampNotPersisted": true,
+    "productContextFieldsUnusedMetadata": true,
+    "noCareer900": true,
+    "noAutoTune": true,
+    "noOfficialProductsAdded": true,
+    "noBalanceChanged": true,
+    "noCommit": true,
+    "noPush": true
+  }
+}

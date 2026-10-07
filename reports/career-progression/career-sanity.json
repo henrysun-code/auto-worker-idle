@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "scenarioCount": 30,
+  "runCount": 900,
+  "replicatesPerScenario": 30,
+  "durationMinutesEach": 360,
+  "totalActiveHours": 5400,
+  "sourceHash": "93ac5824640e08db73d08fdd2efb809c54d0b710f3bd7e2bc5a5ad9d010f07ac",
+  "sourceAndConfigUnchangedDuringRuns": true,
+  "fullStateRngVerification": [
+    [
+      {
+        "rank": 0,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "rank": 4,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "prestigeCycles": 1,
+        "fullStateAndRngEqual": true
+      }
+    ],
+    [
+      {
+        "rank": 0,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "rank": 4,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "prestigeCycles": 1,
+        "fullStateAndRngEqual": true
+      }
+    ],
+    [
+      {
+        "rank": 0,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "rank": 4,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "prestigeCycles": 1,
+        "fullStateAndRngEqual": true
+      }
+    ]
+  ],
+  "maxConservationError": 3.60514604835771e-07,
+  "maxRevenueError": 0,
+  "runtimeAssertions": [
+    "finite nonnegative money/workload/reward; integer nonnegative levels",
+    "generated - processed - prestigeDiscarded = outstanding",
+    "gross = work + parent income",
+    "one mandatory Boss maximum; Boss base workload/reward scale once",
+    "products disabled, offline days zero; actions use production actions"
+  ],
+  "regression": {
+    "core": 323,
+    "browser": 24,
+    "build": "PASS"
+  },
+  "rowCounts": {
+    "runs": 900,
+    "daily": 324000,
+    "purchases": 2138610,
+    "promotions": 38146,
+    "prestiges": 15279,
+    "milestones": 1294320,
+    "waits": 60041,
+    "recrawl": 293901,
+    "rankResidence": 4500,
+    "promotionBlocks": 900,
+    "boss": 362341,
+    "sleep": 314054,
+    "source": 4500,
+    "economy": 900,
+    "crossRank": 181770,
+    "cycles": 16179
+  },
+  "entertainmentMetricReplay": {
+    "logicalRuns": 900,
+    "additionalMatchedReplays": 1800,
+    "allPrimaryEconomyAndWorkloadEqual": true,
+    "reason": "Exact money and funded-overdue exposure also updates at every production boundary, including food spending. Includes Boss completion before sleep anchor when insufficient entertainment time remains; not only overtime crossing sleep anchor."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "existingBalanceDeepEqual": true,
+  "allowedNewConfig": [
+    "promotionAssignment",
+    "promotionQualification",
+    "promotionLowProfile"
+  ],
+  "bossBaseWorkload": 50,
+  "meetingUnchanged": true,
+  "runCostUnchanged": true,
+  "prestigeUnchanged": true,
+  "rankRewardUnchanged": true,
+  "ageUnchanged": true,
+  "productsUnchanged": true,
+  "isolationConfigRestored": true,
+  "excelExistingRowsDeepEqual": true,
+  "excelBeforeRows": 140,
+  "excelAfterRows": 144,
+  "addedExcelKeys": [
+    "promotionQualification.requirements",
+    "promotionAssignment.retryWorkdays",
+    "promotionAssignment.assignments",
+    "promotionLowProfile.multiplier"
+  ]
+}

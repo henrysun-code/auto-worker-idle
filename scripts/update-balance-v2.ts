@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import XLSX from 'xlsx';
+import assert from 'node:assert/strict';
+const file=fileURLToPath(new URL('../config/game_config.xlsx',import.meta.url));
+const backup=fileURLToPath(new URL('../config/archive/game_config-pre-balance-v2.xlsx',import.meta.url));
+assert.ok(!fs.existsSync(backup),'Preserve an existing balance backup');fs.copyFileSync(file,backup);
+const original=fileURLToPath(new URL('../config/archive/game_config-pre-balance-v2.json',import.meta.url));
+assert.ok(!fs.existsSync(original));fs.copyFileSync(fileURLToPath(new URL('../config/generated/game_config.json',import.meta.url)),original);
+const book=XLSX.readFile(file),rows=XLSX.utils.sheet_to_json<{key:string;value:unknown;description?:string}>(book.Sheets.Balance);
+const cost=rows.find(r=>r.key==='runUpgradeCurve.post200Growth');assert.equal(cost?.value,1.025);cost!.value=1.005;
+assert.ok(!rows.some(r=>r.key==='prestige.minimumPrestigeActiveMinutes'));
+rows.push({key:'prestige.minimumPrestigeActiveMinutes',value:30,description:'Minimum actual online active minutes per run; excludes offline and speed acceleration.'});
+const sheet=XLSX.utils.json_to_sheet(rows);sheet['!cols']=book.Sheets.Balance['!cols'];book.Sheets.Balance=sheet;XLSX.writeFile(book,file);

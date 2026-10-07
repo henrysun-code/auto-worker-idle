@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "unchangedExcelRows": 113,
+  "rankFieldsExceptResistanceUnchanged": true,
+  "scope": "All pre-existing Excel keys except explicitly authorized formula/sleep/boss/debug fields"
+}

@@ -1,0 +1,46 @@
+{
+  "onlyTwoBalanceChanges": true,
+  "changedPaths": [
+    "prestige.minimumPrestigeActiveMinutes",
+    "runUpgradeCurve.post200Growth"
+  ],
+  "pre200PricesExactlyEqual": true,
+  "costs": [
+    {
+      "level": 100,
+      "actual": 414,
+      "requested": 414,
+      "difference": 0
+    },
+    {
+      "level": 200,
+      "actual": 21650,
+      "requested": 21650,
+      "difference": 0
+    },
+    {
+      "level": 225,
+      "actual": 65970,
+      "requested": 65970,
+      "difference": 0
+    },
+    {
+      "level": 250,
+      "actual": 201023,
+      "requested": 201023,
+      "difference": 0
+    },
+    {
+      "level": 275,
+      "actual": 612553,
+      "requested": 612553,
+      "difference": 0
+    },
+    {
+      "level": 300,
+      "actual": 1866562,
+      "requested": 1866562,
+      "difference": 0
+    }
+  ]
+}

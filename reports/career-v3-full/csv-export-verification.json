@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "career-v3-summary.csv",
+      "rows": 30,
+      "columns": 37,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-runs.csv",
+      "rows": 900,
+      "columns": 153,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-rank-timings.csv",
+      "rows": 27742,
+      "columns": 24,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-promotion-events.csv",
+      "rows": 21592,
+      "columns": 36,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-promotion-bottlenecks.csv",
+      "rows": 101363,
+      "columns": 10,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-progression-thresholds.csv",
+      "rows": 369000,
+      "columns": 12,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-prestige-summary.csv",
+      "rows": 30,
+      "columns": 42,
+      "typedCellsExact": true
+    },
+    {
+      "file": "career-v3-time-budget.csv",
+      "rows": 900,
+      "columns": 34,
+      "typedCellsExact": true
+    }
+  ]
+}

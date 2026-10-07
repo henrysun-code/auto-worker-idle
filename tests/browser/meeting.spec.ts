@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test';
+import { gameConfig as c } from '../../src/config/gameConfig';
+import { initialState } from '../../src/game/state/initialState';
+import { createMeeting, startMeeting } from '../../src/game/targets/meetingTarget';
+import { createTodo } from '../../src/game/work/todoManager';
+import { startWork } from '../../src/game/targets/targetManager';
+test('Meeting central card shows fixed world duration, resumes Work and reloads without repeated pay',async({page})=>{
+ await page.clock.install({time:new Date('2026-10-06T00:00:00Z')});await page.clock.pauseAt(new Date('2026-10-06T00:00:01Z'));
+ const s=initialState(42);s.world.totalWorldTime=10;s.world.timeOfDay=10;s.world.nextEventAt=1e9;s.needs.phase='MORNING';s.needs.satietyUntil=1e9;s.needs.projectRollProcessedRoutineId=0;s.meetings.lastScheduledWorkday=0;
+ startWork(s,createTodo(s,{...c.work.templates[0],workload:10000}));const work=s.currentTarget!;if(work.type!=='WORK')throw Error();work.progress=37;
+ const meeting=createMeeting(s,'NORMAL',10);meeting.remainingDuration=2;startMeeting(s,meeting);
+ await page.addInitScript(({key,value})=>{if(!localStorage.getItem(key)){value.offline.lastSeenAt=Date.now();localStorage.setItem(key,JSON.stringify(value));}},{key:c.save.key,value:s});await page.goto('/');
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));const card=page.getByRole('region',{name:'中央目標'});
+ await expect(card).toHaveAttribute('data-kind','meeting');await expect(card).toContainText('固定時間流逝');await expect(card).toContainText('秒 / 世界秒');await expect(card).toContainText('+$5');
+ await page.screenshot({path:'tests/artifacts/meeting-v1.png'});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.clock.runFor(2050);await expect(card).toHaveAttribute('data-kind','normal');await page.clock.runFor(1100);
+ await page.reload();await expect(card).toHaveAttribute('data-kind','normal');const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);
+ expect(saved.meetings.statistics.meetingCount).toBe(1);expect(saved.meetings.statistics.meetingCompensation).toBe(5);expect(saved.currentTarget.todo.id).toBe(work.todo.id);
+ await page.getByRole('button',{name:'Debug',exact:true}).click();await expect(page.getByRole('button',{name:'Force Normal Meeting',exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'Force Boss Meeting',exact:true})).toBeVisible();expect(errors).toEqual([]);
+});

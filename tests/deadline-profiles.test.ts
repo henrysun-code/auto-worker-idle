@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { gameConfig as c } from '../src/config/gameConfig';
+import { initialState } from '../src/game/state/initialState';
+import { createTodo } from '../src/game/work/todoManager';
+import { getDeadlineStatus } from '../src/game/work/deadline';
+import { advance } from '../src/game/engine/SimulationLoop';
+test('workday config has no legacy hour ratio or random profile fields',()=>{const json=JSON.stringify(c.deadlines);for(const name of ['deadlineGameHours','dueSoonRatio','dueSoonLeadGameHours','deadlineMinGameHours','deadlineMaxGameHours'])assert.ok(!json.includes(name));});
+test('template explicit zero and null override configured profile workdays',()=>{const s=initialState(42,0);assert.equal(createTodo(s,{...c.work.templates[0],deadlineWorkdays:0}).deadlineWorkdays,0);const none=createTodo(s,{...c.work.templates[0],deadlineWorkdays:null});assert.equal(none.dueWorkdayIndex,null);assert.equal(getDeadlineStatus(none,1e8),'NO_DEADLINE');});
+test('initializing mid workday does not send fake work-start notification at midnight',()=>{const s=initialState(42,0);s.world.totalWorldTime=59;s.world.dayIndex=0;s.world.timeOfDay=59;s.world.nextEventAt=1e8;s.needs.phase='SLEEP';s.currentTarget={id:'sleep',type:'SLEEP',name:'sleep',requirement:20,progress:0,createdAt:59};const t=createTodo(s,{...c.work.templates[0],deadlineWorkdays:0});t.assignmentWorkdayIndex=0;t.dueWorkdayIndex=0;s.todoQueue=[t];advance(s,1);assert.ok(!s.eventLog.some(n=>n.text.includes('件工作到期')));advance(s,8);assert.equal(s.eventLog.filter(n=>n.text.includes('件工作到期')).length,1);});

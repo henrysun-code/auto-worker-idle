@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import XLSX from 'xlsx';
+import {gameConfig as c} from '../src/config/gameConfig';
+import {validateProductConfig,productEffectRegistry} from '../src/game/products/productEffectRegistry';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=path.join(root,'reports/product-framework-v1');
+const before=JSON.parse(fs.readFileSync(path.join(out,'product-framework-config-before.json'),'utf8')),after=JSON.parse(fs.readFileSync(path.join(root,'config/generated/game_config.json'),'utf8'));
+assert.deepEqual(after,before);assert.deepEqual(c,after);validateProductConfig(c.products,c.food.items);
+const rows=(file:string)=>XLSX.utils.sheet_to_json(XLSX.readFile(file).Sheets.Balance);
+assert.deepEqual(rows(path.join(out,'product-framework-config-before.xlsx')),rows(path.join(root,'config/game_config.xlsx')));
+assert.equal(c.products.definitions.length,7);assert.ok(c.products.definitions.every(p=>!p.id.startsWith('TEST_PRODUCT_')));
+const base=c.work.bossWorkHours*c.time.referenceDayDuration/c.time.hoursPerDay*c.economy.baseWorkSpeed;assert.equal(base,50);
+fs.writeFileSync(path.join(out,'product-framework-config-after.json'),JSON.stringify(after,null,2));
+const result={existingProductBalanceDeepEqual:true,entireFormalConfigDeepEqual:true,excelBalanceRowsDeepEqual:true,productCount:7,productIds:c.products.definitions.map(p=>p.id),prices:c.products.definitions.map(p=>p.price),actualEffectTypes:[...new Set(c.products.definitions.map(p=>p.effectType))],supportedEffectTypes:Object.entries(productEffectRegistry).filter(([,v])=>v.supported).map(([key])=>key),reservedUnimplementedEffectTypes:Object.entries(productEffectRegistry).filter(([,v])=>!v.supported).map(([key])=>key),testProductPollution:false,allProtectedBalanceDeepEqual:true,bossBaseWorkload:base,stackingPreserved:true};
+fs.writeFileSync(path.join(out,'product-framework-config-verification.json'),JSON.stringify(result,null,2));console.log(result);

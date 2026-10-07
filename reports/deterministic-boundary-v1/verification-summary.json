@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "rootCauseMatchesBlockingReport": true,
+  "epsilon": 1e-12,
+  "productionFiles": [
+    "src/game/numeric/semanticBoundary.ts",
+    "src/game/targets/sleepWindow.ts",
+    "src/game/work/workQuality.ts",
+    "src/game/engine/SimulationLoop.ts"
+  ],
+  "originalCheckpoint": {
+    "worldStart": 54,
+    "worldEnd": 90,
+    "followUpCountsExact": true,
+    "rngExact": true,
+    "currentTargetExact": true,
+    "sequenceExact": true
+  },
+  "policies": 5,
+  "batches": [
+    0.05,
+    0.25,
+    1,
+    5,
+    60
+  ],
+  "seed": 42,
+  "secondsPerComparison": 600,
+  "comparisons": 25,
+  "semanticEquality": true,
+  "rngExact": true,
+  "activeSecondsExact": true,
+  "ageBreakpoints": [
+    30,
+    40,
+    50,
+    60
+  ],
+  "newWorkloadSnapshotsExact": true,
+  "ageGameplayDivergenceObserved": false,
+  "nonSemanticFloatTails": {
+    "ageTolerance": 1e-12,
+    "historicalNoticeTimeTolerance": 2e-10,
+    "maxObservedAgeTail": 2.3447910280083306e-13,
+    "allOtherGameplayFieldsExact": true
+  },
+  "configDeepEqual": true,
+  "excelBytesUnchanged": true,
+  "core": {
+    "passed": 435,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 31,
+    "failed": 0
+  },
+  "build": {
+    "passed": true
+  },
+  "safeToResumeSpecifiedCareerPreflight": true,
+  "canonical900RunsStarted": false,
+  "noBalanceChange": true,
+  "noAutoTune": true,
+  "noCommit": true,
+  "noPush": true
+}

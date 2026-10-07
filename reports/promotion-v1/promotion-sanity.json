@@ -1,0 +1,27 @@
+{
+  "runs": 480,
+  "scenarios": 16,
+  "repeatsPerScenario": 30,
+  "qualificationNoRng": true,
+  "allPositiveControlsSucceeded": true,
+  "allLowProfileControlsUnscheduled": true,
+  "controlledOffWorkFixture": true,
+  "exactSpeedIncreasesUseTestOnlyTemporaryBuff": true,
+  "normalDinnerSeconds": 4,
+  "products": false,
+  "prestige": false,
+  "offline": false,
+  "randomMeetingExcluded": true,
+  "randomEventsExcluded": true,
+  "coreTests": {
+    "passed": 381,
+    "failed": 0,
+    "promotionTests": 33
+  },
+  "browserTests": {
+    "passed": 29,
+    "failed": 0,
+    "promotionTests": 3
+  },
+  "buildPassed": true
+}

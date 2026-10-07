@@ -1,0 +1,147 @@
+{
+  "status": "BLOCKED_BEFORE_CANONICAL_RUNS",
+  "logicalRunsPlanned": 900,
+  "logicalRunsCompleted": 0,
+  "seeds": [
+    42,
+    7961,
+    15880,
+    23799,
+    31718,
+    39637,
+    47556,
+    55475,
+    63394,
+    71313,
+    79232,
+    87151,
+    95070,
+    102989,
+    110908,
+    118827,
+    126746,
+    134665,
+    142584,
+    150503,
+    158422,
+    166341,
+    174260,
+    182179,
+    190098,
+    198017,
+    205936,
+    213855,
+    221774,
+    229693
+  ],
+  "seedSet": "REUSED_PREVIOUS_CAREER",
+  "productsOff": true,
+  "productSpending": 0,
+  "offlineOff": true,
+  "lowProfileOff": true,
+  "manualPromotionActions": 0,
+  "batchConsistencyPassed": false,
+  "independentReproduction": {
+    "checkpointTime": 54,
+    "end": 90,
+    "identicalInitialState": true,
+    "policyActionsDuringReplay": 0,
+    "firstSmallDelta": 0.14144230779999845,
+    "smallBatch": 0.25,
+    "largeBatch": 60,
+    "stateExactEqual": false,
+    "rngEqual": false,
+    "small": {
+      "rng": 789733336,
+      "activeSeconds": 90,
+      "sequence": 153,
+      "currentTarget": "再改格式 · 回 Email",
+      "todoNames": [
+        "回 Email"
+      ],
+      "lunch": 120,
+      "sleep": {
+        "windowStart": 110,
+        "windowEnd": 128,
+        "duration": 0,
+        "output": 0,
+        "settled": false,
+        "lastRatio": 0.9999999999999992,
+        "speedModifier": -2.220446049250313e-16,
+        "qualityModifier": -2.220446049250313e-16
+      },
+      "quality": 11.999999999999996,
+      "extraTasks": {
+        "todo-3": 3,
+        "todo-5": 1,
+        "todo-28": 4,
+        "todo-6": 5,
+        "todo-26": 1,
+        "todo-75": 1,
+        "todo-27": 6,
+        "todo-74": 5
+      }
+    },
+    "large": {
+      "rng": 1269650146,
+      "activeSeconds": 90,
+      "sequence": 149,
+      "currentTarget": "整理資料",
+      "todoNames": [
+        "回 Email",
+        "整理資料",
+        "回 Email"
+      ],
+      "lunch": 120,
+      "sleep": {
+        "windowStart": 110,
+        "windowEnd": 128,
+        "duration": 0,
+        "output": 0,
+        "settled": false,
+        "lastRatio": 1,
+        "speedModifier": 0,
+        "qualityModifier": 0
+      },
+      "quality": 12,
+      "extraTasks": {
+        "todo-3": 3,
+        "todo-5": 1,
+        "todo-28": 4,
+        "todo-6": 5,
+        "todo-26": 1,
+        "todo-75": 1,
+        "todo-27": 5,
+        "todo-74": 4
+      }
+    }
+  },
+  "verification": {
+    "entireFormalConfigDeepEqual": true,
+    "productionSourceAndExcelUnchanged": true,
+    "sourceHash": "56d11e8c304d44ed117fccd9b766e129a0caaa263dfbadbacae222efb762d688",
+    "bossBaseWorkload": 50,
+    "productsUnchanged": true,
+    "allProtectedBalanceUnchanged": true,
+    "noBalanceRowsAdded": true
+  },
+  "regressions": {
+    "core-tests.log": {
+      "passed": 419,
+      "failed": 0
+    },
+    "browser-tests.log": {
+      "passed": 31
+    },
+    "build.log": {
+      "passed": true
+    }
+  },
+  "revenueReconciliation": "NOT_RUN",
+  "workloadConservation": "NOT_RUN",
+  "careerMetrics": "NOT_RUN",
+  "noGameplayModification": true,
+  "noAutoTune": true,
+  "noCommit": true,
+  "noPush": true
+}

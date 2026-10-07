@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "logicalCareerRuns": 900,
+  "careerScenarios": 30,
+  "replicates": 30,
+  "minutesEach": 360,
+  "isolationRuns": 300,
+  "isolationScenarios": 10,
+  "isolationMinutesEach": 120,
+  "minimumFirstEligibility": 30,
+  "pre200SeededMilestonesExactlyUnchanged": true,
+  "configVerification": {
+    "onlyTwoBalanceChanges": true,
+    "changedPaths": [
+      "prestige.minimumPrestigeActiveMinutes",
+      "runUpgradeCurve.post200Growth"
+    ],
+    "pre200PricesExactlyEqual": true,
+    "costs": [
+      {
+        "level": 100,
+        "actual": 414,
+        "requested": 414,
+        "difference": 0
+      },
+      {
+        "level": 200,
+        "actual": 21650,
+        "requested": 21650,
+        "difference": 0
+      },
+      {
+        "level": 225,
+        "actual": 65970,
+        "requested": 65970,
+        "difference": 0
+      },
+      {
+        "level": 250,
+        "actual": 201023,
+        "requested": 201023,
+        "difference": 0
+      },
+      {
+        "level": 275,
+        "actual": 612553,
+        "requested": 612553,
+        "difference": 0
+      },
+      {
+        "level": 300,
+        "actual": 1866562,
+        "requested": 1866562,
+        "difference": 0
+      }
+    ]
+  },
+  "sourceHash": "7aad8f076c84d9538d75688f446a109804e7acfc507cd25093b10cd8728d9c9b",
+  "sourceHashesStableAcrossWorkers": true,
+  "fullStateAndRngVerification": [
+    [
+      {
+        "rank": 0,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "rank": 4,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "prestigeCycles": 1,
+        "fullStateAndRngEqual": true
+      }
+    ],
+    [
+      {
+        "rank": 0,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "rank": 4,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "prestigeCycles": 1,
+        "fullStateAndRngEqual": true
+      }
+    ],
+    [
+      {
+        "rank": 0,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "rank": 4,
+        "fullStateAndRngEqual": true
+      },
+      {
+        "prestigeCycles": 1,
+        "fullStateAndRngEqual": true
+      }
+    ]
+  ],
+  "maximumConservationError": 3.8906000554561615e-07,
+  "maximumRevenueError": 0,
+  "regression": {
+    "core": 328,
+    "browser": 25,
+    "build": "PASS"
+  },
+  "rowCounts": {
+    "daily": 324000,
+    "economy": 900,
+    "source": 4500,
+    "sleep": 318600,
+    "boss": 368240,
+    "promotions": 21574,
+    "prestiges": 5250,
+    "promotionBlocks": 900,
+    "rankResidence": 4500
+  }
+}

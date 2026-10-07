@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "runs": 540,
+  "verificationReplays": 540,
+  "replayMetricsExactlyEqual": true,
+  "pairedSeeds": 270,
+  "scenariosOnOff": 18,
+  "seedsEach": 30,
+  "activeMinutesEach": 120,
+  "normalRollsEachRun": 120,
+  "offMeetingsAndCompensationZero": true,
+  "rankAndLevelsFixed": true,
+  "productsPrestigeOfflineOff": true,
+  "noAutoTune": true,
+  "sourceHash": "d436a108789d3aefe36f069a001c2a25500e22387d19f4f893a0b1cbcd2c07ca",
+  "existingConfigUnchanged": {
+    "passed": true,
+    "onlyAddedConfig": "meeting",
+    "existingConfigDeepEqual": true,
+    "bossBaseWorkload": 50,
+    "meeting": {
+      "referenceMeetingDurationSeconds": 3,
+      "normalChanceByRank": [
+        0.02,
+        0.04,
+        0.07,
+        0.12,
+        0.18
+      ],
+      "compensationByRank": [
+        5,
+        10,
+        20,
+        40,
+        80
+      ],
+      "bossMeetingChanceOnEscapeFail": 0.25
+    }
+  },
+  "maximumWorkloadConservationError": 2.3625307221664116e-07,
+  "maximumRevenueError": 0,
+  "meetingOffVersusZeroChanceFullExistingStateAndRng": {
+    "passed": true,
+    "fixtures": 9,
+    "ranks": [
+      0,
+      2,
+      4
+    ],
+    "flattery": [
+      0,
+      100,
+      200
+    ],
+    "minutesEach": 120,
+    "excludedOnly": "Meeting State / statistics",
+    "sharedBoundaryCorrection": "Late Lunch transition resolves next target at same timestamp"
+  },
+  "regression": {
+    "core": 348,
+    "browser": 26,
+    "build": "PASS"
+  },
+  "matchedDeltaConfidence": "30 per-seed deltas, mean +/- t(29, .975)*SE; no multiple-comparison correction"
+}

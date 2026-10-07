@@ -1,0 +1,102 @@
+{
+  "status": "COMPLETE_CANONICAL_900_RUNS",
+  "priorState": "UNBLOCKED_FOR_CANONICAL_RUNS",
+  "runs": 900,
+  "uniqueRuns": 900,
+  "activeMinutesEach": 360,
+  "seeds": [
+    42,
+    7961,
+    15880,
+    23799,
+    31718,
+    39637,
+    47556,
+    55475,
+    63394,
+    71313,
+    79232,
+    87151,
+    95070,
+    102989,
+    110908,
+    118827,
+    126746,
+    134665,
+    142584,
+    150503,
+    158422,
+    166341,
+    174260,
+    182179,
+    190098,
+    198017,
+    205936,
+    213855,
+    221774,
+    229693
+  ],
+  "productSpend": 0,
+  "taggedIncome": 0,
+  "maxRevenueError": 1.8144135083275614e-9,
+  "maxWorkloadError": 0.000008946796697273385,
+  "pairedPrevious": 900,
+  "invalidRuns": 0,
+  "formalSourceChanged": false,
+  "preflight": {
+    "passed": true,
+    "policies": 5,
+    "comparisons": 25,
+    "rngExact": true,
+    "activeSecondsExact": true,
+    "discreteGameplayExact": true
+  },
+  "observerExactStateAndRng": true,
+  "config": {
+    "entireFormalConfigDeepEqual": true,
+    "productionSourceExcelAndGeneratedConfigHashUnchanged": true,
+    "beforeHash": "3e1208399c2643d174aff363b0f6e8202e0da1b02205b59f52a2794f76291214",
+    "afterHash": "3e1208399c2643d174aff363b0f6e8202e0da1b02205b59f52a2794f76291214"
+  },
+  "core": {
+    "passed": 435,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 31,
+    "failed": 0
+  },
+  "build": {
+    "passed": true
+  },
+  "noAutoTune": true,
+  "noBalanceChange": true,
+  "noCommit": true,
+  "noPush": true,
+  "partitions": [
+    {
+      "status": "PASS",
+      "part": 0,
+      "parts": 3,
+      "count": 300,
+      "sourceHash": "3e1208399c2643d174aff363b0f6e8202e0da1b02205b59f52a2794f76291214",
+      "seconds": 1538.3896344999998
+    },
+    {
+      "status": "PASS",
+      "part": 1,
+      "parts": 3,
+      "count": 300,
+      "sourceHash": "3e1208399c2643d174aff363b0f6e8202e0da1b02205b59f52a2794f76291214",
+      "seconds": 1538.6291903
+    },
+    {
+      "status": "PASS",
+      "part": 2,
+      "parts": 3,
+      "count": 300,
+      "sourceHash": "3e1208399c2643d174aff363b0f6e8202e0da1b02205b59f52a2794f76291214",
+      "seconds": 1540.3395314
+    }
+  ]
+}

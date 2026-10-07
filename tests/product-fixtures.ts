@@ -1,0 +1,3 @@
+import type {ProductDefinition} from '../src/game/products/productSchema';
+export const TEST_PRODUCT_A:ProductDefinition={id:'TEST_PRODUCT_A',name:'Test Tagged Reward',icon:'A',price:17,billingPeriodDays:1,effectType:'TAGGED_WORK_REWARD',tags:['簡報'],description:'Test-only Config reward fixture',offlineAgeProgressMultiplier:1,rewardTagBonus:.25,ageEfficiencyCompensationRate:0};
+export const TEST_PRODUCT_B:ProductDefinition={id:'TEST_PRODUCT_B',name:'Test Age Protection',icon:'B',price:23,billingPeriodDays:2,effectType:'OFFLINE_AGE_PROTECTION',tags:['age'],description:'Test-only Config age/speed fixture',offlineAgeProgressMultiplier:.75,rewardTagBonus:0,ageEfficiencyCompensationRate:.25};

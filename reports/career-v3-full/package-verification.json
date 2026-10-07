@@ -1,0 +1,440 @@
+{
+  "passed": true,
+  "csvChecks": [
+    {
+      "file": "career-v3-summary.csv",
+      "rows": 30,
+      "columns": 37,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-runs.csv",
+      "rows": 900,
+      "columns": 153,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-rank-timings.csv",
+      "rows": 27742,
+      "columns": 24,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-promotion-events.csv",
+      "rows": 21592,
+      "columns": 36,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-promotion-bottlenecks.csv",
+      "rows": 101363,
+      "columns": 10,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-progression-thresholds.csv",
+      "rows": 369000,
+      "columns": 12,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-prestige-summary.csv",
+      "rows": 30,
+      "columns": 42,
+      "savedCsvShapePass": true
+    },
+    {
+      "file": "career-v3-time-budget.csv",
+      "rows": 900,
+      "columns": 34,
+      "savedCsvShapePass": true
+    }
+  ],
+  "files": [
+    {
+      "file": "analysis.json",
+      "bytes": 9296712,
+      "sha256": "6c707db20b5af2a983b088e390fb96decf859299db294c4580e23f963b965b5e"
+    },
+    {
+      "file": "batch-preflight-after.json",
+      "bytes": 12878,
+      "sha256": "a4230f10c24bca2219ade50217acd2247f2954a70c78b78aea99f49d8d4adec8"
+    },
+    {
+      "file": "canonical-analysis-sanity.json",
+      "bytes": 678,
+      "sha256": "0bbf30a56b6ebc6311417772f7167a1fec560192c664106732853324dfac6fe5"
+    },
+    {
+      "file": "canonical-analysis.log",
+      "bytes": 1000,
+      "sha256": "0a21d3438186ca3e336b8e4d967bc040c1cea4a176ebff34c538236a7873025c"
+    },
+    {
+      "file": "canonical-browser-tests.log",
+      "bytes": 4965,
+      "sha256": "4eae313e4433bb70f4a9c05e612a2e21be0f37959699a92db977a7cd7159ad19"
+    },
+    {
+      "file": "canonical-build.log",
+      "bytes": 563,
+      "sha256": "7d134e6916c2e3695daa9ed5c3789fa0ff77a5cb7ccf570398bacbd5a4d286c1"
+    },
+    {
+      "file": "canonical-core-tests.log",
+      "bytes": 33347,
+      "sha256": "a8fb5c21c644fdb18ec55d4db5fb15f350d19340d0d28da64e56361a9d35d933"
+    },
+    {
+      "file": "canonical-part-0/bottlenecks.jsonl",
+      "bytes": 6872993,
+      "sha256": "134f38f269d433d39165ede42729311825dd432da4944e8f8f4349afc8251c89"
+    },
+    {
+      "file": "canonical-part-0/cycles.jsonl",
+      "bytes": 1192576,
+      "sha256": "ecdfc2f739b3a8cad53ffc278116d6b279a5e1330b35c6bf7c17a3fad21912d7"
+    },
+    {
+      "file": "canonical-part-0/daily.jsonl",
+      "bytes": 44480238,
+      "sha256": "47c6796c21d077e177db4b85f87db1a094ede382e7fdcfa8e1df05583ab55d73"
+    },
+    {
+      "file": "canonical-part-0/dinner.jsonl",
+      "bytes": 97263059,
+      "sha256": "1f263a503a1e9d5b3a1a93dc251dcb9b9b7e06fb31ad67cc49872739667f1188"
+    },
+    {
+      "file": "canonical-part-0/lunch.jsonl",
+      "bytes": 23734940,
+      "sha256": "776ace7c7d1e0024a473cb164a226e6966ad1701357542ff258f36da942b66d6"
+    },
+    {
+      "file": "canonical-part-0/manifest.json",
+      "bytes": 157,
+      "sha256": "575d103d1a356c29a348fa00086b425c00fe9dd9819c4056fdb79cfcaaddd14e"
+    },
+    {
+      "file": "canonical-part-0/prestiges.jsonl",
+      "bytes": 1786643,
+      "sha256": "35c51ee2c708cab13233645cdf1fe8c42594093f8fe4160f01c55f7e158e649d"
+    },
+    {
+      "file": "canonical-part-0/promotions.jsonl",
+      "bytes": 6107698,
+      "sha256": "1a0df968482200d1b6e9aa95a0160ee119156497056ff4d50f1daff9973aa86b"
+    },
+    {
+      "file": "canonical-part-0/ranks.jsonl",
+      "bytes": 4265248,
+      "sha256": "50fee8e88a9c4a8514699552690f01ecc896b3351d5d0288fff64e437fd2896f"
+    },
+    {
+      "file": "canonical-part-0/runs.jsonl",
+      "bytes": 1164194,
+      "sha256": "5ea85af026fcd25900f78e3166f5cf35a6b0b011f5edee1e28e8454ce59cf774"
+    },
+    {
+      "file": "canonical-part-0/sleep.jsonl",
+      "bytes": 26318534,
+      "sha256": "4884fa5198da0153f10dd0782cf3bdc208280d0e29e1b6f453aab4f431c4ad9f"
+    },
+    {
+      "file": "canonical-part-0/thresholds.jsonl",
+      "bytes": 30237627,
+      "sha256": "05ec544c0f937e9b7dafa708a8eee770b9607849d5992af4fecbb521165e1171"
+    },
+    {
+      "file": "canonical-part-0.log",
+      "bytes": 6246,
+      "sha256": "d98a415c77c07c3e987abfc3cbdddcdae0d5b0ae12df618ae52afd94027a67ef"
+    },
+    {
+      "file": "canonical-part-1/bottlenecks.jsonl",
+      "bytes": 6883513,
+      "sha256": "90eddf6296bc4956787b0480e9970f762c58c6ce2150c4763f13c11030623d78"
+    },
+    {
+      "file": "canonical-part-1/cycles.jsonl",
+      "bytes": 1193120,
+      "sha256": "bc0c2bdcba4bf54cd46d8bd0a7cdd6f91ea9d70d05492f0581bc69939bbb960d"
+    },
+    {
+      "file": "canonical-part-1/daily.jsonl",
+      "bytes": 44518387,
+      "sha256": "9017001557a73a4055fd1d495e08a62c6ce0992b0aca344a58577da70443920e"
+    },
+    {
+      "file": "canonical-part-1/dinner.jsonl",
+      "bytes": 97316700,
+      "sha256": "3352adb4b7ac7ac7c06a5cb15d25943aedd8e8475c068531fecfd02ae4485efc"
+    },
+    {
+      "file": "canonical-part-1/lunch.jsonl",
+      "bytes": 23778603,
+      "sha256": "170b4506ff134483b54e6907e9ef1f99bd282f790bf50ed665ce68fa81d05d5c"
+    },
+    {
+      "file": "canonical-part-1/manifest.json",
+      "bytes": 151,
+      "sha256": "326d9cba92cfebd3f0ed22852fa55ce45bb4407dd14599816b7ebb0e8fa6a5b3"
+    },
+    {
+      "file": "canonical-part-1/prestiges.jsonl",
+      "bytes": 1787593,
+      "sha256": "830aff5d1829f171c440a06e6416d8751e5b7b4b7c825db4716983f8985fd253"
+    },
+    {
+      "file": "canonical-part-1/promotions.jsonl",
+      "bytes": 6115231,
+      "sha256": "500b100a2c46874d0bac02a6a2a842d13c16aca34a13e136b42c0a6a9dd32743"
+    },
+    {
+      "file": "canonical-part-1/ranks.jsonl",
+      "bytes": 4267663,
+      "sha256": "ef7dcaa75d74ffa9b4c3976a4982c6bc1a6e663d35d71b97e0ded99d75eda9e7"
+    },
+    {
+      "file": "canonical-part-1/runs.jsonl",
+      "bytes": 1164093,
+      "sha256": "153e7e7c5dbc5fb4e1f5ec4ff68965b237446986268837ff9c1b6dc74fd9788c"
+    },
+    {
+      "file": "canonical-part-1/sleep.jsonl",
+      "bytes": 26335813,
+      "sha256": "99359085bdf93bc3631e504971443c22b33155674cbf0b7450f8a009032dcebf"
+    },
+    {
+      "file": "canonical-part-1/thresholds.jsonl",
+      "bytes": 30279053,
+      "sha256": "e5283500d38f355cd06c1ffa7eb8b60ea1aed79719687a5b397ef36567b9d598"
+    },
+    {
+      "file": "canonical-part-1.log",
+      "bytes": 6276,
+      "sha256": "e23846a22fd8d13366409b8a57c7f1af78fc8b002a553fc71a52c3e31c709bf2"
+    },
+    {
+      "file": "canonical-part-2/bottlenecks.jsonl",
+      "bytes": 6886636,
+      "sha256": "574c7629e3360f743c577ab4b6b8d8d365873a07add1c8c01362e6648b1f3d87"
+    },
+    {
+      "file": "canonical-part-2/cycles.jsonl",
+      "bytes": 1192899,
+      "sha256": "5d45f56c275fbf7b2c6694208cdfcf3f4e31be40797f1114117144fc1d9a0f19"
+    },
+    {
+      "file": "canonical-part-2/daily.jsonl",
+      "bytes": 44521519,
+      "sha256": "992fb4788f432cf2751a3929b4fe03c4ca12f973e0f6b89d5dc599604255cfcc"
+    },
+    {
+      "file": "canonical-part-2/dinner.jsonl",
+      "bytes": 97305826,
+      "sha256": "98e66f4846450432d4a1c9b18a2d8cb48701ff9339e217ea7a01545f3cdbc06b"
+    },
+    {
+      "file": "canonical-part-2/lunch.jsonl",
+      "bytes": 23781256,
+      "sha256": "d3cf8e74a60e74378b50009e8ee59174dea360b1b66b80feb29d3d01e9ca5257"
+    },
+    {
+      "file": "canonical-part-2/manifest.json",
+      "bytes": 151,
+      "sha256": "5329d88fdb2a46360ee0ba2ccd921140475677304a814641f5574734c27898c1"
+    },
+    {
+      "file": "canonical-part-2/prestiges.jsonl",
+      "bytes": 1786624,
+      "sha256": "2de056b5b3b82e3a8535214370c169fffff696b2aad7803a16001320e355e496"
+    },
+    {
+      "file": "canonical-part-2/promotions.jsonl",
+      "bytes": 6112849,
+      "sha256": "862c21e5a9d1bb90ad6b26618d66f3484cd9ffa17a9cd5a362221b2adf0303ef"
+    },
+    {
+      "file": "canonical-part-2/ranks.jsonl",
+      "bytes": 4270330,
+      "sha256": "8df7551a03f40176a3408fa4ff8097917451b15aa23958e854226f4891a8bd66"
+    },
+    {
+      "file": "canonical-part-2/runs.jsonl",
+      "bytes": 1163934,
+      "sha256": "3a2db676367aaf43def52f78aaf8b0d8de8bef17fde60e4376f900853a81f466"
+    },
+    {
+      "file": "canonical-part-2/sleep.jsonl",
+      "bytes": 26355189,
+      "sha256": "a6dd74aaa2867fd615407d2f1c036a59853bb3110c6bf1ec283b1a6b396e7f77"
+    },
+    {
+      "file": "canonical-part-2/thresholds.jsonl",
+      "bytes": 30289390,
+      "sha256": "e1fe7239d1a86941264ab5edb32b06c22e3f854a97296b08f50ef7b757de511e"
+    },
+    {
+      "file": "canonical-part-2.log",
+      "bytes": 6276,
+      "sha256": "c3b806d7548fed30be0a8c3c09471789cf5289f86455424679a566ee676ac4a6"
+    },
+    {
+      "file": "canonical-preflight.log",
+      "bytes": 7450,
+      "sha256": "c855fd8a52058b66ec5a58b5eb0e34971d65e438301c0b7caeac9c6b39169a93"
+    },
+    {
+      "file": "canonical-status.json",
+      "bytes": 448,
+      "sha256": "abd7d2afa3f32494947d3dab6c484f2c9b6949c322304c2836fa7873f758777c"
+    },
+    {
+      "file": "career-v3-config-after.json",
+      "bytes": 39524,
+      "sha256": "655ed8a5abf3a2ce344cd85e85297fa8d6a6bfae651146182722a71dc425f48f"
+    },
+    {
+      "file": "career-v3-config-before.json",
+      "bytes": 39524,
+      "sha256": "655ed8a5abf3a2ce344cd85e85297fa8d6a6bfae651146182722a71dc425f48f"
+    },
+    {
+      "file": "career-v3-config-verification.json",
+      "bytes": 272,
+      "sha256": "fa643c44a184a59504c20d64264cc5653a49a269f4aa5982bb04f6380c5400e0"
+    },
+    {
+      "file": "career-v3-prestige-summary.csv",
+      "bytes": 11576,
+      "sha256": "b05d92acb8ec304f8783de990e6c0cd2780013a2b6e23b51e68263ab2baf9ff8"
+    },
+    {
+      "file": "career-v3-progression-thresholds.csv",
+      "bytes": 36066156,
+      "sha256": "dbd50e5077c16d83345d729f1144a78eae077b9f076a06b307832c2605f9b043"
+    },
+    {
+      "file": "career-v3-promotion-bottlenecks.csv",
+      "bytes": 8682403,
+      "sha256": "2cc2bf41401493aa0a3ed48afa79f7f31c0a0bec2d55f8fb44dede110aab7a34"
+    },
+    {
+      "file": "career-v3-promotion-events.csv",
+      "bytes": 6467404,
+      "sha256": "08916517b4805675baeace953772306addfa4945992a33b5e9bceea61d83a1b1"
+    },
+    {
+      "file": "career-v3-rank-timings.csv",
+      "bytes": 5855860,
+      "sha256": "2203fe4319cc4da960a8c2bf695b949cce53cfed5157e2ec02035e334d145a18"
+    },
+    {
+      "file": "career-v3-runs.csv",
+      "bytes": 1129833,
+      "sha256": "2684b6a3ce6068e542f295024c211fc926edfdad80bfb84bfd325b5199585ab4"
+    },
+    {
+      "file": "career-v3-sanity.json",
+      "bytes": 2119,
+      "sha256": "6e38104faff8d3f0ec47262bd882680eb1eb9b2e991aaf93a9545e421e2a69e0"
+    },
+    {
+      "file": "career-v3-summary.csv",
+      "bytes": 10180,
+      "sha256": "5fe00f1ec3d65b9a5536ba35a4cdfae3065e25f65bf15e1f818cc8c6523abe3c"
+    },
+    {
+      "file": "career-v3-time-budget.csv",
+      "bytes": 349278,
+      "sha256": "5f761cabd7bdeb03d78b19aef695328c46d479a45b34cd743507b984ae61639b"
+    },
+    {
+      "file": "CAREER_V3_FULL_REPORT.md",
+      "bytes": 49663,
+      "sha256": "0a021c2b6c1c46d0806c1e1ee45aff0e0796f2045b88181db3eb5030fc707a1b"
+    },
+    {
+      "file": "CAREER_V3_VS_PREVIOUS.md",
+      "bytes": 1256,
+      "sha256": "fc423e0ef0635acaab007dbc4b2201144535a3b5249e0cdcc0421a090d9ff653"
+    },
+    {
+      "file": "config-before.json",
+      "bytes": 39525,
+      "sha256": "3c733919fe17fff38782697683d917c67348a88e6d4b434472dd2243aec3c5bc"
+    },
+    {
+      "file": "csv-export-verification.json",
+      "bytes": 1075,
+      "sha256": "6b4855cc872dc51e680f3c3147e44ac9b2434c31039ce2553dfe441536513c86"
+    },
+    {
+      "file": "csv-export.log",
+      "bytes": 710,
+      "sha256": "8e17e5627cd3c0d862101be760165fb880439d5da6fc1e745d396effe234a74c"
+    },
+    {
+      "file": "final-answer-data.json",
+      "bytes": 53786,
+      "sha256": "f2e64661b62bbafd39870f4d18cfae491045ec7523e59ff109182671d80a3449"
+    },
+    {
+      "file": "final-answer-data.log",
+      "bytes": 11781,
+      "sha256": "e2216658331d636e7bc3ef4f477cd229fbd7ddc3b7cc45bb5d123807a6f7a8a2"
+    },
+    {
+      "file": "finalization.log",
+      "bytes": 1589,
+      "sha256": "4b3e6f4fa4cbf7e1562c584e8a4fb10976512df4e8b1c2e8e7cf31fadd7091d0"
+    },
+    {
+      "file": "FIRST_COMPANY_PACING.md",
+      "bytes": 13617,
+      "sha256": "74c323f0af0126b20d698c1d80ffb8223867185bb28496fd141d68519cb8b07e"
+    },
+    {
+      "file": "observer-verification.json",
+      "bytes": 5782,
+      "sha256": "ba5b66a623f331b8847fd4fbf11da0db7098a70a8ad164fdc39f8ef58228ce73"
+    },
+    {
+      "file": "previous-paired.json",
+      "bytes": 632221,
+      "sha256": "62de5ec8dd96eff1da47d929797936cef5e9940d57bf5dbbeaca62dfe220dd27"
+    },
+    {
+      "file": "prior-gate-verification.json",
+      "bytes": 1384,
+      "sha256": "97df4aa28a996eacbf02720948bd42d07b39fc3709a45ef2ace2b5243f06ab6e"
+    },
+    {
+      "file": "recrawl-summary.json",
+      "bytes": 39121,
+      "sha256": "032e5112979158c785593bac907b09b62276a31697bbd6b192dcaa1f80534d82"
+    },
+    {
+      "file": "REPORT_INDEX.md",
+      "bytes": 1462,
+      "sha256": "75edd25132c72836d01d518ef39812cf75f640f4a1b2127aad83e093b5f62e47"
+    },
+    {
+      "file": "runner-typecheck.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "snapshot-level-lookup.json",
+      "bytes": 398889,
+      "sha256": "f3e47ba3b1c0a5e482c0633bffe1da6d0d1e591cff06760f56642c0a353775ec"
+    },
+    {
+      "file": "stability.json",
+      "bytes": 1117,
+      "sha256": "c4d8523998e6ed170324f4428d65db50c2b3690d5e716b84327c8080b7eaed02"
+    }
+  ]
+}

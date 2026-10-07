@@ -1,0 +1,43 @@
+{
+  "existingProductBalanceDeepEqual": true,
+  "entireFormalConfigDeepEqual": true,
+  "excelBalanceRowsDeepEqual": true,
+  "productCount": 7,
+  "productIds": [
+    "quick",
+    "wound",
+    "eyes",
+    "sleep",
+    "itch",
+    "agecare",
+    "care"
+  ],
+  "prices": [
+    80,
+    95,
+    85,
+    90,
+    75,
+    120,
+    100
+  ],
+  "actualEffectTypes": [
+    "FOOD_OPTION",
+    "PROBLEM_RESOLVER",
+    "OFFLINE_AGE_PROTECTION",
+    "TAGGED_WORK_REWARD"
+  ],
+  "supportedEffectTypes": [
+    "FOOD_OPTION",
+    "PROBLEM_RESOLVER",
+    "OFFLINE_AGE_PROTECTION",
+    "TAGGED_WORK_REWARD"
+  ],
+  "reservedUnimplementedEffectTypes": [
+    "SLEEP_MODIFIER"
+  ],
+  "testProductPollution": false,
+  "allProtectedBalanceDeepEqual": true,
+  "bossBaseWorkload": 50,
+  "stackingPreserved": true
+}
