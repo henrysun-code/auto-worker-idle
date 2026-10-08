@@ -1,3 +1,4 @@
+import './legacyBalanceFixture';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { gameConfig as c } from '../src/config/gameConfig';
@@ -46,7 +47,7 @@ test('25 product expiry during active work preserves progress and changes next i
 test('26 offline crossing40 preserves old work and snapshots released new work at40',()=>{const old=c.age.daysPerYear;try{c.age.daysPerYear=1;const s=state(39.999),root=todo(s);root.workload=1e8;startWork(s,root);const [pending]=createFollowUp(s,root,'CLIENT_REPLY',1,.12);const before=root.workload;settleOfflineMinutes(s,30);assert.ok(s.player.age>40);assert.equal(root.workload,before);assert.equal(root.ageWorkloadMultiplierAtCreation,1.1);assert.equal(pending.ageWorkloadMultiplierAtCreation,1.25);}finally{c.age.daysPerYear=old;}});
 test('27 money and overdue within limit permit promotion',()=>{const s=state();s.player.money=10000;overdue(s,3);assert.ok(canPromote(s));assert.ok(applyAction(s,{type:'promote'}));});
 test('28 overdue above limit rejects action without spending',()=>{const s=state();s.player.money=10000;overdue(s,4);assert.equal(canPromote(s),false);assert.equal(applyAction(s,{type:'promote'}),false);assert.equal(s.player.money,10000);});
-test('29 insufficient money rejects despite clean work',()=>{const s=state();s.player.money=0;assert.equal(canPromote(s),false);});
+test('29 zero money permits clean promotion without deduction',()=>{const s=state();s.player.money=0;assert.equal(canPromote(s),true);assert.ok(applyAction(s,{type:'promote'}));assert.equal(s.player.money,0);});
 test('30 current overdue counts and queue removal cannot unlock promotion',()=>{const s=state();s.player.money=1e6;overdue(s,4);startWork(s,s.todoQueue.shift()!);assert.equal(getUnresolvedOverdueWorkCount(s),4);assert.equal(canPromote(s),false);});
 test('31 suspended overdue counts through food interruption',()=>{const s=state();s.player.money=1e6;overdue(s,4);startWork(s,s.todoQueue.shift()!);interruptWithFood(s);assert.equal(getUnresolvedOverdueWorkCount(s),4);assert.equal(canPromote(s),false);});
 test('32 pending and project parents never count as overdue work',()=>{const s=state();createFollowUp(s,todo(s),'CLIENT_REPLY',1,20);createProject(s);assert.equal(getUnresolvedOverdueWorkCount(s),0);});

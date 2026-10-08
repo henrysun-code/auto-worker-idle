@@ -1,3 +1,4 @@
+import './legacyBalanceFixture';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {simulateCareer} from '../scripts/careerSimulation';
@@ -19,8 +20,10 @@ test('Career observers match full production State and RNG at Rank0, Rank4 and p
    const b=simulateCareer('PREPARED_BALANCED','NEVER_PRESTIGE',42,{initial,maxSeconds:600,advance:engine.advance,installBossHook});
    assert.deepEqual(b.state,a.state);assert.ok(b.tables.sleep.length>=9);
   }
-  const a=simulateCareer('ALL_ROUNDER','AS_SOON_AS_ELIGIBLE',42,{maxSeconds:1800,observe:false});
-  const b=simulateCareer('ALL_ROUNDER','AS_SOON_AS_ELIGIBLE',42,{maxSeconds:1800,advance:engine.advance,installBossHook});
+  // Explicit ready fixture isolates observer/prestige parity from career balance changes.
+  const ready=initialState(42,0);ready.prestige.forcedReady=true;
+  const a=simulateCareer('ALL_ROUNDER','AS_SOON_AS_ELIGIBLE',42,{initial:ready,maxSeconds:1801,observe:false});
+  const b=simulateCareer('ALL_ROUNDER','AS_SOON_AS_ELIGIBLE',42,{initial:ready,maxSeconds:1801,advance:engine.advance,installBossHook});
   assert.ok(b.state.permanentStatistics.runs>0);assert.deepEqual(b.state,a.state);
  }finally{Date.now=realNow;setBalanceHooks();}
 });

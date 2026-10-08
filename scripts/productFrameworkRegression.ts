@@ -68,9 +68,10 @@ function fixture(api:any,id:string,scenario:string){
   case 'BOSS':s.player.upgrades.flattery=115;api.resolveBoss(s,true,false);break;
   case 'UI':extra.html=renderToStaticMarkup(createElement(api.Products,{s,dispatch:()=>false}));break;
  }
+ delete s.world.dayDurationAtSave; // Compare gameplay fields; this additive save-coordinate marker has no behavior.
  return {state:s,outputs:{speed:api.effectiveWorkSpeed(s),quality:api.effectiveWorkQuality(s),catchChance:api.catchChance(s),escapeChance:api.escapeChance(s),selectedFood:api.selectedFood(s),...extra}};
 }
-export function runProductFrameworkRegression(){
+export function runProductFrameworkRegression(outputDir=out){
  assert.deepEqual(c,bc,'Formal Config changed');
  const manifest=JSON.parse(fs.readFileSync(path.join(out,'product-baseline-manifest.json'),'utf8'));
  for(const [name,hash]of Object.entries(manifest))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(out,'baseline-runtime',name))).digest('hex'),hash,`Baseline changed: ${name}`);
@@ -78,8 +79,9 @@ export function runProductFrameworkRegression(){
  const rows:any[]=[],logs:string[]=[];
  try {
  for(const p of c.products.definitions)for(const scenario of scenarios){const before=fixture(oldApi,p.id,scenario),after=fixture(newApi,p.id,scenario);assert.deepEqual(after,before,`${p.id}/${scenario} exact regression`);logs.push(`PASS ${p.id}/${scenario}: full State + outputs exact equal`);rows.push({productId:p.id,scenario,exactEqual:true,money:after.state.player.money,worldTime:after.state.world.totalWorldTime,active:after.state.products[p.id]?.active,resultHash:crypto.createHash('sha256').update(JSON.stringify(after)).digest('hex')});}
- fs.writeFileSync(path.join(out,'product-framework-regression.log'),logs.join('\n')+`\n${rows.length}/${rows.length} exact behavior fixtures PASS\n`);
- fs.writeFileSync(path.join(out,'product-framework-exact-results.json'),JSON.stringify({products:c.products.definitions.length,scenariosPerProduct:scenarios.length,fixtures:rows.length,fullStateExactEqual:true,uiStaticMarkupExactEqual:true,baselineManifestVerified:true,rows},null,2));
+ fs.mkdirSync(outputDir,{recursive:true});
+ fs.writeFileSync(path.join(outputDir,'product-framework-regression.log'),logs.join('\n')+`\n${rows.length}/${rows.length} exact behavior fixtures PASS\n`);
+ fs.writeFileSync(path.join(outputDir,'product-framework-exact-results.json'),JSON.stringify({products:c.products.definitions.length,scenariosPerProduct:scenarios.length,fixtures:rows.length,fullStateExactEqual:true,uiStaticMarkupExactEqual:true,baselineManifestVerified:true,rows},null,2));
  return {fixtures:rows.length,scenariosPerProduct:scenarios.length};
  } finally {Date.now=realNow;if(previousReact===undefined)delete (globalThis as any).React;else (globalThis as any).React=previousReact;}
 }

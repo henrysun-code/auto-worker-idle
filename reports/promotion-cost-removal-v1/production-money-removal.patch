@@ -1,0 +1,49 @@
+--- baseline/src/game/career/promotion.ts
++++ current/src/game/career/promotion.ts
+@@ -11,13 +11,13 @@
+ }
+ export function canPromote(s: State) {
+   const next = c.ranks[s.career.rank+1];
+-  return !!next && s.player.money >= next.promotionCost && getUnresolvedOverdueWorkCount(s) <= next.maxOverdueAllowed;
++  return !!next && getUnresolvedOverdueWorkCount(s) <= next.maxOverdueAllowed;
+ }
+ 
+ // Formal rank-up transaction shared by assessment completion and internal/debug tests.
+ export function promoteTransaction(s:State) {
+  if(!canPromote(s))return false;
+- const rank=c.ranks[s.career.rank+1];s.player.money-=rank.promotionCost;s.career.rank++;
++ const rank=c.ranks[s.career.rank+1];s.career.rank++;
+  s.career.highestRank=Math.max(s.career.highestRank,s.career.rank);
+  notify(s,'升職',`升職為 ${rank.name}，工作量、品質要求與專案壓力提高。`);return true;
+ }
+--- baseline/src/game/career/promotionAssignment.ts
++++ current/src/game/career/promotionAssignment.ts
+@@ -81,7 +81,7 @@
+   notify(s,'升職','考核加班工作已完成；本次未升職。');return false;
+  }
+  if(s.career.rank!==t.fromRank||!canPromote(s)||!promoteTransaction(s)){
+-  p.status='FAILED_REQUIREMENT';p.failureReason='完成時資金或逾期工作條件已不符合';
++  p.status='FAILED_REQUIREMENT';p.failureReason='完成時職級或逾期工作條件已不符合';
+   p.retryAvailableWorkday=getDeadlineWorkdayIndex(s.world.totalWorldTime)+c.promotionAssignment.retryWorkdays;
+   clearAssignment(s);notify(s,'升職',p.failureReason);return false;
+  }
+--- baseline/src/screens/Upgrades.tsx
++++ current/src/screens/Upgrades.tsx
+@@ -19,5 +19,5 @@
+   const q=getPromotionQualificationStats(s), requirement=c.promotionQualification.requirements[s.career.rank]; const overdue = getUnresolvedOverdueWorkCount(s); const [tab, setTab] = useState('run'); const next = c.ranks[s.career.rank + 1];
+   return <><div className="page-heading"><span className="eyebrow">GROW, AT YOUR OWN PACE</span><h2>把自己練強一點。</h2><p>效率清待辦，品質少留爛攤子。</p></div><div className="button-row"><button aria-pressed={tab === 'run'} onClick={() => setTab('run')}>當輪升級</button><button aria-pressed={tab === 'permanent'} onClick={() => setTab('permanent')}>永久升級 · ✦ {s.prestige.clarity}</button></div>
+   {tab === 'run' ? <><div className="upgrade-list">{(Object.keys(c.upgrades) as UpgradeId[]).map(id => { const u = c.upgrades[id]; const cost = upgradeCost(s, id); return <section className="upgrade-card" aria-label={u.name} key={id}><div className="upgrade-icon">{u.icon}</div><div className="upgrade-info"><h3>{u.name} <small>Lv.{s.player.upgrades[id]}</small></h3><p>{u.description}</p><p className="upgrade-effect">{effects(s, id)}</p></div><button className="primary" disabled={s.player.money < cost} onClick={() => dispatch({ type: 'upgrade', id })}>升級 ${money(cost)}</button></section>; })}</div>
+-  <section className="promotion-card"><span className="eyebrow">PROMOTION ASSIGNMENT</span><h3>{next ? `下一階段：${next.name}` : '已到最高職級'}</h3><p>考核狀態：{{NOT_ELIGIBLE:'尚未符合',ELIGIBLE:'已符合資格',SCHEDULED:'準備開始',ACTIVE:'考核中',COOLDOWN:'重試冷卻中',MAX_RANK:'最高職級',FAILED_REQUIREMENT:'完成時資格失效',FAILED_OVERTIME:'考核失敗・仍須加班完成',COMPLETED_PENDING_DINNER:'已完成・等待下班結算'}[s.promotion.status]}</p>{next && requirement && <><p>穩定效率 {decimal(q.efficiency)} / 需求 {requirement.efficiency} · 穩定品質 {decimal(q.quality)} / 需求 {requirement.quality}</p><p>資格判定效率 {decimal(q.evaluatedEfficiency)} · 品質 {decimal(q.evaluatedQuality)}</p><p>需要資金：${money(s.player.money)} / ${money(next.promotionCost)}</p><p>已逾期工作：{overdue} / 最多 {next.maxOverdueAllowed}</p>{overdue>next.maxOverdueAllowed&&<p role="status">目前仍有過多逾期工作，請先處理工作後再升職。</p>}<p>每次上班評估並立即考核；下班前完成，晚餐錨點再驗證交易條件並扣款升職。</p>{s.promotion.retryAvailableWorkday!==null && <p>可重試工作日：{s.promotion.retryAvailableWorkday+1}</p>}{s.promotion.failureReason&&<p role="status">{s.promotion.failureReason}</p>}</>}<label><input type="checkbox" checked={s.promotion.lowProfileEnabled} onChange={e=>dispatch({type:'lowProfile',value:e.target.checked})}/> 低調摸魚</label><p>僅將升職資格效率／品質乘以 {c.promotionLowProfile.multiplier}，不影響實際工作；下次上班生效，已安排考核不會取消。</p></section></> : <div className="upgrade-list">{c.prestige.upgrades.map(u => { const level = s.prestige.levels[u.id]; const cost = getPrestigeUpgradeCost(u.id,level); return <section key={u.id} className="upgrade-card" aria-label={`永久${u.name}`}><div className="upgrade-info"><h3>{u.name} · Lv.{level}</h3><p>總倍率 ×{permanentMultiplier(s, u.id).toFixed(2)}{` → ×${getPermanentMultiplier(u.id,level+1).toFixed(2)}`}</p><p>醒來後保留，採總倍率而非逐級相乘。</p></div><button disabled={s.prestige.clarity < cost} onClick={() => dispatch({ type: 'permanent', id: u.id })}>{`升級 ✦ ${cost}`}</button></section>; })}</div>}</>;
++  <section className="promotion-card"><span className="eyebrow">PROMOTION ASSIGNMENT</span><h3>{next ? `下一階段：${next.name}` : '已到最高職級'}</h3><p>考核狀態：{{NOT_ELIGIBLE:'尚未符合',ELIGIBLE:'已符合資格',SCHEDULED:'準備開始',ACTIVE:'考核中',COOLDOWN:'重試冷卻中',MAX_RANK:'最高職級',FAILED_REQUIREMENT:'完成時資格失效',FAILED_OVERTIME:'考核失敗・仍須加班完成',COMPLETED_PENDING_DINNER:'已完成・等待下班結算'}[s.promotion.status]}</p>{next && requirement && <><p>穩定效率 {decimal(q.efficiency)} / 需求 {requirement.efficiency} · 穩定品質 {decimal(q.quality)} / 需求 {requirement.quality}</p><p>資格判定效率 {decimal(q.evaluatedEfficiency)} · 品質 {decimal(q.evaluatedQuality)}</p><p>已逾期工作：{overdue} / 最多 {next.maxOverdueAllowed}</p>{overdue>next.maxOverdueAllowed&&<p role="status">目前仍有過多逾期工作，請先處理工作後再升職。</p>}<p>每次上班評估並立即考核；下班前完成，晚餐錨點再驗證職級與逾期條件，升職不收費。</p>{s.promotion.retryAvailableWorkday!==null && <p>可重試工作日：{s.promotion.retryAvailableWorkday+1}</p>}{s.promotion.failureReason&&<p role="status">{s.promotion.failureReason}</p>}</>}<label><input type="checkbox" checked={s.promotion.lowProfileEnabled} onChange={e=>dispatch({type:'lowProfile',value:e.target.checked})}/> 低調摸魚</label><p>僅將升職資格效率／品質乘以 {c.promotionLowProfile.multiplier}，不影響實際工作；下次上班生效，已安排考核不會取消。</p></section></> : <div className="upgrade-list">{c.prestige.upgrades.map(u => { const level = s.prestige.levels[u.id]; const cost = getPrestigeUpgradeCost(u.id,level); return <section key={u.id} className="upgrade-card" aria-label={`永久${u.name}`}><div className="upgrade-info"><h3>{u.name} · Lv.{level}</h3><p>總倍率 ×{permanentMultiplier(s, u.id).toFixed(2)}{` → ×${getPermanentMultiplier(u.id,level+1).toFixed(2)}`}</p><p>醒來後保留，採總倍率而非逐級相乘。</p></div><button disabled={s.prestige.clarity < cost} onClick={() => dispatch({ type: 'permanent', id: u.id })}>{`升級 ✦ ${cost}`}</button></section>; })}</div>}</>;
+ }
+--- baseline/src/config/v2Defaults.ts
++++ current/src/config/v2Defaults.ts
+@@ -53,7 +53,7 @@
+       { type: 'PROJECT_NEXT_STEP', name: '後續確認', qualitySensitive: false, chance: .08, workloadFactor: .5, rewardFactor: .6, countMin: 1, countMax: 1, delay: 0 },
+     ] as { type: FollowUpType; name: string; qualitySensitive: boolean; chance: number; workloadFactor: number; rewardFactor: number; countMin: number; countMax: number; delay: number }[] },
+   ranks: [
+-    { name: '新人', promotionCost: 0, maxOverdueAllowed: 0, workloadMultiplier: 1, rewardMultiplier: 1, qualityMultiplier: 1, projectChance: .16, rankEscapeResistance: 0, recommendedSpeed: 10, recommendedQuality: 6 },
++    { name: '新人', /* @deprecated legacy spreadsheet metadata; never a promotion condition or charge. */ promotionCost: 0, maxOverdueAllowed: 0, workloadMultiplier: 1, rewardMultiplier: 1, qualityMultiplier: 1, projectChance: .16, rankEscapeResistance: 0, recommendedSpeed: 10, recommendedQuality: 6 },
+     { name: '一般員工', promotionCost: 220, maxOverdueAllowed: 3, workloadMultiplier: 1.25, rewardMultiplier: 2.2, qualityMultiplier: 1.2, projectChance: .22, rankEscapeResistance: 4, recommendedSpeed: 20, recommendedQuality: 12 },
+     { name: '資深員工', promotionCost: 900, maxOverdueAllowed: 2, workloadMultiplier: 1.7, rewardMultiplier: 5, qualityMultiplier: 1.5, projectChance: .3, rankEscapeResistance: 9, recommendedSpeed: 40, recommendedQuality: 24 },
+     { name: '主管', promotionCost: 2800, maxOverdueAllowed: 1, workloadMultiplier: 2.2, rewardMultiplier: 11, qualityMultiplier: 1.8, projectChance: .4, rankEscapeResistance: 14, recommendedSpeed: 80, recommendedQuality: 48 },

@@ -1,0 +1,12 @@
+import { ProductEffectDescription, productContributionText, productBillingSummary } from '../game/products/productPresentation';
+import { isProductActive } from '../game/products/productEffects';
+import { gameConfig as c } from '../config/gameConfig';
+import type { Action, State } from '../game/types';
+import { remainingProductDays } from '../game/products/productManager';
+import { selectedFood } from '../game/targets/targetManager';
+import { decimal, money } from '../utils/format';
+export function Products({ s, dispatch }: { s: State; dispatch: (a: Action) => boolean }) {
+  const billingSummary=productBillingSummary(s,c.products.billingPeriodDays); const food = selectedFood(s);
+  return <><div className="page-heading"><span className="eyebrow">TIME, WELL SPENT</span><h2>把時間留給生活。</h2><p>{billingSummary}</p></div><section className="food-setting"><h3>預設飲食方案</h3><p>三餐自動處理；產品無效或餘額不足時改用普通便當。</p><div className="food-options">{c.food.items.map(f => <button key={f.id} aria-pressed={s.player.settings.defaultFoodId === f.id} disabled={!!f.productId && !isProductActive(s,f.productId,'FOOD_OPTION')} onClick={() => dispatch({ type: 'food', id: f.id })}><span>{f.productId ? '🥤' : '🍚'} {f.name}</span><small>${f.price}／次 · 需求 {f.requirement}</small></button>)}</div><p>目前可用：{food.name} · {decimal(food.requirement / c.food.processingRate)} 世界秒</p></section>
+  <div className="product-list">{c.products.definitions.map(p => { const sub = s.products[p.id]; const stats = sub.contributionStats; return <section key={p.id} className="product-card" aria-label={p.name}><div className="product-title"><span className="product-icon">{p.icon}</span><div><h3>{p.name}</h3><small>{sub.active ? '有效中' : '已停用'} · 剩餘 {decimal(remainingProductDays(s, p.id))} 日</small></div></div><p>{p.description}</p><ProductEffectDescription s={s} p={p}/><p>${money(sub.pricePerBillingPeriod)}／{sub.billingPeriodDays} 遊戲日 · 以當輪金錢續購</p><p>本輪啟用 {stats.activationCount} 次 · 本輪花費 ${money(stats.totalSpent)}<br />{productContributionText(s,p)}</p><button aria-pressed={sub.active} disabled={!sub.active && (p.enabled===false || remainingProductDays(s, p.id) <= 0 && s.player.money < sub.pricePerBillingPeriod)} onClick={() => dispatch({ type: 'product', id: p.id })}>{sub.active ? '停用' : remainingProductDays(s, p.id) > 0 ? '恢復啟用' : `啟用 $${money(p.price)}`}</button></section>; })}</div><p className="muted">Prototype 僅描述遊戲事件與效果；正式產品名稱、美術與文案待替換。</p></>;
+}

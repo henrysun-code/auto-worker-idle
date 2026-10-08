@@ -11,6 +11,6 @@ test('offline summary dismisses without blocking and remains in History after re
 });
 test('late breakfast is missed and Todo list shows zero reward rework source',async({page})=>{
  await page.clock.install({time:new Date('2026-10-05T00:00:00Z')});await page.clock.pauseAt(new Date('2026-10-05T00:00:01Z'));
- const s=initialState(42);s.world.totalWorldTime=9;s.world.timeOfDay=9;s.world.nextEventAt=10000;const root=createTodo(s,c.work.templates[0]);createFollowUp(s,root,'MISSING_INFO',2,0);
+ const s=initialState(42);s.world.totalWorldTime=27;s.world.timeOfDay=27;s.world.nextEventAt=10000;const root=createTodo(s,c.work.templates[0]);createFollowUp(s,root,'MISSING_INFO',2,0);
  await page.addInitScript(({key,value})=>{value.offline.lastSeenAt=Date.now();localStorage.setItem(key,JSON.stringify(value));},{key:c.save.key,value:s});await page.goto('/');await page.clock.runFor(50);await expect(page.getByRole('region',{name:'中央目標'})).not.toContainText('早餐食物怪');await page.getByRole('navigation').getByRole('button',{name:'紀錄'}).click();await expect(page.getByText('早餐時間已經過了。',{exact:true}).last()).toBeVisible();await page.getByText(/待辦 .*延遲後續/).click();await expect(page.locator('.history-details')).toContainText('返工');await expect(page.locator('.history-details')).toContainText('$0');await expect(page.locator('.history-details')).toContainText('來源：回 Email');
 });

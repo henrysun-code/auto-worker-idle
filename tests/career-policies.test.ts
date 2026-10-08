@@ -1,10 +1,11 @@
+import './legacyBalanceFixture';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialState} from '../src/game/state/initialState';
 import {gameConfig as c} from '../src/config/gameConfig';
 import {careerDecision,chooseUpgrade,spendClarity,recommendationReady,policies} from '../scripts/careerPolicies';
 import {simulateCareer} from '../scripts/careerSimulation';
-test('ASAP reserve uses actual next-rank promotion cost',()=>{const s=initialState(42,0);s.player.money=c.ranks[1].promotionCost-1;const money=s.player.money;careerDecision(s,'PROMOTE_ASAP_BALANCED',()=>{});assert.equal(s.player.money,money);assert.equal(s.career.rank,0);});
+test('legacy direct-promotion policy no longer waits for promotion funds',()=>{const s=initialState(42,0);s.player.money=0;careerDecision(s,'PROMOTE_ASAP_BALANCED',()=>{});assert.equal(s.player.money,0);assert.equal(s.career.rank,4);});
 test('balanced prepared targets come from config before promoting',()=>{const s=initialState(42,0);s.player.money=100000;const rng=s.world.rng;const promotions:number[]=[];careerDecision(s,'PREPARED_BALANCED',(type,_id,before)=>{if(type==='promote'){assert.equal(recommendationReady(before),true);promotions.push(s.career.rank);}});assert.ok(promotions.length);assert.equal(s.world.rng,rng);});
 test('all rounder cheapest lowest levels and deterministic tie order',()=>{const s=initialState(42,0);assert.equal(chooseUpgrade(s,'ALL_ROUNDER'),'efficiency');s.player.upgrades.efficiency=1;assert.equal(chooseUpgrade(s,'ALL_ROUNDER'),'quality');});
 test('permanent spending uses actions and only four CORE_RECRAWL lines',()=>{const s=initialState(42,0);s.prestige.clarity=100;const before=s.prestige.clarity,p=spendClarity(s);assert.ok(p.length>0);assert.equal(before-s.prestige.clarity,p.reduce((n,x)=>n+x.cost,0));assert.equal(s.prestige.levels.lifeManagement,0);assert.equal(s.prestige.levels.bossTaskReward,0);assert.equal(s.prestige.levels.lunchOutput,0);assert.equal(s.prestige.levels.projectReward,0);});

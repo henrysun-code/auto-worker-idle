@@ -23,6 +23,9 @@ for (const row of XLSX.utils.sheet_to_json<Row>(book!.Sheets.Balance)) {
 }
 const check = (ok: boolean, message: string) => { if (!ok) throw Error(`V2 設定不合法：${message}`); };
 const positive = (v: number) => Number.isFinite(v) && v > 0;
+check(positive(config.time.sleepTimeAcceleration)&&config.time.sleepTimeAcceleration>=1,'Sleep acceleration');
+check(positive(config.promotionAssignment.workloadFactor)&&config.promotionAssignment.failedCompletionReward>=0,'Promotion V2 snapshot/reward');
+check(config.work.workloadTierCenters.length===config.ranks.length&&config.work.workloadTierCenters.every(positive)&&positive(config.work.templateWorkloadReference)&&positive(config.work.templateVariationMin)&&config.work.templateVariationMax>=config.work.templateVariationMin,'Normal workload tiers');
 check(config.promotionAssignment.assignments.length===config.ranks.length-1&&config.promotionAssignment.assignments.every(v=>positive(v.workload)&&!!v.name)&&Number.isInteger(config.promotionAssignment.retryWorkdays)&&config.promotionAssignment.retryWorkdays>=0&&config.promotionQualification.requirements.length===config.ranks.length-1&&config.promotionQualification.requirements.every(v=>positive(v.efficiency)&&positive(v.quality))&&config.promotionLowProfile.multiplier>0&&config.promotionLowProfile.multiplier<=1,'Promotion V1');
 check(positive(config.meeting.referenceMeetingDurationSeconds) && config.meeting.normalChanceByRank.length===config.ranks.length && config.meeting.normalChanceByRank.every(v=>v>=0&&v<=1) && config.meeting.compensationByRank.length===config.ranks.length && config.meeting.compensationByRank.every(v=>v>=0) && config.meeting.bossMeetingChanceOnEscapeFail>=0 && config.meeting.bossMeetingChanceOnEscapeFail<=1,'Meeting V1');
 function finiteValues(o: unknown): boolean { return typeof o === 'number' ? Number.isFinite(o) : Array.isArray(o) ? o.every(finiteValues) : o && typeof o === 'object' ? Object.values(o).every(finiteValues) : true; }

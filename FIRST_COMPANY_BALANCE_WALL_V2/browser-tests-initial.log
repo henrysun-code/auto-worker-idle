@@ -1,0 +1,76 @@
+
+> auto-worker@2.0.0 test:browser
+> playwright test
+
+[WebServer] (node:31432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:3652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:28436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 32 tests using 1 worker
+
+(node:17028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\browser\age-promotion.spec.ts:7:1 › promotion UI counts queued current and suspended overdue with clear lock reason (3.0s)
+  ok  2 tests\browser\age-promotion.spec.ts:12:1 › age product UI shows live compensation and disables it without removing workload pressure (3.1s)
+  ok  3 tests\browser\boss-notifications.spec.ts:5:1 › boss result immediately replaces an old toast despite full notification queue (2.0s)
+  ok  4 tests\browser\corrections.spec.ts:7:1 › offline summary dismisses without blocking and remains in History after reload (2.1s)
+  ok  5 tests\browser\corrections.spec.ts:12:1 › late breakfast is missed and Todo list shows zero reward rework source (1.5s)
+  ok  6 tests\browser\deadline.spec.ts:6:1 › deadline counts and live work labels fit mobile, history shows original and discounted reward (1.7s)
+  ok  7 tests\browser\deadline.spec.ts:17:1 › deadline debug tools create all three deadline states (2.2s)
+  ok  8 tests\browser\deadline.spec.ts:19:1 › profile override shows no deadline on current work and game days on queued project (1.7s)
+  ok  9 tests\browser\deadline.spec.ts:26:1 › sleep midnight preserves due today then work-start wakes and selects overdue work (2.1s)
+  ok 10 tests\browser\game.spec.ts:4:1 › V2 subscriptions, permanent upgrades, debug offline32days, prestige and reload (7.1s)
+  ok 11 tests\browser\game.spec.ts:17:1 › legacy save shows V2 reset notice and saves new core (1.2s)
+  ok 12 tests\browser\meeting.spec.ts:7:1 › Meeting central card shows fixed world duration, resumes Work and reloads without repeated pay (2.1s)
+  ok 13 tests\browser\prestige-active.spec.ts:4:1 › 10x world speed cannot unlock prestige before actual30min; reload and reset preserve timer rules (1.7s)
+  x  14 tests\browser\product-framework.spec.ts:10:1 › Config-only synthetic A/B UI, additive old Save, activation/effect/cycle/expiry and reload (1.0m)
+(node:28036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 15 tests\browser\product-framework.spec.ts:20:1 › existing product UI disable/re-enable retains paid expiry and current Work progress (2.4s)
+  ok 16 tests\browser\progression.spec.ts:10:1 › high level UI shows severity branches escape value and raw life management (1.6s)
+  ok 17 tests\browser\progression.spec.ts:17:1 › boss dinner precedes single mandatory overtime and survives workStart with zero sleep (13.5s)
+  ok 18 tests\browser\progression.spec.ts:22:1 › permanent formula level10 can buy and reload level11 (2.3s)
+  ok 19 tests\browser\promotion-v1.spec.ts:9:1 › qualification and low profile show base stats; mobile no overflow (1.7s)
+  ok 20 tests\browser\promotion-v1.spec.ts:10:1 › morning assignment skips lunch; deadline fails into Dinner then same overtime; reload preserves (18.4s)
+  ok 21 tests\browser\promotion-v1.spec.ts:11:1 › high ability first assignment succeeds at Dinner and is saved (16.1s)
+  ok 22 tests\browser\promotion-v1.spec.ts:12:1 › sleep displays60x and resumes normal after workstart (2.0s)
+  ok 23 tests\browser\rank-content.spec.ts:4:1 › Debug Rank content lists effective work and project weights on mobile (1.9s)
+  ok 24 tests\browser\targets.spec.ts:13:3 › V2 normal target preserves mobile shell and shows correct activity (1.3s)
+  ok 25 tests\browser\targets.spec.ts:13:3 › V2 rework target preserves mobile shell and shows correct activity (1.3s)
+  ok 26 tests\browser\targets.spec.ts:13:3 › V2 large target preserves mobile shell and shows correct activity (1.4s)
+  ok 27 tests\browser\targets.spec.ts:13:3 › V2 food target preserves mobile shell and shows correct activity (1.4s)
+  ok 28 tests\browser\targets.spec.ts:13:3 › V2 lunch target preserves mobile shell and shows correct activity (1.4s)
+  ok 29 tests\browser\targets.spec.ts:13:3 › V2 problem target preserves mobile shell and shows correct activity (1.5s)
+  ok 30 tests\browser\targets.spec.ts:13:3 › V2 sleep target preserves mobile shell and shows correct activity (1.3s)
+  ok 31 tests\browser\targets.spec.ts:13:3 › V2 entertainment target preserves mobile shell and shows correct activity (1.5s)
+  ok 32 tests\browser\targets.spec.ts:27:1 › world boundary preserves sleep until fixed workStart (1.4s)
+
+
+  1) tests\browser\product-framework.spec.ts:10:1 › Config-only synthetic A/B UI, additive old Save, activation/effect/cycle/expiry and reload 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('region', { name: 'Test Tagged Reward', exact: true })
+    Expected substring: "已停用"
+    Received string:    ""
+
+
+      16 |  const active=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(active.products.TEST_PRODUCT_A.active).toBe(true);expect(active.products.TEST_PRODUCT_B.active).toBe(true);expect(active.player.money).toBe(0);expect(active.stats.workSpeed).toBeCloseTo(11.125);await expect(a).toContainText('有效中');await expect(b).toContainText('目前產品效率補償 +11.2%');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();await page.screenshot({path:'tests/artifacts/product-framework-synthetic.png'});
+      17 |  await page.reload();await page.getByRole('navigation').getByRole('button',{name:'產品'}).click();await expect(a).toContainText('有效中');const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(saved.products.TEST_PRODUCT_B.nextBillingWorldTime).toBe(active.products.TEST_PRODUCT_B.nextBillingWorldTime);expect(saved.products.TEST_PRODUCT_A.contributionStats.billingSpent).toBe(17);
+    > 18 |  await page.clock.runFor(361000);await expect(a).toContainText('已停用');await expect(b).toContainText('已停用');await page.clock.runFor(3100);const expired=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(expired.currentTarget.type).toBe('WORK');expect(expired.currentTarget.progress).toBeGreaterThan(active.currentTarget.progress);expect(expired.products.TEST_PRODUCT_A.active).toBe(false);expect(expired.products.TEST_PRODUCT_B.active).toBe(false);expect(expired.stats.workSpeed).toBeCloseTo(7); // zero-sleep modifier retained; product bonus gone.
+         |                                                  ^
+      19 | });
+      20 | test('existing product UI disable/re-enable retains paid expiry and current Work progress',async({page})=>{const s=initialState(42);s.player.money=1000;s.player.age=50;s.player.ageProgressDays=28*c.age.daysPerYear;s.world.totalWorldTime=24;syncWorld(s);s.world.nextEventAt=1e9;s.meetings.lastScheduledWorkday=0;s.promotion.lastCheckedWorkday=0;s.needs.phase='MORNING';s.needs.projectRollProcessedRoutineId=0;s.needs.satietyUntil=1e9;startWork(s,createTodo(s,{...c.work.templates[0],workload:1e9},'EVENT'));await seed(page,s);await page.getByRole('navigation').getByRole('button',{name:'產品'}).click();const card=page.getByRole('region',{name:'時光緩衝組',exact:true});await card.getByRole('button',{name:'啟用 $120',exact:true}).click();await page.clock.runFor(1000);const before=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);await card.getByRole('button',{name:'停用',exact:true}).click();const off=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(off.currentTarget.progress).toBeGreaterThanOrEqual(before.currentTarget.progress);expect(off.stats.workSpeed).toBe(10);await card.getByRole('button',{name:'恢復啟用',exact:true}).click();const on=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(on.player.money).toBe(before.player.money);expect(on.products.agecare.nextBillingWorldTime).toBe(before.products.agecare.nextBillingWorldTime);expect(on.stats.workSpeed).toBeCloseTo(12.25);expect(on.currentTarget.progress).toBe(off.currentTarget.progress);});
+      21 |
+        at D:\Desktop\012s小遊戲\games\auto-worker\tests\browser\product-framework.spec.ts:18:50
+
+    Error Context: test-results\product-framework-Config-o-ed0c2-ect-cycle-expiry-and-reload\error-context.md
+
+  1 failed
+    tests\browser\product-framework.spec.ts:10:1 › Config-only synthetic A/B UI, additive old Save, activation/effect/cycle/expiry and reload 
+  31 passed (2.9m)

@@ -1,0 +1,41 @@
+{
+  "abilityEtas": {
+    "efficiency": 2.994895065229722,
+    "quality": 2.9705400981996726,
+    "flattery": 3.0139103554868623,
+    "lifeManagement": 2.965931863727455,
+    "slacking": 2.978382706164932
+  },
+  "rankMetrics": [
+    {
+      "rank": 0,
+      "purchases": 1306,
+      "medianGap": 3.75,
+      "medianNextETA": 3.117283950617284
+    },
+    {
+      "rank": 1,
+      "purchases": 479,
+      "medianGap": 3.75,
+      "medianNextETA": 2.5456972691395916
+    },
+    {
+      "rank": 2,
+      "purchases": 0,
+      "medianGap": null,
+      "medianNextETA": null
+    },
+    {
+      "rank": 3,
+      "purchases": 0,
+      "medianGap": null,
+      "medianNextETA": null
+    },
+    {
+      "rank": 4,
+      "purchases": 0,
+      "medianGap": null,
+      "medianNextETA": null
+    }
+  ]
+}

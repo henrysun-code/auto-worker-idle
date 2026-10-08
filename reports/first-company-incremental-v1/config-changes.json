@@ -1,0 +1,98 @@
+{
+  "time.dayDuration": 180,
+  "time.sleepTimeAcceleration": 60,
+  "economy.baseWorkSpeed": 10,
+  "economy.baseQuality": 6,
+  "promotionQualification.requirements": [
+    {
+      "efficiency": 20,
+      "quality": 12
+    },
+    {
+      "efficiency": 40,
+      "quality": 24
+    },
+    {
+      "efficiency": 80,
+      "quality": 48
+    },
+    {
+      "efficiency": 160,
+      "quality": 96
+    }
+  ],
+  "promotionAssignment.workloadFactor": 1.2,
+  "promotionAssignment.failedCompletionReward": 0,
+  "work.workloadTierCenters": [
+    70,
+    140,
+    280,
+    560,
+    1120
+  ],
+  "work.templateWorkloadReference": 100,
+  "work.templateVariationMin": 0.75,
+  "work.templateVariationMax": 1.4,
+  "ranks": [
+    {
+      "name": "新人",
+      "promotionCost": 0,
+      "workloadMultiplier": 1,
+      "rewardMultiplier": 1,
+      "qualityMultiplier": 1,
+      "projectChance": 0.16,
+      "recommendedSpeed": 10,
+      "recommendedQuality": 6,
+      "maxOverdueAllowed": 0,
+      "rankEscapeResistance": 0
+    },
+    {
+      "name": "一般員工",
+      "promotionCost": 220,
+      "workloadMultiplier": 1.25,
+      "rewardMultiplier": 2.2,
+      "qualityMultiplier": 1.2,
+      "projectChance": 0.22,
+      "recommendedSpeed": 20,
+      "recommendedQuality": 12,
+      "maxOverdueAllowed": 3,
+      "rankEscapeResistance": 4
+    },
+    {
+      "name": "資深員工",
+      "promotionCost": 900,
+      "workloadMultiplier": 1.7,
+      "rewardMultiplier": 5,
+      "qualityMultiplier": 1.5,
+      "projectChance": 0.3,
+      "recommendedSpeed": 40,
+      "recommendedQuality": 24,
+      "maxOverdueAllowed": 2,
+      "rankEscapeResistance": 9
+    },
+    {
+      "name": "主管",
+      "promotionCost": 2800,
+      "workloadMultiplier": 2.2,
+      "rewardMultiplier": 11,
+      "qualityMultiplier": 1.8,
+      "projectChance": 0.4,
+      "recommendedSpeed": 80,
+      "recommendedQuality": 48,
+      "maxOverdueAllowed": 1,
+      "rankEscapeResistance": 14
+    },
+    {
+      "name": "經理",
+      "promotionCost": 9000,
+      "workloadMultiplier": 3,
+      "rewardMultiplier": 25,
+      "qualityMultiplier": 2.2,
+      "projectChance": 0.5,
+      "recommendedSpeed": 160,
+      "recommendedQuality": 96,
+      "maxOverdueAllowed": 0,
+      "rankEscapeResistance": 20
+    }
+  ]
+}

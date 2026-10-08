@@ -1,5 +1,21 @@
 # 全自動打工人。 V2 / 2.0.0
 
+## 最新交付：Promotion Cost Removal / Balance Wall V2
+
+升職已正式零費用。Balance Wall V2 的12組候選及Top3各30 Seed僅作測量，沒有套用候選；目前正式Config保持成本移除後基準。完整報告：[Promotion Cost Removal](reports/promotion-cost-removal-v1/REPORT.md)、[Balance Wall V2](FIRST_COMPANY_BALANCE_WALL_V2/BALANCE_WALL_V2_REPORT.md)。
+
+## First Company Incremental Rework V1（目前正式規則，取代下方歷史作息／Promotion V1）
+
+一天180世界秒：WorkStart24、午餐60、午休結束84、下班／Dinner120、Sleep150、次日WorkStart204。只有正式SLEEP Target自動60x；完整54世界秒睡眠需0.9真人秒，醒來或被打斷即恢復原在線倍率。Offline與Debug世界跳時不重複快轉、不增加真人Active Time。
+
+Base E10／Q6，Run等級仍0起。普通工作建立時取Rank中央Tier70／140／280／560／1120，再套模板形狀與Age快照；不重乘Rank倍率，不追玩家當前效率。Boss／Project／Follow-up保留原有快照路徑。
+
+Promotion於WorkStart達標立即最高優先，門檻E/Q為20/12、40/24、80/48、160/96。工作量快照為門檻E×96世界秒×1.2。考核日略過午餐／午休收益與懲罰。提早完成先等待Dinner，120邊界先處理精確完成，再驗證職級／Overdue，升職不檢查Money、不扣任何費用；未完成立即FAILED_OVERTIME，保留同id／進度，吃完Dinner後繼續做到真正完成，仍不升職。原retryWorkdays=3、LowProfile×0.8、所有禁止改動的Balance不變。
+
+詳見 [本輪完整報告](FIRST_COMPANY_INCREMENTAL_REWORK_V1_REPORT.md)。`npx tsx scripts/firstCompanyTelemetry.ts`為3seed×60真人分鐘BUY_ALL測量（不AutoTune、不跑900）；`node scripts/reportFirstCompanyIncremental.mjs`產生Config保護驗證與報告。輸出目錄為`reports/first-company-incremental-v1/`，重跑會替換這一輪的檔案，若要保留新一輪證據請先另外存檔。舊60秒存檔增量換算世界座標，既有工作量、金錢、等級与真人時間保留。
+
+歷史核心回歸使用明確的`tests/legacyBalanceFixture.ts`；正式新規則使用更新後的`tests/promotion-v1.test.ts`與正式數值的browser suite，不把歷史Balance結果當成新一輪平衡结論。
+
 ## Product Framework Review V1
 
 產品框架評級 CONFIG_READY。正式7個產品、4種已實作效果及所有Balance不變；中央Schema／Registry／Resolver／Presentation與Config validation支援既有效果的Config-only擴充。FOOD_OPTION需一併提供Food Config；SLEEP_MODIFIER僅保留未實作型別，不能使用。舊Save增量補inactive產品，不改已有Subscription。

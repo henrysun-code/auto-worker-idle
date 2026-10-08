@@ -1,3 +1,4 @@
+import './legacyBalanceFixture';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { quantile,slope,longest,stats } from '../scripts/balanceMetrics';

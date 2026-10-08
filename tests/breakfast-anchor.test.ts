@@ -1,3 +1,4 @@
+import './legacyBalanceFixture';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {initialState} from '../src/game/state/initialState';

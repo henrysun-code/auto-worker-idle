@@ -1,0 +1,46 @@
+✔ official 180-second world day and anchors; starting stats are base, all levels zero (20.1835ms)
+✔ rank0 WorkStart immediate, fixed threshold workload, independent of actual speed/age (2.1731ms)
+✔ rank1 WorkStart immediate, fixed threshold workload, independent of actual speed/age (1.4047ms)
+✔ rank2 WorkStart immediate, fixed threshold workload, independent of actual speed/age (1.2972ms)
+✔ rank3 WorkStart immediate, fixed threshold workload, independent of actual speed/age (1.1298ms)
+✔ below E or Q does not receive assignment; money and overdue gating retained (1.183ms)
+✔ low profile changes only evaluated E/Q; high actual ability can succeed first try (6.4245ms)
+✔ active Promotion Day crosses lunch without FOOD/LUNCH, Buff or Debuff (1.0549ms)
+✔ ordinary day still FOOD then LUNCH and gets rest benefits (1.0099ms)
+✔ completion -1 seconds relative Dinner succeeds, no ordinary pipeline (1.3368ms)
+✔ completion 0 seconds relative Dinner succeeds, no ordinary pipeline (0.9009ms)
+✔ one unit left at Dinner fails, keeps identity/progress, Dinner then same overtime, no late promotion (4.5178ms)
+✔ Money/Overdue revalidated at success, no negative funds (2.186ms)
+✔ active save/reload preserves progress, snapshot, deadline and low profile (1.3059ms)
+✔ offline pauses assessment and deadline, no automatic promotion or acceleration (2.172ms)
+✔ sleep60x consumes 0.9 real seconds for54world seconds then leftover returns1x (1.0342ms)
+✔ sleep batches match a large real tick without skipping workstart (2.4274ms)
+✔ sleep reload resumes fast; debug world skip does not add Active Time (5.9755ms)
+✔ WORK never receives sleep acceleration (0.8831ms)
+✔ PROMOTION never receives sleep acceleration (0.8143ms)
+✔ MEETING never receives sleep acceleration (1.5085ms)
+✔ FOOD never receives sleep acceleration (0.6334ms)
+✔ Rank0 normal workload tier applied once, 5-10sec recommendation, old work faster at higher E (0.8872ms)
+✔ Rank1 normal workload tier applied once, 5-10sec recommendation, old work faster at higher E (0.8198ms)
+✔ Rank2 normal workload tier applied once, 5-10sec recommendation, old work faster at higher E (0.8883ms)
+✔ Rank3 normal workload tier applied once, 5-10sec recommendation, old work faster at higher E (0.7713ms)
+✔ Rank4 normal workload tier applied once, 5-10sec recommendation, old work faster at higher E (0.7634ms)
+✔ Boss, Project, Follow-up keep rank/age snapshot exactly once and no boss flags on follow-up (1.6285ms)
+✔ 60→180 save migration preserves day/phase, old workload/levels/money and active seconds (1.7754ms)
+✔ failed assessment suspended by a Problem is preserved across exact Dinner (1.0514ms)
+✔ cooldown unchanged3 workday indices, refuses day1/2, day3 receives fixed retry (1.2152ms)
+✔ batched promotion outcome/progress/RNG matches small world intervals (77.2256ms)
+✔ world-based offline sleep does not apply60x and preserves Active Play Time (0.9309ms)
+✔ WorkStart promotion preempts existing target, preserving suspended identity/progress (0.7484ms)
+✔ sleep interrupted by Problem changes rate within the same real tick (1.3928ms)
+✔ new formal config multiple working days retains valid state and generated normal variety (42.8091ms)
+✔ early completed assessment reload waits for Dinner transaction; offline does not grant rank (12.116ms)
+✔ Promotion Dinner happens once even when it suspends an already-started ordinary target (1.2973ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 906.6284

@@ -15,8 +15,8 @@ test('high level UI shows severity branches escape value and raw life management
  await page.getByRole('button',{name:'Debug',exact:true}).click();await expect(page.getByText(/Boss Attention 240.0%/)).toBeVisible();await expect(page.getByText(/Rank Escape Resistance 20/)).toBeVisible();await expect(page.getByLabel('設定工作效率')).toHaveValue('1000');
 });
 test('boss dinner precedes single mandatory overtime and survives workStart with zero sleep',async({page})=>{
- const s=initialState(42);s.world.totalWorldTime=40;s.world.timeOfDay=40;s.world.nextEventAt=1e9;s.needs.phase='AFTERNOON';s.player.upgrades.flattery=115;resolveBoss(s,true,false);s.todoQueue[0].workload=10000;
- await seed(page,s);const target=page.getByRole('region',{name:'中央目標'});await expect(target).toContainText('晚餐食物怪');await page.clock.runFor(4000);await expect(target).toContainText('老闆急件 ×');await page.clock.runFor(25000);await expect(target).toContainText('老闆急件 ×');
+ const s=initialState(42);s.world.totalWorldTime=120;s.world.timeOfDay=120;s.world.nextEventAt=1e9;s.needs.phase='AFTERNOON';s.player.upgrades.flattery=115;resolveBoss(s,true,false);s.todoQueue[0].workload=10000;
+ await seed(page,s);const target=page.getByRole('region',{name:'中央目標'});await expect(target).toContainText('晚餐食物怪');await page.clock.runFor(4000);await expect(target).toContainText('老闆急件 ×');await page.clock.runFor(85000);await expect(target).toContainText('老闆急件 ×');
  await expect(page.getByLabel('目前狀態')).toContainText('效率 -30.0%');const saved=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)!),c.save.key);expect(saved.needs.sleep.lastRatio).toBe(0);expect(saved.currentTarget.todo.id).toBe(s.todoQueue[0].id);
 });
 test('permanent formula level10 can buy and reload level11',async({page})=>{

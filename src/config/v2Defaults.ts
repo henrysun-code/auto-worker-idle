@@ -6,13 +6,14 @@ type TargetType = 'WORK' | 'FOOD' | 'LUNCH' | 'ENTERTAINMENT' | 'SLEEP' | 'PROBL
 const context = (allowedTargetTypes: TargetType[], randomEnabled = true) => ({ allowedTargetTypes, blockedTargetTypes: [] as TargetType[], requiredWorkTags: [] as string[], allowedTimeRanges: [] as { start: number; end: number }[], allowedRanks: [] as number[], blockedByProtection: true, randomEnabled, contextModifiers: {} as Partial<Record<TargetType, Modifiers>> });
 const permanent = (id: PermanentId, name: string) => ({ id, name, multiplierBase: 1.10, baseCost: 5, costGrowth: 2.65 });
 export const defaultGameConfig = {
-  // Promotion V1 PROVISIONAL; fixed rank-specific workload.
-  promotionQualification: { requirements: [{ efficiency:26, quality:16 },{ efficiency:38, quality:24 },{ efficiency:55, quality:34 },{ efficiency:78, quality:48 }] },
-  promotionAssignment: { retryWorkdays:3, assignments:[{ name:'獨立需求處理', workload:130 },{ name:'重要客戶提案', workload:209 },{ name:'部門協調改善案', workload:330 },{ name:'年度策略方案', workload:507 }] },
+  // Promotion V2 PROVISIONAL. Legacy assignments.workload is retained for archived V1 tools only;
+  // runtime snapshots threshold E × scaled working day × workloadFactor.
+  promotionQualification: { requirements: [{ efficiency:20, quality:12 },{ efficiency:40, quality:24 },{ efficiency:80, quality:48 },{ efficiency:160, quality:96 }] },
+  promotionAssignment: { retryWorkdays:3, workloadFactor:1.2, failedCompletionReward:0, assignments:[{ name:'獨立需求處理', workload:130 },{ name:'重要客戶提案', workload:209 },{ name:'部門協調改善案', workload:330 },{ name:'年度策略方案', workload:507 }] },
   promotionLowProfile: { multiplier:0.8 },
   gameId: 'auto-worker', version: '2.0.0', saveVersion: 2, coreVersion: 'todo-v2', prototypeTargetRunDuration: 480,
-  time: { dayDuration: 60, referenceDayDuration: 60, hoursPerDay: 24, workStartAnchor: 8, breakfastStart: 0, breakfastCutoff: 8, lunchStart: 20, lunchDuration: 8, offWorkAnchor: 40, sleepAnchor: 50, tickSeconds: .05, speeds: [1, 2, 5, 10] },
-  economy: { startingMoney: 120, baseWorkSpeed: 20, baseQuality: 10, baseLifeSpeed: 1, baseRestOutput: 30, incomeWindow: 60, minimumStatMultiplier: .25 },
+  time: { dayDuration: 180, sleepTimeAcceleration:60, referenceDayDuration: 60, hoursPerDay: 24, workStartAnchor: 8, breakfastStart: 0, breakfastCutoff: 8, lunchStart: 20, lunchDuration: 8, offWorkAnchor: 40, sleepAnchor: 50, tickSeconds: .05, speeds: [1, 2, 5, 10] },
+  economy: { startingMoney: 120, baseWorkSpeed: 10, baseQuality: 6, baseLifeSpeed: 1, baseRestOutput: 30, incomeWindow: 60, minimumStatMultiplier: .25 },
   upgrades: {
     efficiency: upgrade('工作效率', '⚡', '線性提高處理速度。', 35, 1), quality: upgrade('工作品質', '✦', '減少可避免的返工，達成高階品質要求。', 40, 1),
     flattery: upgrade('拍馬屁', '☕', '收入增加，也更容易被老闆找到。', 55, .01), lifeManagement: upgrade('生活管理', '☯', '加快生活需求並增加午休輸出。', 45, 1), slacking: upgrade('摸魚技巧', '🐟', '已被找到後提高逃跑率。', 50, 1),
@@ -31,7 +32,7 @@ export const defaultGameConfig = {
     ], // PROVISIONAL / pending play balance
     workTypeProfiles: { BOSS: 'BOSS_URGENT', URGENT: 'BOSS_URGENT', REWORK: 'REWORK_SHORT', CORRECTION: 'REWORK_SHORT', MISSING_INFO: 'REWORK_SHORT', CLIENT_REPLY: 'CLIENT_REPLY', NEW_REQUEST: 'NEW_REQUEST', PROJECT_NEXT_STEP: 'PROJECT', PROJECT: 'PROJECT', NORMAL: 'NORMAL', FOLLOW_UP: 'NORMAL', EVENT: 'NORMAL' },
   },
-  work: { todoLowWatermark: 2, todoRefillTarget: 4, priorities: { NORMAL: 10, FOLLOW_UP: 20, PROJECT: 30, BOSS: 50, URGENT: 60 }, bossWorkHours: 1, bossReward: 180,
+  work: { workloadTierCenters:[70,140,280,560,1120], templateWorkloadReference:100, templateVariationMin:.75, templateVariationMax:1.4, todoLowWatermark: 2, todoRefillTarget: 4, priorities: { NORMAL: 10, FOLLOW_UP: 20, PROJECT: 30, BOSS: 50, URGENT: 60 }, bossWorkHours: 1, bossReward: 180,
     templates: [
       { id: 'email', name: '回 Email', workload: 45, reward: 16, tags: ['行政'], weight: 4, rank: 0, quality: 10 },
       { id: 'data', name: '整理資料', workload: 80, reward: 28, tags: ['行政'], weight: 3, rank: 0, quality: 12 },
@@ -52,11 +53,11 @@ export const defaultGameConfig = {
       { type: 'PROJECT_NEXT_STEP', name: '後續確認', qualitySensitive: false, chance: .08, workloadFactor: .5, rewardFactor: .6, countMin: 1, countMax: 1, delay: 0 },
     ] as { type: FollowUpType; name: string; qualitySensitive: boolean; chance: number; workloadFactor: number; rewardFactor: number; countMin: number; countMax: number; delay: number }[] },
   ranks: [
-    { name: '新人', promotionCost: 0, maxOverdueAllowed: 0, workloadMultiplier: 1, rewardMultiplier: 1, qualityMultiplier: 1, projectChance: .16, rankEscapeResistance: 0, recommendedSpeed: 20, recommendedQuality: 10 },
-    { name: '一般員工', promotionCost: 220, maxOverdueAllowed: 3, workloadMultiplier: 1.25, rewardMultiplier: 2.2, qualityMultiplier: 1.2, projectChance: .22, rankEscapeResistance: 4, recommendedSpeed: 30, recommendedQuality: 18 },
-    { name: '資深員工', promotionCost: 900, maxOverdueAllowed: 2, workloadMultiplier: 1.7, rewardMultiplier: 5, qualityMultiplier: 1.5, projectChance: .3, rankEscapeResistance: 9, recommendedSpeed: 45, recommendedQuality: 28 },
-    { name: '主管', promotionCost: 2800, maxOverdueAllowed: 1, workloadMultiplier: 2.2, rewardMultiplier: 11, qualityMultiplier: 1.8, projectChance: .4, rankEscapeResistance: 14, recommendedSpeed: 65, recommendedQuality: 40 },
-    { name: '經理', promotionCost: 9000, maxOverdueAllowed: 0, workloadMultiplier: 3, rewardMultiplier: 25, qualityMultiplier: 2.2, projectChance: .5, rankEscapeResistance: 20, recommendedSpeed: 90, recommendedQuality: 55 },
+    { name: '新人', /* @deprecated legacy spreadsheet metadata; never a promotion condition or charge. */ promotionCost: 0, maxOverdueAllowed: 0, workloadMultiplier: 1, rewardMultiplier: 1, qualityMultiplier: 1, projectChance: .16, rankEscapeResistance: 0, recommendedSpeed: 10, recommendedQuality: 6 },
+    { name: '一般員工', promotionCost: 220, maxOverdueAllowed: 3, workloadMultiplier: 1.25, rewardMultiplier: 2.2, qualityMultiplier: 1.2, projectChance: .22, rankEscapeResistance: 4, recommendedSpeed: 20, recommendedQuality: 12 },
+    { name: '資深員工', promotionCost: 900, maxOverdueAllowed: 2, workloadMultiplier: 1.7, rewardMultiplier: 5, qualityMultiplier: 1.5, projectChance: .3, rankEscapeResistance: 9, recommendedSpeed: 40, recommendedQuality: 24 },
+    { name: '主管', promotionCost: 2800, maxOverdueAllowed: 1, workloadMultiplier: 2.2, rewardMultiplier: 11, qualityMultiplier: 1.8, projectChance: .4, rankEscapeResistance: 14, recommendedSpeed: 80, recommendedQuality: 48 },
+    { name: '經理', promotionCost: 9000, maxOverdueAllowed: 0, workloadMultiplier: 3, rewardMultiplier: 25, qualityMultiplier: 2.2, projectChance: .5, rankEscapeResistance: 20, recommendedSpeed: 160, recommendedQuality: 96 },
   ],
   projects: { maximumActive: 4, templates: [{ id: 'launch', weight: 1, rankRequirement: 0, enabled: true, name: '新品提案', tier: 1, reward: 600, deadlineDays: 3, subtasks: [
     { id: 'research', name: '資料蒐集', dependencies: [], workload: 140, reward: 40, qualityRequirement: 15 },

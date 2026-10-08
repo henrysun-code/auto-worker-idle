@@ -1,0 +1,134 @@
+paired 42 [ 2557.2513840833, null, null, null ] [ 399.3610400885, 1189.1192047439, 1850.8610515384, 3240.043493447 ]
+paired 7961 [ 2765.6082697235, null, null, null ] [ 262.9606060606, 710.8093414113, 1480.0643403653, 3180.5695297092 ]
+paired 15880 [ 2440.0339036907, null, null, null ] [ 262.0666666666, 710.1097774371, 1593.0217813298, 2981.5751091161 ]
+expanded 23799 [ 0, 486.6320473897, 1277.7163856951, 2047.070296596, null ]
+expanded 31718 [ 0, 845.6783795937, 1626.5299569945, 2394.1611879059, null ]
+expanded 39637 [ 0, 832.7415830462, 1505.8075417624, 2484.7144147939, null ]
+expanded 47556 [ 0, 365.9640215275, 1162.5097522324, 1720.9174311506, null ]
+expanded 55475 [ 0, 853.8169262849, 1531.8909839751, 2292.1927967809, null ]
+expanded 63394 [ 0, 722.6899525764, 1412.8953472672, 2192.532604409, null ]
+expanded 71313 [ 0, 1193.7955475302, 1871.8871482496, 2633.1212718272, null ]
+expanded 79232 [ 0, 487.228255978, 1258.8512684379, 2246.6487151361, null ]
+expanded 87151 [ 0, 589.9377588708, 1254.5680378252, 2010.9769407681, null ]
+expanded 95070 [ 0, 237.5310185185, 1231.8434256095, 2119.4003526503, null ]
+expanded 102989 [ 0, 236.0833333333, 913.1112332266, 1786.0562252761, null ]
+expanded 110908 [ 0, 484.3569050327, 1383.8054178397, 2025.5828920858, null ]
+expanded 118827 [ 0, 486.6138267844, 1168.6661050894, 1912.9191415768, null ]
+expanded 126746 [ 0, 855.958647316, 1533.4692866472, 2627.8749266417, null ]
+expanded 134665 [ 0, 490.7001828703, 1163.1729496321, 2255.5422440316, null ]
+expanded 142584 [ 0, 842.3947881317, 1524.791582256, 2512.6458704944, null ]
+expanded 150503 [ 0, 734.5129037219, 1526.7560077262, 2196.7337102641, null ]
+expanded 158422 [ 0, 723.3948142537, 1621.2510462529, 2597.5560543964, null ]
+expanded 166341 [ 0, 483.8939393939, 1267.3618475094, 2024.7050049072, null ]
+expanded 174260 [ 0, 849.4642841935, 1516.1757872084, 2375.2206626553, null ]
+expanded 182179 [ 0, 729.519629468, 1504.9044361504, 2269.6642505582, null ]
+expanded 190098 [ 0, 848.1728507655, 1523.687954471, 2308.4879873365, null ]
+expanded 198017 [ 0, 729.1924166341, 1283.3088805938, 2027.1229407347, null ]
+expanded 205936 [ 0, 590.7199467059, 1261.6808000784, 2350.7013714352, null ]
+expanded 213855 [ 0, 595.2638596491, 1160.2645845489, 1942.1356508295, null ]
+expanded 221774 [ 0, 487.5249504737, 1376.6419936166, 2055.2639315889, null ]
+expanded 229693 [ 0, 359.3777777777, 1148.5320839692, 2241.7073601652, null ]
+{
+  "rankTimesMinutes": [
+    {
+      "rank": 1,
+      "reached": 30,
+      "P10": 5.981186868686667,
+      "P50": 9.883198386291667,
+      "P90": 14.164992473377334
+    },
+    {
+      "rank": 2,
+      "reached": 30,
+      "P10": 19.322432889639334,
+      "P50": 23.0037284288025,
+      "P90": 27.029648955451
+    },
+    {
+      "rank": 3,
+      "reached": 30,
+      "P10": 32.32023333173717,
+      "P50": 37.33436235580417,
+      "P90": 42.01894814807667
+    },
+    {
+      "rank": 4,
+      "reached": 0,
+      "P10": ">60 minutes",
+      "P50": ">60 minutes",
+      "P90": ">60 minutes"
+    }
+  ],
+  "byRank": [
+    {
+      "rank": 0,
+      "attempts": 48,
+      "firstSuccessRate": 0.43333333333333335,
+      "firstFailureRate": 0.5666666666666667,
+      "dinnerObservedCount": 48,
+      "firstCensoredRate": 0,
+      "meanDinnerCompletionPercent": 96.44721137152779,
+      "meanOvertimeWorldSeconds": 3.625407255793752,
+      "meanOvertimeElapsedRealSeconds": 5.1254072557937524,
+      "meanRetries": 0.6,
+      "upgradeIntervalP50": 5.75,
+      "medianNextUpgradeETA": 8.170212765957448
+    },
+    {
+      "rank": 1,
+      "attempts": 61,
+      "firstSuccessRate": 0.03333333333333333,
+      "firstFailureRate": 0.9666666666666667,
+      "dinnerObservedCount": 61,
+      "firstCensoredRate": 0,
+      "meanDinnerCompletionPercent": 93.56764429644808,
+      "meanOvertimeWorldSeconds": 7.105022984027884,
+      "meanOvertimeElapsedRealSeconds": 9.137809869273775,
+      "meanRetries": 1.0333333333333334,
+      "upgradeIntervalP50": 2.25,
+      "medianNextUpgradeETA": 2.479338842975207
+    },
+    {
+      "rank": 2,
+      "attempts": 70,
+      "firstSuccessRate": 0,
+      "firstFailureRate": 1,
+      "dinnerObservedCount": 70,
+      "firstCensoredRate": 0,
+      "meanDinnerCompletionPercent": 92.97669270833335,
+      "meanOvertimeWorldSeconds": 7.618307183332854,
+      "meanOvertimeElapsedRealSeconds": 9.904021469047146,
+      "meanRetries": 1.3333333333333333,
+      "upgradeIntervalP50": 0,
+      "medianNextUpgradeETA": 1.4703445010062743
+    },
+    {
+      "rank": 3,
+      "attempts": 47,
+      "firstSuccessRate": 0,
+      "firstFailureRate": 0.8571428571428571,
+      "dinnerObservedCount": 37,
+      "firstCensoredRate": 0.14285714285714285,
+      "meanDinnerCompletionPercent": 82.74952491554059,
+      "meanOvertimeWorldSeconds": 15.327874691063872,
+      "meanOvertimeElapsedRealSeconds": 18.476810861276608,
+      "meanRetries": 0.6333333333333333,
+      "upgradeIntervalP50": 1.75,
+      "medianNextUpgradeETA": 2.416849868803631
+    },
+    {
+      "rank": 4,
+      "attempts": 0,
+      "firstSuccessRate": null,
+      "firstFailureRate": null,
+      "dinnerObservedCount": 0,
+      "firstCensoredRate": null,
+      "meanDinnerCompletionPercent": null,
+      "meanOvertimeWorldSeconds": null,
+      "meanOvertimeElapsedRealSeconds": null,
+      "meanRetries": 0,
+      "upgradeIntervalP50": null,
+      "medianNextUpgradeETA": null
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import './legacyBalanceFixture';
 import {gameConfig as c} from '../src/config/gameConfig';
 import test from 'node:test';
 import assert from 'node:assert/strict';

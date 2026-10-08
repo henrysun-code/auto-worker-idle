@@ -1,0 +1,7 @@
+seed,id,event,realSeconds,worldTime,fromRank,workload,deadline
+42,"promotion-7491","RECEIVED",2557.2513840833,4164,0,2304,4260
+42,"promotion-7491","SUCCESS",2653.2513840833,4260,"","",""
+7961,"promotion-9705","RECEIVED",2765.6082697235,4524,0,2304,4620
+7961,"promotion-9705","SUCCESS",2861.6082697235,4620,"","",""
+15880,"promotion-7450","RECEIVED",2440.0339036907,3984,0,2304,4080
+15880,"promotion-7450","SUCCESS",2536.0339036907,4080,"","",""

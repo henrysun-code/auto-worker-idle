@@ -1,0 +1,129 @@
+{
+  "rankTimes": [
+    {
+      "rank": 1,
+      "reached": 30,
+      "P10": 5.981186868686667,
+      "P50": 9.883198386291667,
+      "P90": 14.164992473377334
+    },
+    {
+      "rank": 2,
+      "reached": 30,
+      "P10": 19.322432889639334,
+      "P50": 23.0037284288025,
+      "P90": 27.029648955451
+    },
+    {
+      "rank": 3,
+      "reached": 30,
+      "P10": 32.32023333173717,
+      "P50": 37.33436235580417,
+      "P90": 42.01894814807667
+    },
+    {
+      "rank": 4,
+      "reached": 0,
+      "P10": ">60 minutes",
+      "P50": ">60 minutes",
+      "P90": ">60 minutes"
+    }
+  ],
+  "byRank": [
+    {
+      "rank": 0,
+      "attempts": 48,
+      "firstSuccessRate": 0.43333333333333335,
+      "firstFailureRate": 0.5666666666666667,
+      "dinnerObservedCount": 48,
+      "firstCensoredRate": 0,
+      "meanDinnerCompletionPercent": 96.44721137152779,
+      "meanOvertimeWorldSeconds": 3.625407255793752,
+      "meanOvertimeElapsedRealSeconds": 5.1254072557937524,
+      "meanRetries": 0.6,
+      "upgradeIntervalP50": 5.75,
+      "medianNextUpgradeETA": 8.170212765957448,
+      "completedAttemptCount": 48,
+      "meanCompletedAttemptOvertimeProcessingSeconds": 3.625407255793752,
+      "meanCompletedAttemptOvertimeElapsedRealSeconds": 5.1254072557937524,
+      "meanCompletedFailedOvertimeProcessingSeconds": 9.667752682116673,
+      "censoredAttemptCount": 0
+    },
+    {
+      "rank": 1,
+      "attempts": 61,
+      "firstSuccessRate": 0.03333333333333333,
+      "firstFailureRate": 0.9666666666666667,
+      "dinnerObservedCount": 61,
+      "firstCensoredRate": 0,
+      "meanDinnerCompletionPercent": 93.56764429644808,
+      "meanOvertimeWorldSeconds": 7.105022984027884,
+      "meanOvertimeElapsedRealSeconds": 9.137809869273775,
+      "meanRetries": 1.0333333333333334,
+      "upgradeIntervalP50": 2.25,
+      "medianNextUpgradeETA": 2.479338842975207,
+      "completedAttemptCount": 61,
+      "meanCompletedAttemptOvertimeProcessingSeconds": 7.105022984027884,
+      "meanCompletedAttemptOvertimeElapsedRealSeconds": 9.137809869273775,
+      "meanCompletedFailedOvertimeProcessingSeconds": 13.980851678248417,
+      "censoredAttemptCount": 0
+    },
+    {
+      "rank": 2,
+      "attempts": 70,
+      "firstSuccessRate": 0,
+      "firstFailureRate": 1,
+      "dinnerObservedCount": 70,
+      "firstCensoredRate": 0,
+      "meanDinnerCompletionPercent": 92.97669270833335,
+      "meanOvertimeWorldSeconds": 7.618307183332854,
+      "meanOvertimeElapsedRealSeconds": 9.904021469047146,
+      "meanRetries": 1.3333333333333333,
+      "upgradeIntervalP50": 0,
+      "medianNextUpgradeETA": 1.4703445010062743,
+      "completedAttemptCount": 70,
+      "meanCompletedAttemptOvertimeProcessingSeconds": 7.618307183332854,
+      "meanCompletedAttemptOvertimeElapsedRealSeconds": 9.904021469047146,
+      "meanCompletedFailedOvertimeProcessingSeconds": 13.332037570832494,
+      "censoredAttemptCount": 0
+    },
+    {
+      "rank": 3,
+      "attempts": 47,
+      "firstSuccessRate": 0,
+      "firstFailureRate": 0.8571428571428571,
+      "dinnerObservedCount": 37,
+      "firstCensoredRate": 0.14285714285714285,
+      "meanDinnerCompletionPercent": 82.74952491554059,
+      "meanOvertimeWorldSeconds": 15.327874691063872,
+      "meanOvertimeElapsedRealSeconds": 18.476810861276608,
+      "meanRetries": 0.6333333333333333,
+      "upgradeIntervalP50": 1.75,
+      "medianNextUpgradeETA": 2.416849868803631,
+      "completedAttemptCount": 37,
+      "meanCompletedAttemptOvertimeProcessingSeconds": 19.47054352648654,
+      "meanCompletedAttemptOvertimeElapsedRealSeconds": 23.470543526486505,
+      "meanCompletedFailedOvertimeProcessingSeconds": 19.47054352648654,
+      "censoredAttemptCount": 10
+    },
+    {
+      "rank": 4,
+      "attempts": 0,
+      "firstSuccessRate": null,
+      "firstFailureRate": null,
+      "dinnerObservedCount": 0,
+      "firstCensoredRate": null,
+      "meanDinnerCompletionPercent": null,
+      "meanOvertimeWorldSeconds": null,
+      "meanOvertimeElapsedRealSeconds": null,
+      "meanRetries": 0,
+      "upgradeIntervalP50": null,
+      "medianNextUpgradeETA": null,
+      "completedAttemptCount": 0,
+      "meanCompletedAttemptOvertimeProcessingSeconds": null,
+      "meanCompletedAttemptOvertimeElapsedRealSeconds": null,
+      "meanCompletedFailedOvertimeProcessingSeconds": null,
+      "censoredAttemptCount": 0
+    }
+  ]
+}

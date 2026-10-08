@@ -11,13 +11,13 @@ export function getUnresolvedOverdueWorkCount(s: State) {
 }
 export function canPromote(s: State) {
   const next = c.ranks[s.career.rank+1];
-  return !!next && s.player.money >= next.promotionCost && getUnresolvedOverdueWorkCount(s) <= next.maxOverdueAllowed;
+  return !!next && getUnresolvedOverdueWorkCount(s) <= next.maxOverdueAllowed;
 }
 
 // Formal rank-up transaction shared by assessment completion and internal/debug tests.
 export function promoteTransaction(s:State) {
  if(!canPromote(s))return false;
- const rank=c.ranks[s.career.rank+1];s.player.money-=rank.promotionCost;s.career.rank++;
+ const rank=c.ranks[s.career.rank+1];s.career.rank++;
  s.career.highestRank=Math.max(s.career.highestRank,s.career.rank);
  notify(s,'升職',`升職為 ${rank.name}，工作量、品質要求與專案壓力提高。`);return true;
 }

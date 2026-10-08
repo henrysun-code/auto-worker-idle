@@ -1,0 +1,32 @@
+{
+  "protectedFiles": 45,
+  "protectedChanges": [],
+  "uniqueRuns": 180,
+  "logicalSweepRuns": 120,
+  "logicalTop3Runs": 90,
+  "reusedTop3First10Runs": 30,
+  "runCounts": {
+    "A-G1.040-C2": 10,
+    "A-G1.040-C3": 30,
+    "A-G1.042-C2": 10,
+    "A-G1.042-C3": 30,
+    "A-G1.045-C2": 10,
+    "A-G1.045-C3": 30,
+    "B-G1.040-C2": 10,
+    "B-G1.040-C3": 10,
+    "B-G1.042-C2": 10,
+    "B-G1.042-C3": 10,
+    "B-G1.045-C2": 10,
+    "B-G1.045-C3": 10
+  },
+  "samplesPerCandidateValidated": true,
+  "unblockedMissedAssignments": 0,
+  "noAutomaticWinner": true,
+  "noConfigWrites": true,
+  "noAutoTune": true,
+  "noCommit": true,
+  "noPush": true,
+  "sleepTelemetry": "unique existing sleep-window settlement notices at production boundaries",
+  "coreTests": 461,
+  "browserTests": 32
+}

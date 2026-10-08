@@ -1,0 +1,662 @@
+[
+  {
+    "path": "config/game_config.xlsx",
+    "bytes": 71584,
+    "sha256": "139f68e8cebf6c01895bba14f94be4a004c75f18f23e650900b192eba3a4ecf3"
+  },
+  {
+    "path": "config/generated/game_config.json",
+    "bytes": 39814,
+    "sha256": "4e0614bbf6b85e639296a2ed93213b97ef61f40988df9a752e5d3dd4340ad021"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/analysis-10seed.log",
+    "bytes": 3403,
+    "sha256": "471913ef0db9476d855cc2c83178b5cf8f17d435ab4bf418cdf739465260f485"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/analysis-final.log",
+    "bytes": 4280,
+    "sha256": "a0a745d8442685b1f720d081e4ace95ea6a7ba65237e2b1144517b0f4ed99ac4"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/analysis.json",
+    "bytes": 123091,
+    "sha256": "0d5e6af9b405fbb141472ba317ed8cd6f62df00bb8949e3bb326863d447b63fc"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/BALANCE_WALL_V2_REPORT.md",
+    "bytes": 13694,
+    "sha256": "345e9ef0d95c73f528db3c0b1aa5ead927e3bd1cc277fa99f00acdcee45a2f81"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/baseline-config.json",
+    "bytes": 39813,
+    "sha256": "8c25232b994db1bea1dbe5119fccc8796e908135d42206dd76512ab36a3be26c"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/browser-tests-initial.log",
+    "bytes": 9304,
+    "sha256": "6852c602295b9968229a33d436fac1088204a816fb789f531ee5f060be932e06"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/browser-tests.log",
+    "bytes": 5063,
+    "sha256": "d6b34427a14be9a890425ac4bd8c07ba74ad3a984532eadbfa5fd7a0ad2a1806"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/build.log",
+    "bytes": 563,
+    "sha256": "1cdf914b88a685d58198d211143937951c3e0185e15e9fcb3460d56bc5fe3992"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-A-G1.040-C2.json",
+    "bytes": 39810,
+    "sha256": "76f47afee96848063bf3b2c23ca9dc856e0fdf1c06bafc3d77114a7ebffd3887"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-A-G1.040-C3.json",
+    "bytes": 39810,
+    "sha256": "88534aac6709b0bc78cb557a6cae29ca00f7a1f8dc1dd3ce919c51eeef63e17e"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-A-G1.042-C2.json",
+    "bytes": 39811,
+    "sha256": "481a71ec4105e8b092773dde214983838f3aa6b2c0db25a2bebed6118b2d1fca"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-A-G1.042-C3.json",
+    "bytes": 39811,
+    "sha256": "0b483168a4d67424e58ce076735c3e4323e5c498f9fd0fed358b16e0bb404efe"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-A-G1.045-C2.json",
+    "bytes": 39811,
+    "sha256": "d7a80f6191cfe2ae32d4be335b95fbe7ff0a5c6fa335685ae01236bd6a03220d"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-A-G1.045-C3.json",
+    "bytes": 39811,
+    "sha256": "33928b36959525b6bbd10d05f91574bed37df3708e631b4e91599bb27b0c3c2c"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-B-G1.040-C2.json",
+    "bytes": 39810,
+    "sha256": "89af9ccfb459f7713dbdcdcfa96532f5f3d5cb16dca8bf89ea4ee52e31985d9e"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-B-G1.040-C3.json",
+    "bytes": 39810,
+    "sha256": "4d12b74ba5ff8be35a401f11bcece4c87d7094d93772bde4139cf5af70688b2d"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-B-G1.042-C2.json",
+    "bytes": 39811,
+    "sha256": "9cb9c5c2241577a42c0dbfd4ff49ae4f8dd474bcc95a72cc2193aa7a4f531b4a"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-B-G1.042-C3.json",
+    "bytes": 39811,
+    "sha256": "b5fc1f819a5c22c61ef7ac8bac62a9f16fb650797f11b796d666a399bb5e5660"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-B-G1.045-C2.json",
+    "bytes": 39811,
+    "sha256": "e77f3d10f99a51c8d526b2d185e36b9af5af89bf95baab69e78c4445521f3e0e"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-B-G1.045-C3.json",
+    "bytes": 39811,
+    "sha256": "22290a9e99fdf165338c437bd1b79a5d88dc5f022228c061cfab6302f4169465"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-burst-intervals.csv",
+    "bytes": 3857,
+    "sha256": "cb9b7b4aca8e04be2efdd05018a5492641244955196df45122c2277e64387bcd"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-levels-at-r4.csv",
+    "bytes": 2405,
+    "sha256": "5046f3da38540cfe4c28bc8da542c6cda7788c3e23809d08c1bd05b6b643de40"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-promotions.csv",
+    "bytes": 6294,
+    "sha256": "dcb8a9f4ee943d0553cedb09d5333ad09d759a10ade2aa53923090892ab96a46"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-rank-times.csv",
+    "bytes": 10223,
+    "sha256": "f48c68ea1324113c6d1c20d23ec833eb9942a1787c82e80c66461ece954f4f9d"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-ranking.csv",
+    "bytes": 5151,
+    "sha256": "36ed835b897034df64f2c6d15d2ecd72b75c4bdbab07529d350377fbb19e665d"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-softwall-costs.csv",
+    "bytes": 2261,
+    "sha256": "7be34ec23e0272d40a03ad917dd30b90c80ba741049c8b786b73a54bd6d94637"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/candidate-summary.csv",
+    "bytes": 5027,
+    "sha256": "f786b761cc8a5880ad4867a7bf8100689ff0d6874659c19204b23964b34594d7"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/core-tests.log",
+    "bytes": 36050,
+    "sha256": "71df003d542c3195bcb0f7781b4ee5bf71cbffc0e3db1a72b7f9ef50162e2260"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/etas.csv",
+    "bytes": 27696773,
+    "sha256": "0110bb0e4851c229e95fbeaac4d28f83a8872fe865039b8a25b6d17faf65d510"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/final-levels-diagnostic.csv",
+    "bytes": 8067,
+    "sha256": "ab4433862b7ff8fcdf9e7f24d074193dafa452cdeebdf2861c789d83b981f1b4"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/pressure-run-details.csv",
+    "bytes": 24216,
+    "sha256": "7eec1b89e6130e40f95e5572d1c1639309049025e8fd9d7c5af5916318ddfe70"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/promotions.csv",
+    "bytes": 313744,
+    "sha256": "4e77e21c26cdd01cebd45af07974b0c01d2aa4e1b5f1c042dd0aa49a3ccffdfb"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/protected-hashes.json",
+    "bytes": 4869,
+    "sha256": "c2718b4f0ada7c8951add938beca8d54421dd2877757beb9c81261a22efb337a"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/purchase-bursts.csv",
+    "bytes": 2540550,
+    "sha256": "06bf91410a5ee81b480a3fc880ea608f23988bb462761c83039304e26af4a6f9"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/purchases.csv",
+    "bytes": 4376200,
+    "sha256": "235d7ff03493d22b67db3a78f586aeb8925cc308247b89ae7d0045be93676cab"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/rank-run-details.csv",
+    "bytes": 54031,
+    "sha256": "0e75af144d5e39d3ecf75ccf058554a552dff5a4786512128cf23466ec0634ab"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/ranks.csv",
+    "bytes": 24657,
+    "sha256": "6e145e4397eef2f30de958e619911e4289f38582d72be12e4c32e699f67fdfad"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/REVIEW_README.md",
+    "bytes": 1285,
+    "sha256": "85275d66cd1ea5dd94f01371d88ee83b823102eb831d765482d39058a89406d7"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/runs.json",
+    "bytes": 2184725,
+    "sha256": "0016af39afbbd85e0bd82421dbe54e9128848e1b98b6c2ba50d1150c4ef6744f"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/sweep-10seed.log",
+    "bytes": 9647,
+    "sha256": "131aebc4f272ec1d14fa80d7f9f80de182038b5617277eed879f5061dae7e299"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/top3-30seed-summary.csv",
+    "bytes": 1725,
+    "sha256": "a7acfe138dda4d3aecdafd182ddbc4b8585def1d7e40230120083398aae82d1d"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/top3-30seed.log",
+    "bytes": 4891,
+    "sha256": "8e0af256f4ffe73b9434f0d143c8d797cad583467a2dcfc8e68ae7adab0184a7"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/top3-confidence-intervals.csv",
+    "bytes": 852,
+    "sha256": "31f50faafa100f7e70d148595805064ff7b0ccc37a392566027daabad3425f6f"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/top3-sleep-ratios.csv",
+    "bytes": 69881,
+    "sha256": "615f7371cc1b2e54b2d6256ffed6898dafe7c5c3a3efb9703300e83a1af37a10"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/verification.json",
+    "bytes": 812,
+    "sha256": "e02807a0747424fb48bcbd7f3ce090d33a3898eb2f33862f645b39643752c8b8"
+  },
+  {
+    "path": "FIRST_COMPANY_BALANCE_WALL_V2/workstarts.csv",
+    "bytes": 600331,
+    "sha256": "ed627d03a4db57f519ecb621b1b3b96c3bd2bc320d549def77223c1d60aebe69"
+  },
+  {
+    "path": "index.html",
+    "bytes": 432,
+    "sha256": "61e8730a115f352cfecfec0adf6fa224c59a230a74d400c9448cf3ccb6f5d22c"
+  },
+  {
+    "path": "package-lock.json",
+    "bytes": 44530,
+    "sha256": "8d4ff3efab992fdd7eb145d28281cabe1cbd980a9cc8dd4ca5642eae0258666b"
+  },
+  {
+    "path": "package.json",
+    "bytes": 911,
+    "sha256": "8d643cf57cac860866a5a9ebaadba4b1e89e507c6563779e284ce054e0d536d9"
+  },
+  {
+    "path": "playwright.config.ts",
+    "bytes": 425,
+    "sha256": "c5a80454cc68689fa76b0b84a5e7112273b527a990e44c3fed01064958198560"
+  },
+  {
+    "path": "public/.gitkeep",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "public/favicon.svg",
+    "bytes": 245,
+    "sha256": "212a1b97af8371a4153a6249b9b9da14c338e825de239e29b874426daa780872"
+  },
+  {
+    "path": "scripts/balanceWallCandidates.ts",
+    "bytes": 1134,
+    "sha256": "fe4153a876be30038f8c3d79aa75f35e00671b18618ee035c88e425217bdd249"
+  },
+  {
+    "path": "scripts/balanceWallSweep.ts",
+    "bytes": 9057,
+    "sha256": "05b42638aacd4728d2c7bb081c77ab10f1919bf173713f9afa46d19fd7115199"
+  },
+  {
+    "path": "scripts/config.ts",
+    "bytes": 10977,
+    "sha256": "c340f6759c2566df1cc9db30cc8727b478b2a0782d0d4187221f3ce403e54df6"
+  },
+  {
+    "path": "scripts/finalizeBalanceWall.py",
+    "bytes": 14587,
+    "sha256": "52eda67642f2f0548b584e876dbf1117ed6063705f4b39230d20ec7d703aacb9"
+  },
+  {
+    "path": "scripts/packageBalanceWall.py",
+    "bytes": 3971,
+    "sha256": "8572fa1c42643970eebfb25369f2586d586b780dff7d413743f6b09774090a1d"
+  },
+  {
+    "path": "scripts/reportBalanceWall.py",
+    "bytes": 7779,
+    "sha256": "df32a4f678d2097dd0b4bb30ec4824a2c12388e76046e162ccb62e29353ff008"
+  },
+  {
+    "path": "src/App.tsx",
+    "bytes": 3506,
+    "sha256": "21d2148754aa91665868340246928ede74a81f4b80894ae4f6ea63643cccd7f9"
+  },
+  {
+    "path": "src/components/CharacterScene.tsx",
+    "bytes": 5322,
+    "sha256": "2b82be5ae5c517ecdca302e26a42688cb14886480557da106c9aace8379769c6"
+  },
+  {
+    "path": "src/components/DebugPanel.tsx",
+    "bytes": 10467,
+    "sha256": "09ec6d8e7302de8e181a36fb1bc115c95616ebfbc7d12055e65c172ab69610f6"
+  },
+  {
+    "path": "src/components/OfflineSummaryCard.tsx",
+    "bytes": 1627,
+    "sha256": "870b7268a76507479bd83a30f7d725c7d95a540e84b45bf21b6e6cf661f4dc5c"
+  },
+  {
+    "path": "src/components/TargetCard.tsx",
+    "bytes": 3667,
+    "sha256": "0eaa322f11b449a7a1f7c02b87bdfede581946b813f731a045af705c4b4c826a"
+  },
+  {
+    "path": "src/components/TargetMonster.tsx",
+    "bytes": 1746,
+    "sha256": "7daa4e65492ba3db40ca4e76f5c31f73cc5bf669526eacc22f4a4ce7abf331a2"
+  },
+  {
+    "path": "src/components/WorkerAvatar.tsx",
+    "bytes": 2294,
+    "sha256": "0837077c79d3ec95be0721759b994f4852e8f1256edd264cec1ac11a8b85d119"
+  },
+  {
+    "path": "src/config/eventConfig.ts",
+    "bytes": 89,
+    "sha256": "66c5a63bda219e02df0221576425f91334f5f54fcc8c0e28cc09453e6b8a0b82"
+  },
+  {
+    "path": "src/config/gameConfig.ts",
+    "bytes": 281,
+    "sha256": "0c1439b963132d61086f6c5be52e4161a5a5c798109275ba8097311c117e1cf5"
+  },
+  {
+    "path": "src/config/prestigeConfig.ts",
+    "bytes": 94,
+    "sha256": "625ebaaceedde3675790fe154c4fde9cc079c7c47d3eba64f8469686bd2583cd"
+  },
+  {
+    "path": "src/config/productConfig.ts",
+    "bytes": 93,
+    "sha256": "feb7d22b7927a366d46ecd6bb096af58179871cec76548b7a43c32ed40c69ae8"
+  },
+  {
+    "path": "src/config/projectConfig.ts",
+    "bytes": 93,
+    "sha256": "5eb8d25b64a1fdd44e37efe25d06e8ea94fcd434035f34eca0b2fa479b74193c"
+  },
+  {
+    "path": "src/config/rankContent.ts",
+    "bytes": 4701,
+    "sha256": "100d878f4153ab0aa0175506879ae9b8e1bc239cbdd9037036486e654c52877a"
+  },
+  {
+    "path": "src/config/v2Defaults.ts",
+    "bytes": 15737,
+    "sha256": "f782e048869cae6d5b3a4b804f1adb71cc075bdc2ffd923856f8cbecc4d49864"
+  },
+  {
+    "path": "src/config/workConfig.ts",
+    "bytes": 86,
+    "sha256": "859d0963ee3c8dc5eb16b13f28fd39d308b79f72161df89f47530cb048dfe042"
+  },
+  {
+    "path": "src/game/buffs/buffManager.ts",
+    "bytes": 844,
+    "sha256": "d74263874a236010c32b0aed485de04eaf52490223c41b057a0c6351dc0cdf78"
+  },
+  {
+    "path": "src/game/career/bossEvents.ts",
+    "bytes": 2877,
+    "sha256": "d90cf302bdd844824d762a59a0ecaf2e9ed9d180c33c799e66cecd9bef043149"
+  },
+  {
+    "path": "src/game/career/promotion.ts",
+    "bytes": 1221,
+    "sha256": "4482296f78ba1f7a93b30d70b3a1aa36325c111c9f77d5c4259300c799f1c538"
+  },
+  {
+    "path": "src/game/career/promotionAssignment.ts",
+    "bytes": 9274,
+    "sha256": "2d499ee2d933d690651a58a0a114a60a74a50ecd659785becc793657ebfeb3c7"
+  },
+  {
+    "path": "src/game/engine/actions.ts",
+    "bytes": 1757,
+    "sha256": "5e247d54f05243171fcef9d6c2ef25f973b007e4bb3a61c1a14c62ec2b141293"
+  },
+  {
+    "path": "src/game/engine/debugActions.ts",
+    "bytes": 8298,
+    "sha256": "075221aa1f0a543a02848d7e4c6b541e6a64c73f90360f1f597bdd44bf0a67e4"
+  },
+  {
+    "path": "src/game/engine/GameEngine.ts",
+    "bytes": 4244,
+    "sha256": "92a9e3e75125370bba2cfe642651845c9c56f36720f01df30645a4dc8510e3d8"
+  },
+  {
+    "path": "src/game/engine/SimulationLoop.ts",
+    "bytes": 9931,
+    "sha256": "4eb463baa8a86d774675b20c7e8a3c3c46f28ebed0d140081f32bf2230dcba7b"
+  },
+  {
+    "path": "src/game/events/eventLog.ts",
+    "bytes": 672,
+    "sha256": "991fae8499e6278bcbb0531eed8c0d73e680a1ddea7eafa48dfd9dda7fc135e6"
+  },
+  {
+    "path": "src/game/events/eventManager.ts",
+    "bytes": 2374,
+    "sha256": "1332ba64fa5553ff07f255b3c470f3a9f07ea7bebb2a30d7b470127ba3415671"
+  },
+  {
+    "path": "src/game/numeric/semanticBoundary.ts",
+    "bytes": 565,
+    "sha256": "66234d90e6f1ece233cd985d56f12b6adf958e26c30d8fac17b9b08d1fe3f169"
+  },
+  {
+    "path": "src/game/presentation/target.ts",
+    "bytes": 6181,
+    "sha256": "30bbce6041e49b5e05d99e8fb4ea5618f6c0a6b9a653b42d2e25cd198f166d01"
+  },
+  {
+    "path": "src/game/prestige/permanentUpgrades.ts",
+    "bytes": 957,
+    "sha256": "be6011b5b522cc777c151edce34ab5da3302b6a68821f1f619f497074843268f"
+  },
+  {
+    "path": "src/game/prestige/prestigeManager.ts",
+    "bytes": 2015,
+    "sha256": "95d2813e37c66f655221241490636573c42406d33ac7574c43069a41fd593807"
+  },
+  {
+    "path": "src/game/products/billingManager.ts",
+    "bytes": 1205,
+    "sha256": "2a0585a4391573283aa2ca8b362a166a97b2dcf1ca16047954f5d274e64ace32"
+  },
+  {
+    "path": "src/game/products/productEffectRegistry.ts",
+    "bytes": 7191,
+    "sha256": "3679c73c54b4887f6db695b1512e38b4b22c96b68c39be14303e1f619e25c322"
+  },
+  {
+    "path": "src/game/products/productEffects.ts",
+    "bytes": 2904,
+    "sha256": "3770b8b1186825a88b7f39bea1ce0d544a7357ffded62812104e2c00ebb44a7a"
+  },
+  {
+    "path": "src/game/products/productManager.ts",
+    "bytes": 2449,
+    "sha256": "24a78a5d66e0cc3a2dc6a1de4510f97f367a5ab1ff2c6b937ac10e4c6d96b2de"
+  },
+  {
+    "path": "src/game/products/productPresentation.tsx",
+    "bytes": 1840,
+    "sha256": "f722276cdff0e3c5d7202c9ddc94320ded9998f2a55f3130236d7dfe80a69793"
+  },
+  {
+    "path": "src/game/products/productSchema.ts",
+    "bytes": 860,
+    "sha256": "651715bc06b644ebd60b72c192774ad4baa01e84beeb5c691f8cdd97984be6cb"
+  },
+  {
+    "path": "src/game/projects/projectManager.ts",
+    "bytes": 4785,
+    "sha256": "f0243259386ceffddbbfbf45a9fb41a769e16c612c68fb88bca9fae27329cd68"
+  },
+  {
+    "path": "src/game/save/dayDurationMigration.ts",
+    "bytes": 2127,
+    "sha256": "4c6f0671f37bce39eed925e48252023839f4d4a9c19c9b9de1ce4e172921eca9"
+  },
+  {
+    "path": "src/game/save/saveGame.ts",
+    "bytes": 15694,
+    "sha256": "fb0d7b3924d58b9fd3325f6bb10975db29c6eae823cc9cc486ce0ac0bd7cc8c5"
+  },
+  {
+    "path": "src/game/state/gameState.ts",
+    "bytes": 9188,
+    "sha256": "773e47f9a0056c0a53cbb87ee94740c9ac68d5d49ebb3985190a86c26157719f"
+  },
+  {
+    "path": "src/game/state/initialState.ts",
+    "bytes": 2465,
+    "sha256": "425cdcff696d7419901e4b52696f67736f4b4292f19cd0891738d9b4cc6ed900"
+  },
+  {
+    "path": "src/game/targets/meetingTarget.ts",
+    "bytes": 6192,
+    "sha256": "7dc34d408c4ba76481fbc39ed6dc53ba0efe14b2bd08826ed726f543af96f941"
+  },
+  {
+    "path": "src/game/targets/problemTarget.ts",
+    "bytes": 3108,
+    "sha256": "626dfa890113d35d43284083962b8fac46077638c62d3a9a69cb33357c9258b3"
+  },
+  {
+    "path": "src/game/targets/sleepWindow.ts",
+    "bytes": 2706,
+    "sha256": "59fdf626633feeb0950cc9bc9c924a89887402d5cc1f0802b18d04c64df26bc1"
+  },
+  {
+    "path": "src/game/targets/targetManager.ts",
+    "bytes": 16571,
+    "sha256": "4ff1e9fba58ef3f3e333bc3d81e63f985d779f99c3c1059533052c0d6167645b"
+  },
+  {
+    "path": "src/game/time/offlineSimulation.ts",
+    "bytes": 2354,
+    "sha256": "acb3e2c47b855bd70b9df23e050d5cbcbd2b1f49134f1d2487f0306a4f8717d1"
+  },
+  {
+    "path": "src/game/time/schedule.ts",
+    "bytes": 1132,
+    "sha256": "36a7629bc2bd2e623f1d2799dbb31625ac36d79525b1f75470ba785ba229d882"
+  },
+  {
+    "path": "src/game/time/worldTime.ts",
+    "bytes": 852,
+    "sha256": "a6710e98efc9b27b4e868215312c12709edfc317f51de42911ad236f2972ec5b"
+  },
+  {
+    "path": "src/game/types.ts",
+    "bytes": 41,
+    "sha256": "d2590a62e2692f448e92643957f2a698ab8b8953995d84dba2a55dffebe98120"
+  },
+  {
+    "path": "src/game/work/ageWorkload.ts",
+    "bytes": 1906,
+    "sha256": "f6d65cbf910c7ec77c3efb284873b07eb9774299cd87d311a3807387d232adba"
+  },
+  {
+    "path": "src/game/work/deadline.ts",
+    "bytes": 4295,
+    "sha256": "4f0f1e68be02eb94c58e5253c19ba27def36d91a3745a5a7921eee38d409cc2b"
+  },
+  {
+    "path": "src/game/work/followUpManager.ts",
+    "bytes": 3261,
+    "sha256": "30a01dc91b6c5b2e44fab608f0014a21bbcc42c9bda372e60165462994ff0989"
+  },
+  {
+    "path": "src/game/work/progression.ts",
+    "bytes": 675,
+    "sha256": "5a48718f6a1e9a499f1af7502f3ea3f301b2a18a32ef2283c4b10540b50f9415"
+  },
+  {
+    "path": "src/game/work/templateWeights.ts",
+    "bytes": 711,
+    "sha256": "a1fc828cfa07b64667024c2e1fe2ee05f288d56c2d1aa8c7324c71aace1f8090"
+  },
+  {
+    "path": "src/game/work/todoManager.ts",
+    "bytes": 2314,
+    "sha256": "c9feec6ba21b33a8d7b7dd87d1df54671f744a93371dffe0578c8f1bd41f3bc1"
+  },
+  {
+    "path": "src/game/work/workQuality.ts",
+    "bytes": 939,
+    "sha256": "e43c3c97f1e33336e0c02e9bd40db5d6d610f352450465db883b77b1128977b0"
+  },
+  {
+    "path": "src/game/work/workSelector.ts",
+    "bytes": 1046,
+    "sha256": "d8639661e1ea1c11bab4b002112a76d786459dcb41160a81d64681505081297a"
+  },
+  {
+    "path": "src/game/work/workStats.ts",
+    "bytes": 3790,
+    "sha256": "9588cebb8f1d3f24a3764d8af13f105840d0e8da1a9df3f1fe92998337c3a673"
+  },
+  {
+    "path": "src/hooks/useGame.ts",
+    "bytes": 236,
+    "sha256": "1219bf4ee22580e594dfff7f799622a40f6f9a8be923e7d9ca84cddcd7740f98"
+  },
+  {
+    "path": "src/main.tsx",
+    "bytes": 293,
+    "sha256": "d47faed4e44455166ea108b52bb78627c39efa68b79d77b5cf5cdb71982b4f3c"
+  },
+  {
+    "path": "src/screens/History.tsx",
+    "bytes": 4120,
+    "sha256": "a91bf2a705182d962c5762670731327902ee18bde9c15448e9758653c4251a7c"
+  },
+  {
+    "path": "src/screens/Home.tsx",
+    "bytes": 2804,
+    "sha256": "cc2f020330fa4319bb7cbb3f9ca6121b79a59c4d0883f099ff880d488a2369ad"
+  },
+  {
+    "path": "src/screens/Products.tsx",
+    "bytes": 2679,
+    "sha256": "db378acf53cb5be508b64b134c1835610c5674ea5c145abc04f9750b34866dc5"
+  },
+  {
+    "path": "src/screens/Upgrades.tsx",
+    "bytes": 5476,
+    "sha256": "20e8b1ff3168d6b5f1532c42141b7e94491be284a3f0245039feb6756399481d"
+  },
+  {
+    "path": "src/style.css",
+    "bytes": 16775,
+    "sha256": "141e8a6a8018cfe53ef9ae8a835d4770fe5c40bb9067774435ae05f1a06cc033"
+  },
+  {
+    "path": "src/target-style.css",
+    "bytes": 15543,
+    "sha256": "6104fae6f60fc11e711e5237018ca0e85619ccb176bf67c73083fc85d4f74b30"
+  },
+  {
+    "path": "src/utils/format.ts",
+    "bytes": 218,
+    "sha256": "9f670606b1c59a58a5c0f7452e4d6eacd6327026602717510465ccd9edd1a68d"
+  },
+  {
+    "path": "tests/balance-wall-overlay.test.ts",
+    "bytes": 3950,
+    "sha256": "3db5cdd8a1d7ed6dfa0e219eb6bcf0e4fe78e052357f2291190405360d237ac5"
+  },
+  {
+    "path": "tests/browser/promotion-v1.spec.ts",
+    "bytes": 4363,
+    "sha256": "2955c2a3716164dbd817e3ac6e6b056903db3073e534612e89978bcb9e9a769e"
+  },
+  {
+    "path": "tests/promotion-v1.test.ts",
+    "bytes": 19129,
+    "sha256": "92714ce9d7fc70370ba06c3eafc640891c6a1da6a112b7f48601f86501b914a3"
+  },
+  {
+    "path": "tsconfig.build.json",
+    "bytes": 96,
+    "sha256": "4a19de7451a69c281a80605017a0187fb09d63d4a51a035bbd8f0dd48487a112"
+  },
+  {
+    "path": "tsconfig.json",
+    "bytes": 368,
+    "sha256": "149f8eff3aea142c9d2c66ef7028cef39dd7ba138929de3cc51be0a10c40134a"
+  },
+  {
+    "path": "vite.config.ts",
+    "bytes": 818,
+    "sha256": "7402dc2e63fa6460b41f8e52383682664a2b08f6df1a5fc66f0aba6fc24de8e1"
+  }
+]

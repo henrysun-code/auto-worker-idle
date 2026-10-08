@@ -1,0 +1,994 @@
+{
+  "baselineExactSummaryMatch": true,
+  "baselineExactPurchaseMatch": true,
+  "baselinePurchaseCount": 1785,
+  "configNumericallyIdentical": true,
+  "generatedConfigSHA256": "4e0614bbf6b85e639296a2ed93213b97ef61f40988df9a752e5d3dd4340ad021",
+  "unblockedWorkStartMissedAssignments": 0,
+  "firstLegalWorkStartChecks": [
+    {
+      "seed": 42,
+      "rank": 0,
+      "firstEQQualifiedTime": 364.75,
+      "firstLegalWorkStart": 399.3610400885,
+      "firstPromotionAssignedTime": 399.3610400885,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 42,
+      "rank": 1,
+      "firstEQQualifiedTime": 1150.25,
+      "firstLegalWorkStart": 1189.1192047439,
+      "firstPromotionAssignedTime": 1189.1192047439,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 42,
+      "rank": 2,
+      "firstEQQualifiedTime": 1834.25,
+      "firstLegalWorkStart": 1850.8610515384,
+      "firstPromotionAssignedTime": 1850.8610515384,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 42,
+      "rank": 3,
+      "firstEQQualifiedTime": 3227.4999999998,
+      "firstLegalWorkStart": 3240.043493447,
+      "firstPromotionAssignedTime": 3240.043493447,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 7961,
+      "rank": 0,
+      "firstEQQualifiedTime": 195,
+      "firstLegalWorkStart": 262.9606060606,
+      "firstPromotionAssignedTime": 262.9606060606,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 7961,
+      "rank": 1,
+      "firstEQQualifiedTime": 615.5,
+      "firstLegalWorkStart": 710.8093414113,
+      "firstPromotionAssignedTime": 710.8093414113,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 7961,
+      "rank": 2,
+      "firstEQQualifiedTime": 1439.75,
+      "firstLegalWorkStart": 1480.0643403653,
+      "firstPromotionAssignedTime": 1480.0643403653,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 7961,
+      "rank": 3,
+      "firstEQQualifiedTime": 3109.75,
+      "firstLegalWorkStart": 3180.5695297092,
+      "firstPromotionAssignedTime": 3180.5695297092,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 15880,
+      "rank": 0,
+      "firstEQQualifiedTime": 234.5,
+      "firstLegalWorkStart": 262.0666666666,
+      "firstPromotionAssignedTime": 262.0666666666,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 15880,
+      "rank": 1,
+      "firstEQQualifiedTime": 620.75,
+      "firstLegalWorkStart": 710.1097774371,
+      "firstPromotionAssignedTime": 710.1097774371,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 15880,
+      "rank": 2,
+      "firstEQQualifiedTime": 1503.75,
+      "firstLegalWorkStart": 1593.0217813298,
+      "firstPromotionAssignedTime": 1593.0217813298,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 15880,
+      "rank": 3,
+      "firstEQQualifiedTime": 2882.5,
+      "firstLegalWorkStart": 2981.5751091161,
+      "firstPromotionAssignedTime": 2981.5751091161,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 23799,
+      "rank": 0,
+      "firstEQQualifiedTime": 288.25,
+      "firstLegalWorkStart": 390.6320473897,
+      "firstPromotionAssignedTime": 390.6320473897,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 23799,
+      "rank": 1,
+      "firstEQQualifiedTime": 814.5,
+      "firstLegalWorkStart": 841.0708302681,
+      "firstPromotionAssignedTime": 841.0708302681,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 23799,
+      "rank": 2,
+      "firstEQQualifiedTime": 1591.5,
+      "firstLegalWorkStart": 1611.80479313,
+      "firstPromotionAssignedTime": 1611.80479313,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 23799,
+      "rank": 3,
+      "firstEQQualifiedTime": 2991.75,
+      "firstLegalWorkStart": 3019.212029385,
+      "firstPromotionAssignedTime": 3019.212029385,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 31718,
+      "rank": 0,
+      "firstEQQualifiedTime": 341.25,
+      "firstLegalWorkStart": 396.3032011299,
+      "firstPromotionAssignedTime": 396.3032011299,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 31718,
+      "rank": 1,
+      "firstEQQualifiedTime": 1141,
+      "firstLegalWorkStart": 1185.5509660752,
+      "firstPromotionAssignedTime": 1185.5509660752,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 31718,
+      "rank": 2,
+      "firstEQQualifiedTime": 1858.75,
+      "firstLegalWorkStart": 1955.2087201907,
+      "firstPromotionAssignedTime": 1955.2087201907,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 31718,
+      "rank": 3,
+      "firstEQQualifiedTime": 3498.5,
+      "firstLegalWorkStart": 3588.4772923196,
+      "firstPromotionAssignedTime": 3588.4772923196,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 39637,
+      "rank": 0,
+      "firstEQQualifiedTime": 283,
+      "firstLegalWorkStart": 389.9638026325,
+      "firstPromotionAssignedTime": 389.9638026325,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 39637,
+      "rank": 1,
+      "firstEQQualifiedTime": 1044.25,
+      "firstLegalWorkStart": 1063.9586002195,
+      "firstPromotionAssignedTime": 1063.9586002195,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 39637,
+      "rank": 2,
+      "firstEQQualifiedTime": 1689.5,
+      "firstLegalWorkStart": 1726.9458791373,
+      "firstPromotionAssignedTime": 1726.9458791373,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 39637,
+      "rank": 3,
+      "firstEQQualifiedTime": 3315.75,
+      "firstLegalWorkStart": 3346.7239258239,
+      "firstPromotionAssignedTime": 3346.7239258239,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 47556,
+      "rank": 0,
+      "firstEQQualifiedTime": 216,
+      "firstLegalWorkStart": 269.9640215275,
+      "firstPromotionAssignedTime": 269.9640215275,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 47556,
+      "rank": 1,
+      "firstEQQualifiedTime": 646.25,
+      "firstLegalWorkStart": 740.3535214273,
+      "firstPromotionAssignedTime": 740.3535214273,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 47556,
+      "rank": 2,
+      "firstEQQualifiedTime": 1257,
+      "firstLegalWorkStart": 1275.0118457728,
+      "firstPromotionAssignedTime": 1275.0118457728,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 47556,
+      "rank": 3,
+      "firstEQQualifiedTime": 2578.4999999999,
+      "firstLegalWorkStart": 2672.8470370747,
+      "firstPromotionAssignedTime": 2672.8470370747,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 55475,
+      "rank": 0,
+      "firstEQQualifiedTime": 350,
+      "firstLegalWorkStart": 401.2184748108,
+      "firstPromotionAssignedTime": 401.2184748108,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 55475,
+      "rank": 1,
+      "firstEQQualifiedTime": 1070.25,
+      "firstLegalWorkStart": 1086.7264202104,
+      "firstPromotionAssignedTime": 1086.7264202104,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 55475,
+      "rank": 2,
+      "firstEQQualifiedTime": 1831,
+      "firstLegalWorkStart": 1859.6875336782,
+      "firstPromotionAssignedTime": 1859.6875336782,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 55475,
+      "rank": 3,
+      "firstEQQualifiedTime": 3379.25,
+      "firstLegalWorkStart": 3464.8280313284,
+      "firstPromotionAssignedTime": 3464.8280313284,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 63394,
+      "rank": 0,
+      "firstEQQualifiedTime": 227,
+      "firstLegalWorkStart": 271.7112257876,
+      "firstPromotionAssignedTime": 271.7112257876,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 63394,
+      "rank": 1,
+      "firstEQQualifiedTime": 947.5,
+      "firstLegalWorkStart": 957.4669551057,
+      "firstPromotionAssignedTime": 957.4669551057,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 63394,
+      "rank": 2,
+      "firstEQQualifiedTime": 1658.25,
+      "firstLegalWorkStart": 1744.3784193218,
+      "firstPromotionAssignedTime": 1744.3784193218,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 63394,
+      "rank": 3,
+      "firstEQQualifiedTime": 3494,
+      "firstLegalWorkStart": 3571.6517076927,
+      "firstPromotionAssignedTime": 3571.6517076927,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 71313,
+      "rank": 0,
+      "firstEQQualifiedTime": 361.75,
+      "firstLegalWorkStart": 399.1172181187,
+      "firstPromotionAssignedTime": 399.1172181187,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 71313,
+      "rank": 1,
+      "firstEQQualifiedTime": 1326,
+      "firstLegalWorkStart": 1433.1189214344,
+      "firstPromotionAssignedTime": 1433.1189214344,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 71313,
+      "rank": 2,
+      "firstEQQualifiedTime": 2122.25,
+      "firstLegalWorkStart": 2196.0420462091,
+      "firstPromotionAssignedTime": 2196.0420462091,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 71313,
+      "rank": 3,
+      "firstEQQualifiedTime": null,
+      "firstLegalWorkStart": null,
+      "firstPromotionAssignedTime": null,
+      "assignedAtFirstLegalWorkStart": null
+    },
+    {
+      "seed": 79232,
+      "rank": 0,
+      "firstEQQualifiedTime": 296,
+      "firstLegalWorkStart": 391.228255978,
+      "firstPromotionAssignedTime": 391.228255978,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 79232,
+      "rank": 1,
+      "firstEQQualifiedTime": 762,
+      "firstLegalWorkStart": 836.6360659203,
+      "firstPromotionAssignedTime": 836.6360659203,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 79232,
+      "rank": 2,
+      "firstEQQualifiedTime": 1404.5,
+      "firstLegalWorkStart": 1480.8976874964,
+      "firstPromotionAssignedTime": 1480.8976874964,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 79232,
+      "rank": 3,
+      "firstEQQualifiedTime": 3343.75,
+      "firstLegalWorkStart": 3420.508484811,
+      "firstPromotionAssignedTime": 3420.508484811,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 87151,
+      "rank": 0,
+      "firstEQQualifiedTime": 98.75,
+      "firstLegalWorkStart": 140.0833333333,
+      "firstPromotionAssignedTime": 140.0833333333,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 87151,
+      "rank": 1,
+      "firstEQQualifiedTime": 784.75,
+      "firstLegalWorkStart": 818.8463618671,
+      "firstPromotionAssignedTime": 818.8463618671,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 87151,
+      "rank": 2,
+      "firstEQQualifiedTime": 1499.5,
+      "firstLegalWorkStart": 1580.3748967454,
+      "firstPromotionAssignedTime": 1580.3748967454,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 87151,
+      "rank": 3,
+      "firstEQQualifiedTime": 2922.25,
+      "firstLegalWorkStart": 2966.597295833,
+      "firstPromotionAssignedTime": 2966.597295833,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 95070,
+      "rank": 0,
+      "firstEQQualifiedTime": 98.75,
+      "firstLegalWorkStart": 141.5310185185,
+      "firstPromotionAssignedTime": 141.5310185185,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 95070,
+      "rank": 1,
+      "firstEQQualifiedTime": 396,
+      "firstLegalWorkStart": 472.920754148,
+      "firstPromotionAssignedTime": 472.920754148,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 95070,
+      "rank": 2,
+      "firstEQQualifiedTime": 1345.5,
+      "firstLegalWorkStart": 1348.3818963902,
+      "firstPromotionAssignedTime": 1348.3818963902,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 95070,
+      "rank": 3,
+      "firstEQQualifiedTime": 3010.25,
+      "firstLegalWorkStart": 3080.0044382496,
+      "firstPromotionAssignedTime": 3080.0044382496,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 102989,
+      "rank": 0,
+      "firstEQQualifiedTime": 98.75,
+      "firstLegalWorkStart": 140.0833333333,
+      "firstPromotionAssignedTime": 140.0833333333,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 102989,
+      "rank": 1,
+      "firstEQQualifiedTime": 728.75,
+      "firstLegalWorkStart": 817.1112332266,
+      "firstPromotionAssignedTime": 817.1112332266,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 102989,
+      "rank": 2,
+      "firstEQQualifiedTime": 1317.5,
+      "firstLegalWorkStart": 1352.1188707602,
+      "firstPromotionAssignedTime": 1352.1188707602,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 102989,
+      "rank": 3,
+      "firstEQQualifiedTime": 2751.75,
+      "firstLegalWorkStart": 2846.0581557826,
+      "firstPromotionAssignedTime": 2846.0581557826,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 110908,
+      "rank": 0,
+      "firstEQQualifiedTime": 280.25,
+      "firstLegalWorkStart": 388.3569050327,
+      "firstPromotionAssignedTime": 388.3569050327,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 110908,
+      "rank": 1,
+      "firstEQQualifiedTime": 863.25,
+      "firstLegalWorkStart": 942.5771081451,
+      "firstPromotionAssignedTime": 942.5771081451,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 110908,
+      "rank": 2,
+      "firstEQQualifiedTime": 1519.5,
+      "firstLegalWorkStart": 1604.7518807032,
+      "firstPromotionAssignedTime": 1604.7518807032,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 110908,
+      "rank": 3,
+      "firstEQQualifiedTime": 3057.75,
+      "firstLegalWorkStart": 3078.051779066,
+      "firstPromotionAssignedTime": 3078.051779066,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 118827,
+      "rank": 0,
+      "firstEQQualifiedTime": 282.25,
+      "firstLegalWorkStart": 390.6138267844,
+      "firstPromotionAssignedTime": 390.6138267844,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 118827,
+      "rank": 1,
+      "firstEQQualifiedTime": 700.5,
+      "firstLegalWorkStart": 725.2586041424,
+      "firstPromotionAssignedTime": 725.2586041424,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 118827,
+      "rank": 2,
+      "firstEQQualifiedTime": 1410,
+      "firstLegalWorkStart": 1491.9661718876,
+      "firstPromotionAssignedTime": 1491.9661718876,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 118827,
+      "rank": 3,
+      "firstEQQualifiedTime": 2991,
+      "firstLegalWorkStart": 3079.3807030458,
+      "firstPromotionAssignedTime": 3079.3807030458,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 126746,
+      "rank": 0,
+      "firstEQQualifiedTime": 376.25,
+      "firstLegalWorkStart": 401.1139993686,
+      "firstPromotionAssignedTime": 401.1139993686,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 126746,
+      "rank": 1,
+      "firstEQQualifiedTime": 1081.5,
+      "firstLegalWorkStart": 1091.436876561,
+      "firstPromotionAssignedTime": 1091.436876561,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 126746,
+      "rank": 2,
+      "firstEQQualifiedTime": 1831.5,
+      "firstLegalWorkStart": 1874.1491152865,
+      "firstPromotionAssignedTime": 1874.1491152865,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 126746,
+      "rank": 3,
+      "firstEQQualifiedTime": 3535,
+      "firstLegalWorkStart": null,
+      "firstPromotionAssignedTime": null,
+      "assignedAtFirstLegalWorkStart": null
+    },
+    {
+      "seed": 134665,
+      "rank": 0,
+      "firstEQQualifiedTime": 304.75,
+      "firstLegalWorkStart": 394.7001828703,
+      "firstPromotionAssignedTime": 394.7001828703,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 134665,
+      "rank": 1,
+      "firstEQQualifiedTime": 699.25,
+      "firstLegalWorkStart": 736.6781211369,
+      "firstPromotionAssignedTime": 736.6781211369,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 134665,
+      "rank": 2,
+      "firstEQQualifiedTime": 1413.25,
+      "firstLegalWorkStart": 1498.402660447,
+      "firstPromotionAssignedTime": 1498.402660447,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 134665,
+      "rank": 3,
+      "firstEQQualifiedTime": 3172.5,
+      "firstLegalWorkStart": 3216.1711406063,
+      "firstPromotionAssignedTime": 3216.1711406063,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 142584,
+      "rank": 0,
+      "firstEQQualifiedTime": 294.5,
+      "firstLegalWorkStart": 392.2828330654,
+      "firstPromotionAssignedTime": 392.2828330654,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 142584,
+      "rank": 1,
+      "firstEQQualifiedTime": 1010.5,
+      "firstLegalWorkStart": 1083.5401519219,
+      "firstPromotionAssignedTime": 1083.5401519219,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 142584,
+      "rank": 2,
+      "firstEQQualifiedTime": 1711.25,
+      "firstLegalWorkStart": 1744.7242111586,
+      "firstPromotionAssignedTime": 1744.7242111586,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 142584,
+      "rank": 3,
+      "firstEQQualifiedTime": 3560.5,
+      "firstLegalWorkStart": 3589.2021817854,
+      "firstPromotionAssignedTime": 3589.2021817854,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 150503,
+      "rank": 0,
+      "firstEQQualifiedTime": 242.5,
+      "firstLegalWorkStart": 273.5658411618,
+      "firstPromotionAssignedTime": 273.5658411618,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 150503,
+      "rank": 1,
+      "firstEQQualifiedTime": 1062.25,
+      "firstLegalWorkStart": 1076.5290698533,
+      "firstPromotionAssignedTime": 1076.5290698533,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 150503,
+      "rank": 2,
+      "firstEQQualifiedTime": 1709,
+      "firstLegalWorkStart": 1759.5039316349,
+      "firstPromotionAssignedTime": 1759.5039316349,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 150503,
+      "rank": 3,
+      "firstEQQualifiedTime": 3090.25,
+      "firstLegalWorkStart": 3163.7597369644,
+      "firstPromotionAssignedTime": 3163.7597369644,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 158422,
+      "rank": 0,
+      "firstEQQualifiedTime": 247.25,
+      "firstLegalWorkStart": 272.059746243,
+      "firstPromotionAssignedTime": 272.059746243,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 158422,
+      "rank": 1,
+      "firstEQQualifiedTime": 1091.25,
+      "firstLegalWorkStart": 1187.2695551063,
+      "firstPromotionAssignedTime": 1187.2695551063,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 158422,
+      "rank": 2,
+      "firstEQQualifiedTime": 1808.5,
+      "firstLegalWorkStart": 1844.6848394484,
+      "firstPromotionAssignedTime": 1844.6848394484,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 158422,
+      "rank": 3,
+      "firstEQQualifiedTime": 3371.75,
+      "firstLegalWorkStart": 3459.0857763956,
+      "firstPromotionAssignedTime": 3459.0857763956,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 166341,
+      "rank": 0,
+      "firstEQQualifiedTime": 343.75,
+      "firstLegalWorkStart": 387.8939393939,
+      "firstPromotionAssignedTime": 387.8939393939,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 166341,
+      "rank": 1,
+      "firstEQQualifiedTime": 760,
+      "firstLegalWorkStart": 828.2016736435,
+      "firstPromotionAssignedTime": 828.2016736435,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 166341,
+      "rank": 2,
+      "firstEQQualifiedTime": 1550,
+      "firstLegalWorkStart": 1590.3562832844,
+      "firstPromotionAssignedTime": 1590.3562832844,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 166341,
+      "rank": 3,
+      "firstEQQualifiedTime": 3020.75,
+      "firstLegalWorkStart": 3099.6641800769,
+      "firstPromotionAssignedTime": 3099.6641800769,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 174260,
+      "rank": 0,
+      "firstEQQualifiedTime": 340.25,
+      "firstLegalWorkStart": 396.8308629581,
+      "firstPromotionAssignedTime": 396.8308629581,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 174260,
+      "rank": 1,
+      "firstEQQualifiedTime": 1006.5,
+      "firstLegalWorkStart": 1082.2281492489,
+      "firstPromotionAssignedTime": 1082.2281492489,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 174260,
+      "rank": 2,
+      "firstEQQualifiedTime": 1867.75,
+      "firstLegalWorkStart": 1941.5767951434,
+      "firstPromotionAssignedTime": 1941.5767951434,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 174260,
+      "rank": 3,
+      "firstEQQualifiedTime": 3458,
+      "firstLegalWorkStart": 3549.8663374336,
+      "firstPromotionAssignedTime": 3549.8663374336,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 182179,
+      "rank": 0,
+      "firstEQQualifiedTime": 251.25,
+      "firstLegalWorkStart": 275.9915631457,
+      "firstPromotionAssignedTime": 275.9915631457,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 182179,
+      "rank": 1,
+      "firstEQQualifiedTime": 997.5,
+      "firstLegalWorkStart": 1076.5315608294,
+      "firstPromotionAssignedTime": 1076.5315608294,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 182179,
+      "rank": 2,
+      "firstEQQualifiedTime": 1802.5,
+      "firstLegalWorkStart": 1833.8848965821,
+      "firstPromotionAssignedTime": 1833.8848965821,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 182179,
+      "rank": 3,
+      "firstEQQualifiedTime": 3359.5,
+      "firstLegalWorkStart": 3450.5918306245,
+      "firstPromotionAssignedTime": 3450.5918306245,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 190098,
+      "rank": 0,
+      "firstEQQualifiedTime": 346.25,
+      "firstLegalWorkStart": 398.0693283645,
+      "firstPromotionAssignedTime": 398.0693283645,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 190098,
+      "rank": 1,
+      "firstEQQualifiedTime": 1053,
+      "firstLegalWorkStart": 1086.7165415695,
+      "firstPromotionAssignedTime": 1086.7165415695,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 190098,
+      "rank": 2,
+      "firstEQQualifiedTime": 1813,
+      "firstLegalWorkStart": 1864.3330161013,
+      "firstPromotionAssignedTime": 1864.3330161013,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 190098,
+      "rank": 3,
+      "firstEQQualifiedTime": 3229,
+      "firstLegalWorkStart": 3268.0429262752,
+      "firstPromotionAssignedTime": 3268.0429262752,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 198017,
+      "rank": 0,
+      "firstEQQualifiedTime": 241,
+      "firstLegalWorkStart": 275.2255439392,
+      "firstPromotionAssignedTime": 275.2255439392,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 198017,
+      "rank": 1,
+      "firstEQQualifiedTime": 832,
+      "firstLegalWorkStart": 848.4457499674,
+      "firstPromotionAssignedTime": 848.4457499674,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 198017,
+      "rank": 2,
+      "firstEQQualifiedTime": 1518.5,
+      "firstLegalWorkStart": 1610.4631816993,
+      "firstPromotionAssignedTime": 1610.4631816993,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 198017,
+      "rank": 3,
+      "firstEQQualifiedTime": 3161.25,
+      "firstLegalWorkStart": 3187.0770346447,
+      "firstPromotionAssignedTime": 3187.0770346447,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 205936,
+      "rank": 0,
+      "firstEQQualifiedTime": 98.75,
+      "firstLegalWorkStart": 140.0833333333,
+      "firstPromotionAssignedTime": 140.0833333333,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 205936,
+      "rank": 1,
+      "firstEQQualifiedTime": 794.25,
+      "firstLegalWorkStart": 818.8266713471,
+      "firstPromotionAssignedTime": 818.8266713471,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 205936,
+      "rank": 2,
+      "firstEQQualifiedTime": 1568,
+      "firstLegalWorkStart": 1589.4890168208,
+      "firstPromotionAssignedTime": 1589.4890168208,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 205936,
+      "rank": 3,
+      "firstEQQualifiedTime": 3017.9999999999,
+      "firstLegalWorkStart": 3102.4390153372,
+      "firstPromotionAssignedTime": 3102.4390153372,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 213855,
+      "rank": 0,
+      "firstEQQualifiedTime": 98.75,
+      "firstLegalWorkStart": 140.0833333333,
+      "firstPromotionAssignedTime": 140.0833333333,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 213855,
+      "rank": 1,
+      "firstEQQualifiedTime": 688.25,
+      "firstLegalWorkStart": 715.4624676067,
+      "firstPromotionAssignedTime": 715.4624676067,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 213855,
+      "rank": 2,
+      "firstEQQualifiedTime": 1470.25,
+      "firstLegalWorkStart": 1499.7859441056,
+      "firstPromotionAssignedTime": 1499.7859441056,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 213855,
+      "rank": 3,
+      "firstEQQualifiedTime": 2833.25,
+      "firstLegalWorkStart": 2911.4982059356,
+      "firstPromotionAssignedTime": 2911.4982059356,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 221774,
+      "rank": 0,
+      "firstEQQualifiedTime": 292.5,
+      "firstLegalWorkStart": 391.5249504737,
+      "firstPromotionAssignedTime": 391.5249504737,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 221774,
+      "rank": 1,
+      "firstEQQualifiedTime": 871.25,
+      "firstLegalWorkStart": 946.594374434,
+      "firstPromotionAssignedTime": 946.594374434,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 221774,
+      "rank": 2,
+      "firstEQQualifiedTime": 1571,
+      "firstLegalWorkStart": 1607.1414717323,
+      "firstPromotionAssignedTime": 1607.1414717323,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 221774,
+      "rank": 3,
+      "firstEQQualifiedTime": 3090.25,
+      "firstLegalWorkStart": 3118.508783851,
+      "firstPromotionAssignedTime": 3118.508783851,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 229693,
+      "rank": 0,
+      "firstEQQualifiedTime": 244.25,
+      "firstLegalWorkStart": 263.3777777777,
+      "firstPromotionAssignedTime": 263.3777777777,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 229693,
+      "rank": 1,
+      "firstEQQualifiedTime": 620.75,
+      "firstLegalWorkStart": 715.1261809187,
+      "firstPromotionAssignedTime": 715.1261809187,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 229693,
+      "rank": 2,
+      "firstEQQualifiedTime": 1436.75,
+      "firstLegalWorkStart": 1482.4711472859,
+      "firstPromotionAssignedTime": 1482.4711472859,
+      "assignedAtFirstLegalWorkStart": true
+    },
+    {
+      "seed": 229693,
+      "rank": 3,
+      "firstEQQualifiedTime": 3229.25,
+      "firstLegalWorkStart": 3306.6643675808,
+      "firstPromotionAssignedTime": 3306.6643675808,
+      "assignedAtFirstLegalWorkStart": true
+    }
+  ],
+  "beforeRuns": 3,
+  "afterRuns": 30,
+  "uniqueAfterSeeds": 30,
+  "canonicalSeedFormula": "42 + replicate * 7919",
+  "horizonRealSeconds": 3600,
+  "reserves": 0,
+  "autoTune": false,
+  "products": "OFF",
+  "prestige": "OFF",
+  "lowProfile": "OFF",
+  "speed": 1,
+  "rank3WorkStartBlockCounts": {
+    "EQ": 286,
+    "ASSIGNED": 47,
+    "COOLDOWN": 55,
+    "OVERDUE|COOLDOWN": 9,
+    "EQ|OVERDUE": 5
+  },
+  "rank3EQQualifiedRuns": 29,
+  "rank3FirstEQQualifiedMedianMinutes": 52.6875,
+  "coreTests": 446,
+  "browserTests": 32,
+  "noCommit": true,
+  "noPush": true
+}

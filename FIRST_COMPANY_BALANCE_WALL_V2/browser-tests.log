@@ -1,0 +1,49 @@
+
+> auto-worker@2.0.0 test:browser
+> playwright test
+
+[WebServer] (node:29144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:34556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:7672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 32 tests using 1 worker
+
+(node:8580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\browser\age-promotion.spec.ts:7:1 › promotion UI counts queued current and suspended overdue with clear lock reason (3.0s)
+  ok  2 tests\browser\age-promotion.spec.ts:12:1 › age product UI shows live compensation and disables it without removing workload pressure (2.6s)
+  ok  3 tests\browser\boss-notifications.spec.ts:5:1 › boss result immediately replaces an old toast despite full notification queue (1.7s)
+  ok  4 tests\browser\corrections.spec.ts:7:1 › offline summary dismisses without blocking and remains in History after reload (1.9s)
+  ok  5 tests\browser\corrections.spec.ts:12:1 › late breakfast is missed and Todo list shows zero reward rework source (1.4s)
+  ok  6 tests\browser\deadline.spec.ts:6:1 › deadline counts and live work labels fit mobile, history shows original and discounted reward (1.4s)
+  ok  7 tests\browser\deadline.spec.ts:17:1 › deadline debug tools create all three deadline states (1.8s)
+  ok  8 tests\browser\deadline.spec.ts:19:1 › profile override shows no deadline on current work and game days on queued project (1.5s)
+  ok  9 tests\browser\deadline.spec.ts:26:1 › sleep midnight preserves due today then work-start wakes and selects overdue work (1.8s)
+  ok 10 tests\browser\game.spec.ts:4:1 › V2 subscriptions, permanent upgrades, debug offline32days, prestige and reload (6.7s)
+  ok 11 tests\browser\game.spec.ts:17:1 › legacy save shows V2 reset notice and saves new core (992ms)
+  ok 12 tests\browser\meeting.spec.ts:7:1 › Meeting central card shows fixed world duration, resumes Work and reloads without repeated pay (1.9s)
+  ok 13 tests\browser\prestige-active.spec.ts:4:1 › 10x world speed cannot unlock prestige before actual30min; reload and reset preserve timer rules (1.8s)
+  ok 14 tests\browser\product-framework.spec.ts:10:1 › Config-only synthetic A/B UI, additive old Save, activation/effect/cycle/expiry and reload (52.8s)
+  ok 15 tests\browser\product-framework.spec.ts:20:1 › existing product UI disable/re-enable retains paid expiry and current Work progress (1.4s)
+  ok 16 tests\browser\progression.spec.ts:10:1 › high level UI shows severity branches escape value and raw life management (1.3s)
+  ok 17 tests\browser\progression.spec.ts:17:1 › boss dinner precedes single mandatory overtime and survives workStart with zero sleep (10.6s)
+  ok 18 tests\browser\progression.spec.ts:22:1 › permanent formula level10 can buy and reload level11 (1.8s)
+  ok 19 tests\browser\promotion-v1.spec.ts:9:1 › qualification and low profile show base stats; mobile no overflow (1.4s)
+  ok 20 tests\browser\promotion-v1.spec.ts:10:1 › morning assignment skips lunch; deadline fails into Dinner then same overtime; reload preserves (14.7s)
+  ok 21 tests\browser\promotion-v1.spec.ts:11:1 › high ability first assignment succeeds at Dinner and is saved (12.5s)
+  ok 22 tests\browser\promotion-v1.spec.ts:12:1 › sleep displays60x and resumes normal after workstart (1.8s)
+  ok 23 tests\browser\rank-content.spec.ts:4:1 › Debug Rank content lists effective work and project weights on mobile (1.5s)
+  ok 24 tests\browser\targets.spec.ts:13:3 › V2 normal target preserves mobile shell and shows correct activity (1.0s)
+  ok 25 tests\browser\targets.spec.ts:13:3 › V2 rework target preserves mobile shell and shows correct activity (1.1s)
+  ok 26 tests\browser\targets.spec.ts:13:3 › V2 large target preserves mobile shell and shows correct activity (1.1s)
+  ok 27 tests\browser\targets.spec.ts:13:3 › V2 food target preserves mobile shell and shows correct activity (1.1s)
+  ok 28 tests\browser\targets.spec.ts:13:3 › V2 lunch target preserves mobile shell and shows correct activity (1.1s)
+  ok 29 tests\browser\targets.spec.ts:13:3 › V2 problem target preserves mobile shell and shows correct activity (1.1s)
+  ok 30 tests\browser\targets.spec.ts:13:3 › V2 sleep target preserves mobile shell and shows correct activity (1.0s)
+  ok 31 tests\browser\targets.spec.ts:13:3 › V2 entertainment target preserves mobile shell and shows correct activity (1.1s)
+  ok 32 tests\browser\targets.spec.ts:27:1 › world boundary preserves sleep until fixed workStart (1.2s)
+
+  32 passed (2.5m)

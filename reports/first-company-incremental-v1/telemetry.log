@@ -1,0 +1,74 @@
+[
+  {
+    "seed": 42,
+    "policy": "BUY_ALL_CHEAPEST_AFFORDABLE",
+    "realSeconds": 3600,
+    "worldTime": 5878.8538844134,
+    "rank": 1,
+    "levels": {
+      "efficiency": 124,
+      "quality": 120,
+      "flattery": 112,
+      "lifeManagement": 117,
+      "slacking": 114
+    },
+    "firstPromotionRealSeconds": 2557.2513840833,
+    "R4RealSeconds": null,
+    "R4Censored": true,
+    "medianObservedUpgradeGap": 3.5,
+    "medianNextUpgradeETA": 3.1738075762276816,
+    "promotionAttempts": 1,
+    "promotionOvertimeWorldSeconds": 0,
+    "promotionOvertimeRealSeconds": 0,
+    "netMoney": 422,
+    "grossIncome": 161755
+  },
+  {
+    "seed": 7961,
+    "policy": "BUY_ALL_CHEAPEST_AFFORDABLE",
+    "realSeconds": 3600,
+    "worldTime": 5875.9186392339,
+    "rank": 1,
+    "levels": {
+      "efficiency": 125,
+      "quality": 122,
+      "flattery": 113,
+      "lifeManagement": 119,
+      "slacking": 116
+    },
+    "firstPromotionRealSeconds": 2765.6082697235,
+    "R4RealSeconds": null,
+    "R4Censored": true,
+    "medianObservedUpgradeGap": 3.75,
+    "medianNextUpgradeETA": 2.7142455745996066,
+    "promotionAttempts": 1,
+    "promotionOvertimeWorldSeconds": 0,
+    "promotionOvertimeRealSeconds": 0,
+    "netMoney": 1077,
+    "grossIncome": 170879
+  },
+  {
+    "seed": 15880,
+    "policy": "BUY_ALL_CHEAPEST_AFFORDABLE",
+    "realSeconds": 3600,
+    "worldTime": 5878.9758283423,
+    "rank": 1,
+    "levels": {
+      "efficiency": 127,
+      "quality": 123,
+      "flattery": 115,
+      "lifeManagement": 120,
+      "slacking": 118
+    },
+    "firstPromotionRealSeconds": 2440.0339036907,
+    "R4RealSeconds": null,
+    "R4Censored": true,
+    "medianObservedUpgradeGap": 3.75,
+    "medianNextUpgradeETA": 3.0102289332683876,
+    "promotionAttempts": 1,
+    "promotionOvertimeWorldSeconds": 0,
+    "promotionOvertimeRealSeconds": 0,
+    "netMoney": 1082,
+    "grossIncome": 179901
+  }
+]

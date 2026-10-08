@@ -1,0 +1,245 @@
+{
+  "protectedKeys": [
+    "upgrades",
+    "runUpgradeCurve",
+    "prestige",
+    "products",
+    "food",
+    "boss",
+    "meeting",
+    "projects",
+    "followUps",
+    "deadlines",
+    "age",
+    "life",
+    "lunch",
+    "sleep",
+    "offline"
+  ],
+  "protectedBalanceUnchanged": true,
+  "rankRewardCostAndResistanceUnchanged": true,
+  "differences": [
+    {
+      "path": "promotionQualification.requirements",
+      "before": [
+        {
+          "efficiency": 26,
+          "quality": 16
+        },
+        {
+          "efficiency": 38,
+          "quality": 24
+        },
+        {
+          "efficiency": 55,
+          "quality": 34
+        },
+        {
+          "efficiency": 78,
+          "quality": 48
+        }
+      ],
+      "after": [
+        {
+          "efficiency": 20,
+          "quality": 12
+        },
+        {
+          "efficiency": 40,
+          "quality": 24
+        },
+        {
+          "efficiency": 80,
+          "quality": 48
+        },
+        {
+          "efficiency": 160,
+          "quality": 96
+        }
+      ]
+    },
+    {
+      "path": "promotionAssignment.workloadFactor",
+      "before": null,
+      "after": 1.2
+    },
+    {
+      "path": "promotionAssignment.failedCompletionReward",
+      "before": null,
+      "after": 0
+    },
+    {
+      "path": "time.dayDuration",
+      "before": 60,
+      "after": 180
+    },
+    {
+      "path": "time.sleepTimeAcceleration",
+      "before": null,
+      "after": 60
+    },
+    {
+      "path": "economy.baseWorkSpeed",
+      "before": 20,
+      "after": 10
+    },
+    {
+      "path": "economy.baseQuality",
+      "before": 10,
+      "after": 6
+    },
+    {
+      "path": "work.workloadTierCenters",
+      "before": null,
+      "after": [
+        70,
+        140,
+        280,
+        560,
+        1120
+      ]
+    },
+    {
+      "path": "work.templateWorkloadReference",
+      "before": null,
+      "after": 100
+    },
+    {
+      "path": "work.templateVariationMin",
+      "before": null,
+      "after": 0.75
+    },
+    {
+      "path": "work.templateVariationMax",
+      "before": null,
+      "after": 1.4
+    },
+    {
+      "path": "ranks",
+      "before": [
+        {
+          "name": "新人",
+          "promotionCost": 0,
+          "workloadMultiplier": 1,
+          "rewardMultiplier": 1,
+          "qualityMultiplier": 1,
+          "projectChance": 0.16,
+          "recommendedSpeed": 20,
+          "recommendedQuality": 10,
+          "maxOverdueAllowed": 0,
+          "rankEscapeResistance": 0
+        },
+        {
+          "name": "一般員工",
+          "promotionCost": 220,
+          "workloadMultiplier": 1.25,
+          "rewardMultiplier": 2.2,
+          "qualityMultiplier": 1.2,
+          "projectChance": 0.22,
+          "recommendedSpeed": 30,
+          "recommendedQuality": 18,
+          "maxOverdueAllowed": 3,
+          "rankEscapeResistance": 4
+        },
+        {
+          "name": "資深員工",
+          "promotionCost": 900,
+          "workloadMultiplier": 1.7,
+          "rewardMultiplier": 5,
+          "qualityMultiplier": 1.5,
+          "projectChance": 0.3,
+          "recommendedSpeed": 45,
+          "recommendedQuality": 28,
+          "maxOverdueAllowed": 2,
+          "rankEscapeResistance": 9
+        },
+        {
+          "name": "主管",
+          "promotionCost": 2800,
+          "workloadMultiplier": 2.2,
+          "rewardMultiplier": 11,
+          "qualityMultiplier": 1.8,
+          "projectChance": 0.4,
+          "recommendedSpeed": 65,
+          "recommendedQuality": 40,
+          "maxOverdueAllowed": 1,
+          "rankEscapeResistance": 14
+        },
+        {
+          "name": "經理",
+          "promotionCost": 9000,
+          "workloadMultiplier": 3,
+          "rewardMultiplier": 25,
+          "qualityMultiplier": 2.2,
+          "projectChance": 0.5,
+          "recommendedSpeed": 90,
+          "recommendedQuality": 55,
+          "maxOverdueAllowed": 0,
+          "rankEscapeResistance": 20
+        }
+      ],
+      "after": [
+        {
+          "name": "新人",
+          "promotionCost": 0,
+          "workloadMultiplier": 1,
+          "rewardMultiplier": 1,
+          "qualityMultiplier": 1,
+          "projectChance": 0.16,
+          "recommendedSpeed": 10,
+          "recommendedQuality": 6,
+          "maxOverdueAllowed": 0,
+          "rankEscapeResistance": 0
+        },
+        {
+          "name": "一般員工",
+          "promotionCost": 220,
+          "workloadMultiplier": 1.25,
+          "rewardMultiplier": 2.2,
+          "qualityMultiplier": 1.2,
+          "projectChance": 0.22,
+          "recommendedSpeed": 20,
+          "recommendedQuality": 12,
+          "maxOverdueAllowed": 3,
+          "rankEscapeResistance": 4
+        },
+        {
+          "name": "資深員工",
+          "promotionCost": 900,
+          "workloadMultiplier": 1.7,
+          "rewardMultiplier": 5,
+          "qualityMultiplier": 1.5,
+          "projectChance": 0.3,
+          "recommendedSpeed": 40,
+          "recommendedQuality": 24,
+          "maxOverdueAllowed": 2,
+          "rankEscapeResistance": 9
+        },
+        {
+          "name": "主管",
+          "promotionCost": 2800,
+          "workloadMultiplier": 2.2,
+          "rewardMultiplier": 11,
+          "qualityMultiplier": 1.8,
+          "projectChance": 0.4,
+          "recommendedSpeed": 80,
+          "recommendedQuality": 48,
+          "maxOverdueAllowed": 1,
+          "rankEscapeResistance": 14
+        },
+        {
+          "name": "經理",
+          "promotionCost": 9000,
+          "workloadMultiplier": 3,
+          "rewardMultiplier": 25,
+          "qualityMultiplier": 2.2,
+          "projectChance": 0.5,
+          "recommendedSpeed": 160,
+          "recommendedQuality": 96,
+          "maxOverdueAllowed": 0,
+          "rankEscapeResistance": 20
+        }
+      ]
+    }
+  ]
+}

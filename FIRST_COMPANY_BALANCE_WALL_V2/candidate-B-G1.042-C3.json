@@ -1,0 +1,1777 @@
+{
+  "promotionQualification": {
+    "requirements": [
+      {
+        "efficiency": 20,
+        "quality": 12
+      },
+      {
+        "efficiency": 35,
+        "quality": 21
+      },
+      {
+        "efficiency": 65,
+        "quality": 39
+      },
+      {
+        "efficiency": 110,
+        "quality": 66
+      }
+    ]
+  },
+  "promotionAssignment": {
+    "retryWorkdays": 3,
+    "workloadFactor": 1.2,
+    "failedCompletionReward": 0,
+    "assignments": [
+      {
+        "name": "獨立需求處理",
+        "workload": 130
+      },
+      {
+        "name": "重要客戶提案",
+        "workload": 209
+      },
+      {
+        "name": "部門協調改善案",
+        "workload": 330
+      },
+      {
+        "name": "年度策略方案",
+        "workload": 507
+      }
+    ]
+  },
+  "promotionLowProfile": {
+    "multiplier": 0.8
+  },
+  "gameId": "auto-worker",
+  "version": "2.0.0",
+  "saveVersion": 2,
+  "coreVersion": "todo-v2",
+  "prototypeTargetRunDuration": 480,
+  "time": {
+    "dayDuration": 180,
+    "sleepTimeAcceleration": 60,
+    "referenceDayDuration": 60,
+    "hoursPerDay": 24,
+    "workStartAnchor": 8,
+    "breakfastStart": 0,
+    "breakfastCutoff": 8,
+    "lunchStart": 20,
+    "lunchDuration": 8,
+    "offWorkAnchor": 40,
+    "sleepAnchor": 50,
+    "tickSeconds": 0.05,
+    "speeds": [
+      1,
+      2,
+      5,
+      10
+    ]
+  },
+  "economy": {
+    "startingMoney": 120,
+    "baseWorkSpeed": 10,
+    "baseQuality": 6,
+    "baseLifeSpeed": 1,
+    "baseRestOutput": 30,
+    "incomeWindow": 60,
+    "minimumStatMultiplier": 0.25
+  },
+  "upgrades": {
+    "efficiency": {
+      "name": "工作效率",
+      "icon": "⚡",
+      "description": "線性提高處理速度。",
+      "baseCost": 30,
+      "increment": 1
+    },
+    "quality": {
+      "name": "工作品質",
+      "icon": "✦",
+      "description": "減少可避免的返工，達成高階品質要求。",
+      "baseCost": 34,
+      "increment": 1
+    },
+    "flattery": {
+      "name": "拍馬屁",
+      "icon": "☕",
+      "description": "收入增加，也更容易被老闆找到。",
+      "baseCost": 47,
+      "increment": 0.01
+    },
+    "lifeManagement": {
+      "name": "生活管理",
+      "icon": "☯",
+      "description": "加快生活需求並增加午休輸出。",
+      "baseCost": 38,
+      "increment": 1
+    },
+    "slacking": {
+      "name": "摸魚技巧",
+      "icon": "🐟",
+      "description": "已被找到後提高逃跑率。",
+      "baseCost": 43,
+      "increment": 1
+    }
+  },
+  "runUpgradeCurve": {
+    "baseGrowth": 1.042,
+    "post100Growth": 1.015,
+    "post200Growth": 1.005,
+    "softCap1": 60,
+    "softCap2": 120
+  },
+  "lifeConversion": {
+    "speedPerRaw": 0.2,
+    "lunchOutputPerRaw": 6
+  },
+  "meeting": {
+    "referenceMeetingDurationSeconds": 3,
+    "normalChanceByRank": [
+      0.02,
+      0.04,
+      0.07,
+      0.12,
+      0.18
+    ],
+    "compensationByRank": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "bossMeetingChanceOnEscapeFail": 0.25
+  },
+  "deadlines": {
+    "overdueRewardMultiplier": 0.7,
+    "defaultProfileId": "NORMAL",
+    "profiles": [
+      {
+        "id": "BOSS_URGENT",
+        "deadlineWorkdays": 0
+      },
+      {
+        "id": "REWORK_SHORT",
+        "deadlineWorkdays": 1
+      },
+      {
+        "id": "CLIENT_REPLY",
+        "deadlineWorkdays": 1
+      },
+      {
+        "id": "NEW_REQUEST",
+        "deadlineWorkdays": 2
+      },
+      {
+        "id": "NORMAL",
+        "deadlineWorkdays": 2
+      },
+      {
+        "id": "PROJECT",
+        "deadlineWorkdays": 3
+      },
+      {
+        "id": "NO_DEADLINE",
+        "deadlineWorkdays": null
+      }
+    ],
+    "workTypeProfiles": {
+      "BOSS": "BOSS_URGENT",
+      "URGENT": "BOSS_URGENT",
+      "REWORK": "REWORK_SHORT",
+      "CORRECTION": "REWORK_SHORT",
+      "MISSING_INFO": "REWORK_SHORT",
+      "CLIENT_REPLY": "CLIENT_REPLY",
+      "NEW_REQUEST": "NEW_REQUEST",
+      "PROJECT_NEXT_STEP": "PROJECT",
+      "PROJECT": "PROJECT",
+      "NORMAL": "NORMAL",
+      "FOLLOW_UP": "NORMAL",
+      "EVENT": "NORMAL"
+    }
+  },
+  "work": {
+    "workloadTierCenters": [
+      70,
+      140,
+      245,
+      455,
+      770
+    ],
+    "templateWorkloadReference": 100,
+    "templateVariationMin": 0.75,
+    "templateVariationMax": 1.4,
+    "todoLowWatermark": 2,
+    "todoRefillTarget": 4,
+    "priorities": {
+      "NORMAL": 10,
+      "FOLLOW_UP": 20,
+      "PROJECT": 30,
+      "BOSS": 50,
+      "URGENT": 60
+    },
+    "bossWorkHours": 1,
+    "bossReward": 180,
+    "templates": [
+      {
+        "id": "email",
+        "name": "回 Email",
+        "workload": 45,
+        "reward": 16,
+        "tags": [
+          "行政"
+        ],
+        "weight": 4,
+        "rank": 0,
+        "quality": 10,
+        "rankWeights": [
+          4,
+          2.5,
+          1,
+          0.3,
+          0.1
+        ]
+      },
+      {
+        "id": "data",
+        "name": "整理資料",
+        "workload": 80,
+        "reward": 28,
+        "tags": [
+          "行政"
+        ],
+        "weight": 3,
+        "rank": 0,
+        "quality": 12,
+        "rankWeights": [
+          3,
+          2,
+          0.8,
+          0.2,
+          0.05
+        ]
+      },
+      {
+        "id": "slides",
+        "name": "修改簡報",
+        "workload": 100,
+        "reward": 38,
+        "tags": [
+          "簡報",
+          "形象"
+        ],
+        "weight": 2,
+        "rank": 0,
+        "quality": 14,
+        "rankWeights": [
+          2,
+          1.8,
+          1.2,
+          0.7,
+          0.3
+        ]
+      },
+      {
+        "id": "monthly",
+        "name": "月報",
+        "workload": 130,
+        "reward": 55,
+        "tags": [
+          "報告"
+        ],
+        "weight": 2,
+        "rank": 1,
+        "quality": 18,
+        "rankWeights": [
+          0,
+          2.3,
+          1.7,
+          0.8,
+          0.3
+        ]
+      },
+      {
+        "id": "client",
+        "name": "客戶回覆",
+        "workload": 90,
+        "reward": 42,
+        "tags": [
+          "客戶"
+        ],
+        "weight": 3,
+        "rank": 1,
+        "quality": 20,
+        "rankWeights": [
+          0,
+          2.8,
+          2,
+          1,
+          0.4
+        ]
+      },
+      {
+        "id": "revision",
+        "name": "需求確認",
+        "workload": 150,
+        "reward": 68,
+        "tags": [
+          "簡報"
+        ],
+        "weight": 2,
+        "rank": 2,
+        "quality": 28,
+        "rankWeights": [
+          0,
+          0,
+          2.3,
+          1.6,
+          0.7
+        ]
+      },
+      {
+        "id": "urgent",
+        "name": "急件",
+        "workload": 180,
+        "reward": 95,
+        "tags": [
+          "客戶"
+        ],
+        "weight": 2,
+        "rank": 2,
+        "quality": 30,
+        "rankWeights": [
+          0,
+          0,
+          2.3,
+          1.8,
+          0.8
+        ]
+      },
+      {
+        "id": "meeting",
+        "name": "會議資料整理",
+        "workload": 190,
+        "reward": 100,
+        "tags": [
+          "報告"
+        ],
+        "weight": 2,
+        "rank": 3,
+        "quality": 40,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          2.1,
+          1.4
+        ]
+      },
+      {
+        "id": "requirement_summary",
+        "name": "需求彙整",
+        "rank": 1,
+        "weight": 2.2,
+        "rankWeights": [
+          0,
+          2.2,
+          1.6,
+          0.8,
+          0.3
+        ],
+        "workload": 110,
+        "reward": 48,
+        "quality": 19,
+        "tags": [
+          "客戶",
+          "行政"
+        ]
+      },
+      {
+        "id": "progress_update",
+        "name": "進度更新",
+        "rank": 1,
+        "weight": 2,
+        "rankWeights": [
+          0,
+          2,
+          1.4,
+          0.7,
+          0.3
+        ],
+        "workload": 105,
+        "reward": 46,
+        "quality": 18,
+        "tags": [
+          "報告"
+        ]
+      },
+      {
+        "id": "client_proposal",
+        "name": "客戶提案",
+        "rank": 2,
+        "weight": 2.6,
+        "rankWeights": [
+          0,
+          0,
+          2.6,
+          2,
+          1
+        ],
+        "workload": 160,
+        "reward": 78,
+        "quality": 30,
+        "tags": [
+          "客戶",
+          "簡報",
+          "形象"
+        ]
+      },
+      {
+        "id": "cross_department",
+        "name": "跨部門協調",
+        "rank": 2,
+        "weight": 2.2,
+        "rankWeights": [
+          0,
+          0,
+          2.2,
+          2.4,
+          1.4
+        ],
+        "workload": 140,
+        "reward": 72,
+        "quality": 27,
+        "tags": [
+          "行政",
+          "管理"
+        ]
+      },
+      {
+        "id": "risk_review",
+        "name": "專案風險整理",
+        "rank": 2,
+        "weight": 2,
+        "rankWeights": [
+          0,
+          0,
+          2,
+          2.2,
+          1.3
+        ],
+        "workload": 170,
+        "reward": 85,
+        "quality": 32,
+        "tags": [
+          "報告",
+          "管理"
+        ]
+      },
+      {
+        "id": "team_review",
+        "name": "團隊進度審查",
+        "rank": 3,
+        "weight": 2.6,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          2.6,
+          2
+        ],
+        "workload": 160,
+        "reward": 90,
+        "quality": 38,
+        "tags": [
+          "報告",
+          "管理"
+        ]
+      },
+      {
+        "id": "resource_allocation",
+        "name": "人力分配",
+        "rank": 3,
+        "weight": 2.4,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          2.4,
+          2
+        ],
+        "workload": 175,
+        "reward": 100,
+        "quality": 40,
+        "tags": [
+          "行政",
+          "管理"
+        ]
+      },
+      {
+        "id": "manager_report",
+        "name": "主管報告",
+        "rank": 3,
+        "weight": 2.7,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          2.7,
+          2.2
+        ],
+        "workload": 190,
+        "reward": 105,
+        "quality": 42,
+        "tags": [
+          "報告",
+          "管理"
+        ]
+      },
+      {
+        "id": "client_escalation",
+        "name": "客戶問題升級處理",
+        "rank": 3,
+        "weight": 2.2,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          2.2,
+          1.8
+        ],
+        "workload": 200,
+        "reward": 110,
+        "quality": 44,
+        "tags": [
+          "客戶",
+          "管理"
+        ]
+      },
+      {
+        "id": "department_strategy",
+        "name": "部門策略規劃",
+        "rank": 4,
+        "weight": 3,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "workload": 210,
+        "reward": 120,
+        "quality": 50,
+        "tags": [
+          "報告",
+          "管理",
+          "策略"
+        ]
+      },
+      {
+        "id": "budget_review",
+        "name": "預算審核",
+        "rank": 4,
+        "weight": 2.8,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          0,
+          2.8
+        ],
+        "workload": 190,
+        "reward": 110,
+        "quality": 52,
+        "tags": [
+          "報告",
+          "管理"
+        ]
+      },
+      {
+        "id": "cross_department_decision",
+        "name": "跨部門決策",
+        "rank": 4,
+        "weight": 2.8,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          0,
+          2.8
+        ],
+        "workload": 200,
+        "reward": 115,
+        "quality": 50,
+        "tags": [
+          "行政",
+          "管理"
+        ]
+      },
+      {
+        "id": "executive_report",
+        "name": "高層報告",
+        "rank": 4,
+        "weight": 3,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "workload": 220,
+        "reward": 125,
+        "quality": 55,
+        "tags": [
+          "簡報",
+          "報告",
+          "形象",
+          "管理"
+        ]
+      },
+      {
+        "id": "critical_issue",
+        "name": "重大問題處理",
+        "rank": 4,
+        "weight": 2.4,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          0,
+          2.4
+        ],
+        "workload": 230,
+        "reward": 130,
+        "quality": 58,
+        "tags": [
+          "客戶",
+          "管理"
+        ]
+      }
+    ]
+  },
+  "followUps": {
+    "maxFollowUpDepth": 2,
+    "maxExtraTasksPerRootWork": 6,
+    "projectMaxExtraTasks": 10,
+    "qualityCountBands": [
+      {
+        "minimumRatio": 0,
+        "countMin": 2,
+        "countMax": 3
+      },
+      {
+        "minimumRatio": 0.8,
+        "countMin": 1,
+        "countMax": 2
+      },
+      {
+        "minimumRatio": 1.2,
+        "countMin": 1,
+        "countMax": 1
+      }
+    ],
+    "types": [
+      {
+        "type": "REWORK",
+        "name": "修正錯誤",
+        "qualitySensitive": true,
+        "chance": 0.35,
+        "workloadFactor": 0.65,
+        "rewardFactor": 0.04,
+        "countMin": 1,
+        "countMax": 2,
+        "delay": 0
+      },
+      {
+        "type": "CORRECTION",
+        "name": "再改格式",
+        "qualitySensitive": true,
+        "chance": 0.2,
+        "workloadFactor": 0.35,
+        "rewardFactor": 0.02,
+        "countMin": 1,
+        "countMax": 1,
+        "delay": 0
+      },
+      {
+        "type": "MISSING_INFO",
+        "name": "補漏資料",
+        "qualitySensitive": true,
+        "chance": 0.2,
+        "workloadFactor": 0.4,
+        "rewardFactor": 0,
+        "countMin": 1,
+        "countMax": 2,
+        "delay": 8
+      },
+      {
+        "type": "CLIENT_REPLY",
+        "name": "客戶回信",
+        "qualitySensitive": false,
+        "chance": 0.18,
+        "workloadFactor": 0.65,
+        "rewardFactor": 0.8,
+        "countMin": 1,
+        "countMax": 2,
+        "delay": 20
+      },
+      {
+        "type": "NEW_REQUEST",
+        "name": "追加需求",
+        "qualitySensitive": false,
+        "chance": 0.12,
+        "workloadFactor": 0.8,
+        "rewardFactor": 0.9,
+        "countMin": 1,
+        "countMax": 3,
+        "delay": 10
+      },
+      {
+        "type": "PROJECT_NEXT_STEP",
+        "name": "後續確認",
+        "qualitySensitive": false,
+        "chance": 0.08,
+        "workloadFactor": 0.5,
+        "rewardFactor": 0.6,
+        "countMin": 1,
+        "countMax": 1,
+        "delay": 0
+      }
+    ]
+  },
+  "ranks": [
+    {
+      "name": "新人",
+      "promotionCost": 0,
+      "workloadMultiplier": 1,
+      "rewardMultiplier": 1,
+      "qualityMultiplier": 1,
+      "projectChance": 0.16,
+      "recommendedSpeed": 10,
+      "recommendedQuality": 6,
+      "maxOverdueAllowed": 0,
+      "rankEscapeResistance": 0
+    },
+    {
+      "name": "一般員工",
+      "promotionCost": 220,
+      "workloadMultiplier": 1.25,
+      "rewardMultiplier": 2.2,
+      "qualityMultiplier": 1.2,
+      "projectChance": 0.22,
+      "recommendedSpeed": 20,
+      "recommendedQuality": 12,
+      "maxOverdueAllowed": 3,
+      "rankEscapeResistance": 4
+    },
+    {
+      "name": "資深員工",
+      "promotionCost": 900,
+      "workloadMultiplier": 1.7,
+      "rewardMultiplier": 5,
+      "qualityMultiplier": 1.5,
+      "projectChance": 0.3,
+      "recommendedSpeed": 35,
+      "recommendedQuality": 21,
+      "maxOverdueAllowed": 2,
+      "rankEscapeResistance": 9
+    },
+    {
+      "name": "主管",
+      "promotionCost": 2800,
+      "workloadMultiplier": 2.2,
+      "rewardMultiplier": 11,
+      "qualityMultiplier": 1.8,
+      "projectChance": 0.4,
+      "recommendedSpeed": 65,
+      "recommendedQuality": 39,
+      "maxOverdueAllowed": 1,
+      "rankEscapeResistance": 14
+    },
+    {
+      "name": "經理",
+      "promotionCost": 9000,
+      "workloadMultiplier": 3,
+      "rewardMultiplier": 25,
+      "qualityMultiplier": 2.2,
+      "projectChance": 0.5,
+      "recommendedSpeed": 110,
+      "recommendedQuality": 66,
+      "maxOverdueAllowed": 0,
+      "rankEscapeResistance": 20
+    }
+  ],
+  "projects": {
+    "maximumActive": 4,
+    "templates": [
+      {
+        "id": "launch",
+        "weight": 1,
+        "rankRequirement": 0,
+        "enabled": true,
+        "name": "新品提案",
+        "tier": 1,
+        "reward": 600,
+        "deadlineDays": 3,
+        "subtasks": [
+          {
+            "id": "research",
+            "name": "資料蒐集",
+            "dependencies": [],
+            "workload": 140,
+            "reward": 40,
+            "qualityRequirement": 15
+          },
+          {
+            "id": "market",
+            "name": "市場分析",
+            "dependencies": [
+              "research"
+            ],
+            "workload": 160,
+            "reward": 50,
+            "qualityRequirement": 18
+          },
+          {
+            "id": "data",
+            "name": "數據整理",
+            "dependencies": [
+              "research"
+            ],
+            "workload": 120,
+            "reward": 35,
+            "qualityRequirement": 15
+          },
+          {
+            "id": "plan",
+            "name": "企劃草案",
+            "dependencies": [
+              "market",
+              "data"
+            ],
+            "workload": 200,
+            "reward": 70,
+            "qualityRequirement": 20
+          },
+          {
+            "id": "slides",
+            "name": "提案簡報",
+            "dependencies": [
+              "plan"
+            ],
+            "workload": 180,
+            "reward": 60,
+            "qualityRequirement": 22
+          },
+          {
+            "id": "review",
+            "name": "主管確認",
+            "dependencies": [
+              "slides"
+            ],
+            "workload": 100,
+            "reward": 30,
+            "qualityRequirement": 20
+          },
+          {
+            "id": "revise",
+            "name": "提案修改",
+            "dependencies": [
+              "review"
+            ],
+            "workload": 140,
+            "reward": 40,
+            "qualityRequirement": 22
+          },
+          {
+            "id": "final",
+            "name": "最終提案",
+            "dependencies": [
+              "revise"
+            ],
+            "workload": 160,
+            "reward": 50,
+            "qualityRequirement": 25
+          }
+        ],
+        "rankWeights": [
+          3,
+          1.5,
+          0.8,
+          0.3,
+          0.1
+        ]
+      },
+      {
+        "id": "client_campaign",
+        "name": "客戶活動企劃",
+        "rankRequirement": 1,
+        "weight": 3,
+        "rankWeights": [
+          0,
+          3,
+          2,
+          1,
+          0.5
+        ],
+        "tier": 2,
+        "reward": 700,
+        "subtasks": [
+          {
+            "id": "client_brief",
+            "name": "需求確認",
+            "workload": 100,
+            "reward": 35,
+            "qualityRequirement": 18,
+            "dependencies": []
+          },
+          {
+            "id": "audience",
+            "name": "目標客群整理",
+            "workload": 120,
+            "reward": 40,
+            "qualityRequirement": 20,
+            "dependencies": [
+              "client_brief"
+            ]
+          },
+          {
+            "id": "channel_research",
+            "name": "渠道與素材研究",
+            "workload": 110,
+            "reward": 40,
+            "qualityRequirement": 20,
+            "dependencies": [
+              "client_brief"
+            ]
+          },
+          {
+            "id": "campaign_concept",
+            "name": "企劃方向",
+            "workload": 150,
+            "reward": 55,
+            "qualityRequirement": 22,
+            "dependencies": [
+              "audience",
+              "channel_research"
+            ]
+          },
+          {
+            "id": "material_plan",
+            "name": "素材規劃",
+            "workload": 130,
+            "reward": 45,
+            "qualityRequirement": 22,
+            "dependencies": [
+              "campaign_concept"
+            ]
+          },
+          {
+            "id": "client_review",
+            "name": "客戶確認",
+            "workload": 90,
+            "reward": 30,
+            "qualityRequirement": 24,
+            "dependencies": [
+              "material_plan"
+            ]
+          },
+          {
+            "id": "campaign_revision",
+            "name": "企劃修改",
+            "workload": 120,
+            "reward": 40,
+            "qualityRequirement": 24,
+            "dependencies": [
+              "client_review"
+            ]
+          },
+          {
+            "id": "launch_prepare",
+            "name": "上線準備",
+            "workload": 110,
+            "reward": 35,
+            "qualityRequirement": 24,
+            "dependencies": [
+              "campaign_revision"
+            ]
+          }
+        ],
+        "enabled": true,
+        "deadlineDays": 3
+      },
+      {
+        "id": "cross_department_project",
+        "name": "跨部門整合案",
+        "rankRequirement": 2,
+        "weight": 3,
+        "rankWeights": [
+          0,
+          0,
+          3,
+          2,
+          1
+        ],
+        "tier": 3,
+        "reward": 800,
+        "subtasks": [
+          {
+            "id": "scope",
+            "name": "專案範圍確認",
+            "workload": 130,
+            "reward": 45,
+            "qualityRequirement": 26,
+            "dependencies": []
+          },
+          {
+            "id": "stakeholders",
+            "name": "關係人整理",
+            "workload": 110,
+            "reward": 40,
+            "qualityRequirement": 27,
+            "dependencies": [
+              "scope"
+            ]
+          },
+          {
+            "id": "integration_data",
+            "name": "資料收集",
+            "workload": 150,
+            "reward": 50,
+            "qualityRequirement": 28,
+            "dependencies": [
+              "scope"
+            ]
+          },
+          {
+            "id": "execution_plan",
+            "name": "執行方案",
+            "workload": 170,
+            "reward": 60,
+            "qualityRequirement": 30,
+            "dependencies": [
+              "stakeholders",
+              "integration_data"
+            ]
+          },
+          {
+            "id": "risk_analysis",
+            "name": "風險整理",
+            "workload": 150,
+            "reward": 55,
+            "qualityRequirement": 32,
+            "dependencies": [
+              "integration_data"
+            ]
+          },
+          {
+            "id": "department_alignment",
+            "name": "跨部門確認",
+            "workload": 170,
+            "reward": 60,
+            "qualityRequirement": 30,
+            "dependencies": [
+              "execution_plan",
+              "risk_analysis"
+            ]
+          },
+          {
+            "id": "integration_revision",
+            "name": "方案修正",
+            "workload": 130,
+            "reward": 45,
+            "qualityRequirement": 30,
+            "dependencies": [
+              "department_alignment"
+            ]
+          },
+          {
+            "id": "integration_delivery",
+            "name": "最終交付",
+            "workload": 150,
+            "reward": 55,
+            "qualityRequirement": 32,
+            "dependencies": [
+              "integration_revision"
+            ]
+          }
+        ],
+        "enabled": true,
+        "deadlineDays": 3
+      },
+      {
+        "id": "process_improvement",
+        "name": "團隊流程改善",
+        "rankRequirement": 3,
+        "weight": 3,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          3,
+          2
+        ],
+        "tier": 4,
+        "reward": 950,
+        "subtasks": [
+          {
+            "id": "process_problem",
+            "name": "問題盤點",
+            "workload": 140,
+            "reward": 50,
+            "qualityRequirement": 36,
+            "dependencies": []
+          },
+          {
+            "id": "process_metrics",
+            "name": "流程數據整理",
+            "workload": 150,
+            "reward": 50,
+            "qualityRequirement": 38,
+            "dependencies": [
+              "process_problem"
+            ]
+          },
+          {
+            "id": "improvement_plan",
+            "name": "改善方案",
+            "workload": 180,
+            "reward": 65,
+            "qualityRequirement": 40,
+            "dependencies": [
+              "process_metrics"
+            ]
+          },
+          {
+            "id": "pilot",
+            "name": "小規模測試",
+            "workload": 170,
+            "reward": 60,
+            "qualityRequirement": 40,
+            "dependencies": [
+              "improvement_plan"
+            ]
+          },
+          {
+            "id": "pilot_review",
+            "name": "成效審查",
+            "workload": 150,
+            "reward": 55,
+            "qualityRequirement": 42,
+            "dependencies": [
+              "pilot"
+            ]
+          },
+          {
+            "id": "training_docs",
+            "name": "教育文件",
+            "workload": 130,
+            "reward": 45,
+            "qualityRequirement": 40,
+            "dependencies": [
+              "pilot_review"
+            ]
+          },
+          {
+            "id": "rollout_plan",
+            "name": "正式導入準備",
+            "workload": 150,
+            "reward": 50,
+            "qualityRequirement": 42,
+            "dependencies": [
+              "pilot_review"
+            ]
+          },
+          {
+            "id": "process_rollout",
+            "name": "正式導入",
+            "workload": 180,
+            "reward": 65,
+            "qualityRequirement": 44,
+            "dependencies": [
+              "training_docs",
+              "rollout_plan"
+            ]
+          }
+        ],
+        "enabled": true,
+        "deadlineDays": 3
+      },
+      {
+        "id": "annual_strategy",
+        "name": "年度策略規劃",
+        "rankRequirement": 4,
+        "weight": 4,
+        "rankWeights": [
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        "tier": 5,
+        "reward": 1200,
+        "subtasks": [
+          {
+            "id": "annual_performance",
+            "name": "年度績效整理",
+            "workload": 160,
+            "reward": 55,
+            "qualityRequirement": 48,
+            "dependencies": []
+          },
+          {
+            "id": "market_review",
+            "name": "市場資訊整理",
+            "workload": 170,
+            "reward": 60,
+            "qualityRequirement": 50,
+            "dependencies": []
+          },
+          {
+            "id": "annual_goals",
+            "name": "年度目標設定",
+            "workload": 180,
+            "reward": 65,
+            "qualityRequirement": 52,
+            "dependencies": [
+              "annual_performance",
+              "market_review"
+            ]
+          },
+          {
+            "id": "budget_plan",
+            "name": "資源預算規劃",
+            "workload": 190,
+            "reward": 70,
+            "qualityRequirement": 54,
+            "dependencies": [
+              "annual_goals"
+            ]
+          },
+          {
+            "id": "strategy_roadmap",
+            "name": "策略路線圖",
+            "workload": 200,
+            "reward": 75,
+            "qualityRequirement": 54,
+            "dependencies": [
+              "annual_goals"
+            ]
+          },
+          {
+            "id": "executive_review",
+            "name": "高層審查",
+            "workload": 150,
+            "reward": 55,
+            "qualityRequirement": 55,
+            "dependencies": [
+              "budget_plan",
+              "strategy_roadmap"
+            ]
+          },
+          {
+            "id": "strategy_revision",
+            "name": "策略修正",
+            "workload": 180,
+            "reward": 65,
+            "qualityRequirement": 56,
+            "dependencies": [
+              "executive_review"
+            ]
+          },
+          {
+            "id": "final_strategy",
+            "name": "最終年度計畫",
+            "workload": 200,
+            "reward": 80,
+            "qualityRequirement": 58,
+            "dependencies": [
+              "strategy_revision"
+            ]
+          }
+        ],
+        "enabled": true,
+        "deadlineDays": 3
+      }
+    ]
+  },
+  "food": {
+    "processingRate": 30,
+    "allowWorkInterruption": true,
+    "items": [
+      {
+        "id": "normal",
+        "name": "普通便當",
+        "price": 0,
+        "requirement": 120,
+        "satietyDuration": 18,
+        "tags": [
+          "餐點"
+        ],
+        "productId": ""
+      },
+      {
+        "id": "quick",
+        "name": "快速飽足飲",
+        "price": 8,
+        "requirement": 20,
+        "satietyDuration": 25,
+        "tags": [
+          "食品"
+        ],
+        "productId": "quick"
+      }
+    ]
+  },
+  "lunch": {
+    "fullRestTarget": 240,
+    "tiers": [
+      {
+        "minimum": 0,
+        "name": "沒有休息到",
+        "speedBonus": 0
+      },
+      {
+        "minimum": 0.2,
+        "name": "稍微喘口氣",
+        "speedBonus": 0.04
+      },
+      {
+        "minimum": 0.5,
+        "name": "精神不錯",
+        "speedBonus": 0.1
+      },
+      {
+        "minimum": 0.8,
+        "name": "充分休息",
+        "speedBonus": 0.16
+      },
+      {
+        "minimum": 1,
+        "name": "神清氣爽",
+        "speedBonus": 0.22
+      }
+    ]
+  },
+  "life": {
+    "entertainmentRequirement": 8,
+    "minimumEntertainmentTime": 3,
+    "relaxedQuality": 0.15
+  },
+  "sleep": {
+    "targetDuration": 18,
+    "effectCurve": [
+      {
+        "ratio": 0,
+        "speedModifier": -0.3,
+        "qualityModifier": -0.3
+      },
+      {
+        "ratio": 0.5,
+        "speedModifier": -0.15,
+        "qualityModifier": -0.15
+      },
+      {
+        "ratio": 1,
+        "speedModifier": 0,
+        "qualityModifier": 0
+      },
+      {
+        "ratio": 1.1,
+        "speedModifier": 0.05,
+        "qualityModifier": 0.05
+      }
+    ]
+  },
+  "boss": {
+    "baseAttention": 0.1,
+    "flatteryAttentionPerLevel": 0.02,
+    "flatteryIncomePerLevel": 0.01,
+    "baseEscapeValue": 15,
+    "baseJobResistance": 85
+  },
+  "events": {
+    "interval": 18,
+    "baseChance": 0.25,
+    "definitions": [
+      {
+        "id": "eyes",
+        "allowedTargetTypes": [
+          "WORK"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [
+          "行政",
+          "簡報",
+          "報告",
+          "客戶"
+        ],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": true,
+        "contextModifiers": {},
+        "name": "眼睛酸澀",
+        "duration": 40,
+        "speedPenalty": -0.12,
+        "qualityPenalty": -0.08,
+        "severity": 1,
+        "tag": "eyes",
+        "problemName": "用眼問題處理",
+        "problemRequirement": 4,
+        "interruptImmediately": false,
+        "priority": 30,
+        "protectionDuration": 20,
+        "protectionChanceMultiplier": 0
+      },
+      {
+        "id": "wound",
+        "allowedTargetTypes": [
+          "WORK",
+          "FOOD",
+          "ENTERTAINMENT",
+          "LUNCH"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": true,
+        "contextModifiers": {},
+        "name": "傷口事件",
+        "duration": 45,
+        "speedPenalty": -0.18,
+        "qualityPenalty": 0,
+        "severity": 2,
+        "tag": "wound",
+        "problemName": "傷口問題處理",
+        "problemRequirement": 4,
+        "interruptImmediately": true,
+        "priority": 80,
+        "protectionDuration": 15,
+        "protectionChanceMultiplier": 0.35
+      },
+      {
+        "id": "itch",
+        "allowedTargetTypes": [
+          "WORK",
+          "ENTERTAINMENT",
+          "SLEEP"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": true,
+        "contextModifiers": {},
+        "name": "搔癢事件",
+        "duration": 30,
+        "speedPenalty": -0.1,
+        "qualityPenalty": 0,
+        "severity": 1,
+        "tag": "itch",
+        "problemName": "搔癢問題處理",
+        "problemRequirement": 3,
+        "interruptImmediately": true,
+        "priority": 50,
+        "protectionDuration": 15,
+        "protectionChanceMultiplier": 0
+      },
+      {
+        "id": "tired",
+        "allowedTargetTypes": [
+          "WORK",
+          "ENTERTAINMENT"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": false,
+        "contextModifiers": {},
+        "name": "睡眠不足事件",
+        "duration": 40,
+        "speedPenalty": -0.1,
+        "qualityPenalty": -0.1,
+        "severity": 1,
+        "tag": "sleep",
+        "problemName": "精神狀態整理",
+        "problemRequirement": 4,
+        "interruptImmediately": false,
+        "priority": 20,
+        "protectionDuration": 15,
+        "protectionChanceMultiplier": 0.5
+      }
+    ]
+  },
+  "products": {
+    "billingPeriodDays": 30,
+    "definitions": [
+      {
+        "id": "quick",
+        "name": "快速飽足飲",
+        "icon": "🥤",
+        "price": 80,
+        "effectType": "FOOD_OPTION",
+        "tags": [
+          "food"
+        ],
+        "description": "啟用期間可選快速食物，每餐另付 $8。",
+        "offlineAgeProgressMultiplier": 1,
+        "rewardTagBonus": 0,
+        "ageEfficiencyCompensationRate": 0
+      },
+      {
+        "id": "wound",
+        "allowedTargetTypes": [
+          "WORK",
+          "FOOD",
+          "ENTERTAINMENT",
+          "LUNCH"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": true,
+        "contextModifiers": {},
+        "name": "傷口處理組",
+        "icon": "🩹",
+        "price": 95,
+        "effectType": "PROBLEM_RESOLVER",
+        "tags": [
+          "wound"
+        ],
+        "description": "傷口遊戲事件轉為可快速處理的需求。",
+        "offlineAgeProgressMultiplier": 1,
+        "rewardTagBonus": 0,
+        "ageEfficiencyCompensationRate": 0
+      },
+      {
+        "id": "eyes",
+        "allowedTargetTypes": [
+          "WORK"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [
+          "行政",
+          "簡報",
+          "報告",
+          "客戶"
+        ],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": true,
+        "contextModifiers": {},
+        "name": "用眼休息組",
+        "icon": "👁",
+        "price": 85,
+        "effectType": "PROBLEM_RESOLVER",
+        "tags": [
+          "eyes"
+        ],
+        "description": "處理用眼遊戲問題，短暫保護同類事件。",
+        "offlineAgeProgressMultiplier": 1,
+        "rewardTagBonus": 0,
+        "ageEfficiencyCompensationRate": 0
+      },
+      {
+        "id": "sleep",
+        "name": "晚安整理組",
+        "icon": "🌙",
+        "price": 90,
+        "effectType": "PROBLEM_RESOLVER",
+        "tags": [
+          "sleep"
+        ],
+        "description": "處理睡眠類遊戲事件。",
+        "offlineAgeProgressMultiplier": 1,
+        "rewardTagBonus": 0,
+        "ageEfficiencyCompensationRate": 0
+      },
+      {
+        "id": "itch",
+        "allowedTargetTypes": [
+          "WORK",
+          "ENTERTAINMENT",
+          "SLEEP"
+        ],
+        "blockedTargetTypes": [],
+        "requiredWorkTags": [],
+        "allowedTimeRanges": [],
+        "allowedRanks": [],
+        "blockedByProtection": true,
+        "randomEnabled": true,
+        "contextModifiers": {},
+        "name": "舒適整理組",
+        "icon": "🍃",
+        "price": 75,
+        "effectType": "PROBLEM_RESOLVER",
+        "tags": [
+          "itch"
+        ],
+        "description": "處理搔癢遊戲事件，短暫避免同類打斷。",
+        "offlineAgeProgressMultiplier": 1,
+        "rewardTagBonus": 0,
+        "ageEfficiencyCompensationRate": 0
+      },
+      {
+        "id": "agecare",
+        "name": "時光緩衝組",
+        "icon": "🌿",
+        "price": 120,
+        "effectType": "OFFLINE_AGE_PROTECTION",
+        "tags": [
+          "age"
+        ],
+        "description": "有效期間離線年齡進度暫定減半。",
+        "offlineAgeProgressMultiplier": 0.5,
+        "rewardTagBonus": 0,
+        "ageEfficiencyCompensationRate": 0.5
+      },
+      {
+        "id": "care",
+        "name": "從容保養組",
+        "icon": "✨",
+        "price": 100,
+        "effectType": "TAGGED_WORK_REWARD",
+        "tags": [
+          "形象",
+          "簡報"
+        ],
+        "description": "對應工作標籤額外收入 +15%。",
+        "offlineAgeProgressMultiplier": 1,
+        "rewardTagBonus": 0.15,
+        "ageEfficiencyCompensationRate": 0
+      }
+    ]
+  },
+  "age": {
+    "start": 22,
+    "daysPerYear": 365,
+    "workloadCurve": [
+      {
+        "age": 22,
+        "multiplier": 1
+      },
+      {
+        "age": 30,
+        "multiplier": 1.1
+      },
+      {
+        "age": 40,
+        "multiplier": 1.25
+      },
+      {
+        "age": 50,
+        "multiplier": 1.45
+      },
+      {
+        "age": 60,
+        "multiplier": 1.7
+      }
+    ]
+  },
+  "prestige": {
+    "minimumPrestigeActiveMinutes": 30,
+    "minimumRank": 2,
+    "minimumEarned": 1800,
+    "incomeDivisor": 4,
+    "incomeExponent": 0.65,
+    "rankBonus": 3,
+    "projectTierBonus": 2,
+    "progressDivisor": 100,
+    "healthyBonus": 1.2,
+    "severePenalty": 0.8,
+    "minimumReward": 1,
+    "upgrades": [
+      {
+        "id": "workEfficiency",
+        "name": "工作效率",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "workQuality",
+        "name": "工作品質",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "workReward",
+        "name": "工作收入",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "lifeManagement",
+        "name": "生活管理",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "lunchOutput",
+        "name": "午休輸出",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "projectReward",
+        "name": "專案獎金",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "bossTaskReward",
+        "name": "老闆任務報酬",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      },
+      {
+        "id": "startingMoney",
+        "name": "起始資金",
+        "multiplierBase": 1.1,
+        "baseCost": 5,
+        "costGrowth": 2.65
+      }
+    ]
+  },
+  "offline": {
+    "minutesPerGameDay": 30
+  },
+  "notifications": {
+    "seconds": 3,
+    "visibleLimit": 2,
+    "historyLimit": 400,
+    "queueLimit": 60
+  },
+  "save": {
+    "key": "012s:auto-worker:v2",
+    "legacyKey": "012s:auto-worker:v1",
+    "interval": 3
+  },
+  "debug": {
+    "moneyGrant": 1000,
+    "clarityGrant": 30,
+    "maxValue": 100000000,
+    "maxLevel": 1000
+  }
+}
